@@ -3,13 +3,13 @@
 
 **George Violaris**
 
-**Security Engineer & Programmer**
+**Software Engineer and Information Security Specialist**
 
 **Email**: violarisgeorge@gmail.com
 
 **Phone**: +357 99433732
 
-I work on developing secure enterprise software and infrastructure.
+I work on enterprise software and infrastructure.
 ---
 
 ---
@@ -21,6 +21,7 @@ I work on developing secure enterprise software and infrastructure.
 3. Network Administration - Cisco switching/routing
 4. Security Administration - Firewall, IPS/IDS, IPSec, internal PenTesting, security policy design
 5. Data Protection - Veeam Backup and Replication, vSphere Replication
+6. Software and Web Development for internal company systems
 
 **February 2012 - October 2014**: Software & Systems Engineer, SMK IdealHost Ltd
 1. Web Development - Development of IdealDNS (Python, PHP, Java)
