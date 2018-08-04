@@ -65,9 +65,9 @@ I work on enterprise software and infrastructure.
 ---
 
 ### Professional Skills
-**Programming Languages**: Go, Java, Python, PHP
+**Programming Languages**: Go, Java, Python, PHP, JavaScript
 
-**Programming Frameworks**: Spring, Buffalo, Revel, CodeIgniter, Django
+**Programming Frameworks**: Spring, Buffalo, Revel, CodeIgniter, Django, Node.js
 
 **Databases**: Oracle, Postgres, MySQL, MSSQL, MongoDB
 
