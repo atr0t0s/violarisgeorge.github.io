@@ -1,6 +1,5 @@
 > I am a Software Engineer and Information Security Specialist. [#golang](https://twitter.com/search?q=%23golang&src=typd), [#bitcoin](https://twitter.com/search?q=%23bitcoin&src=typd), [#blockchain](https://twitter.com/search?q=%23blockchain&src=tyah), [#p2p](https://twitter.com/search?q=%23p2p&src=typd), [#privacy](https://twitter.com/search?q=%23privacy&src=typd). 
 
-- ### [Read the InfoSec Digest](https://paper.li/ViolarisGeorge/1521979641#/)
 - ### [Curriculum Vitae](cv.html#curriculum-vitae)
 - ### [Contact me](https://about.me/violarisgeorge)
 
@@ -20,7 +19,5 @@ My research interests include distributed and decentralized systems, P2P network
 In my resources page I keep some of the material which are of interest to me and have helped to expand my knowledge on certain subjects. 
 
 You may use the below details to drop me a line by email. I answer all non-spam correspondence. Make sure to find me on Keybase and use my public key to send me a private message only I can read.
-
-I run a Bitcoin Core full node at btcnode.violaris.org:8333
 
 <a class="twitter-timeline" href="https://twitter.com/ViolarisGeorge?ref_src=twsrc%5Etfw">Tweets by ViolarisGeorge</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
