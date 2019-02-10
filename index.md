@@ -1,4 +1,4 @@
-> I am a Software Engineer and Information Security Specialist. [#golang](https://twitter.com/search?q=%23golang&src=typd), [#bitcoin](https://twitter.com/search?q=%23bitcoin&src=typd), [#blockchain](https://twitter.com/search?q=%23blockchain&src=tyah), [#p2p](https://twitter.com/search?q=%23p2p&src=typd), [#privacy](https://twitter.com/search?q=%23privacy&src=typd). 
+> Software Engineer and Full Stack Web Developer.
 
 - ### [Curriculum Vitae](cv.html#curriculum-vitae)
 - ### [Contact me](https://about.me/violarisgeorge)
