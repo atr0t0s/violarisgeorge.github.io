@@ -1,11 +1,13 @@
-> Software Engineer and Full Stack Web Developer.
-
-- ### [Curriculum Vitae](cv.html#curriculum-vitae)
-- ### [Contact me](https://about.me/violarisgeorge)
+> ### [Curriculum Vitae](cv.html#curriculum-vitae)
+> ### [Contact me](https://about.me/violarisgeorge)
 
 ---
 
 ## About me
-For the last ten years, I have worked on software projects that include development of secure GPS tracking servers, intranet applications, customer portals and web services. My preferred toolset consists of Go, Java, PHP, JavaScript and Python. I prefer to develop on frameworks that follow the highest industry standards to provide fast, maintainable and expandable applications. Such frameworks include Spring MVC, Beego, Buffalo, Laravel and CodeIgniter. For front-end UI development I work with AngularJS and Vue.js.
+I am a developer and software security engineer living in Nicosia, Cyprus. I work in many areas of software engineering such as back end programming (Go, Java, PHP, Node.js, Python) as well as front end development with AngularJS and Vue.js. During the last ten years I've worked on developing secure GPS tracking servers, collaboration tools, marketing, campaign and sales software.
 
-In my resources page I keep some of the material which are of interest to me and have helped to expand my knowledge on certain subjects. 
+I'm a big advocate for team work, reliability, authenticity and integrity. 
+
+I'm extremely passionate about the freedom of expression that the web provides us, and I really enjoy helping organizations and individuals reach their potential and achieve their goals. The digital age has brought upon us a new industrial revolution and a myriad of new ways to solve new and old problems. My mission is to keep an eye to the future, build upon the shoulders of giants and strive for greatness through technology, communication and positivity.
+
+In my resources page I keep material from the web that I find interesting.  
