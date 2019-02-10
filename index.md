@@ -1,6 +1,6 @@
 > [Read my blog on Medium](https://medium.com/@ViolarisGeorge)
 > ### [Curriculum Vitae](cv.html#curriculum-vitae)
-> ### [Contact me](https://about.me/violarisgeorge)
+> ### [Contact me and find me on Social Networks](https://about.me/violarisgeorge)
 
 ---
 
