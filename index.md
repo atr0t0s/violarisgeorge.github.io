@@ -5,7 +5,7 @@
 ---
 
 ## About me
-I am a developer and software security engineer living in Nicosia, Cyprus. I work in many areas of software engineering such as back end programming (Go, Java, PHP, Node.js, Python) as well as front end development with AngularJS and Vue.js. During the last ten years I've worked on developing secure GPS tracking servers, collaboration tools, marketing, campaign and sales software.
+![]({{site.baseurl}}/https://aboutme.imgix.net/background/users/v/i/o/violarisgeorge_1520887564_084.jpg)I am a developer and software security engineer living in Nicosia, Cyprus. I work in many areas of software engineering such as back end programming (Go, Java, PHP, Node.js, Python) as well as front end development with AngularJS and Vue.js. During the last ten years I've worked on developing secure GPS tracking servers, collaboration tools, marketing, campaign and sales software.
 
 I'm a big advocate for team work, reliability, authenticity and integrity. 
 
