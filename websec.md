@@ -88,6 +88,4 @@ Moreover, a model requiring the combination of the discussed techniques, namely 
 5.	J. Luxenburger and G. Weikum. Query-Log Based Authority Analysis for Web Information Search, Lecture Notes in Computer Science, v. 3306, p. 94. 2004.
 6.	R. Atterer, M. Wnuk, A. Schmidt. Knowing the User's Every Move – User Activity Tracking for Website Usability Evaluation and Implicit Interaction, 2006
 
-
-
-
+[Comments](https://github.com/violarisgeorge/violarisgeorge.github.io/issues/5)
