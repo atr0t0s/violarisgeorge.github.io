@@ -68,3 +68,5 @@ Retrieved from http://digitallibrary.kcci.com.pk/bitstream/32417747/701/1/authen
 
 [10] RSA Adaptive Authentication and Out-Of-Band Authentication
 Retrieved from http://www.rsa.com/products/consumer/datasheets/8898_OOB_DS_0212.pdf on March 13th 2012
+
+[Comments](https://github.com/violarisgeorge/violarisgeorge.github.io/issues/6)
