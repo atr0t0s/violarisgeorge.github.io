@@ -33,3 +33,5 @@ An exploit is a mechanism which takes advantage of a vulnerability to materializ
 The payload is malicious code that is deployed and executed on a system through the exploitation method. Once the payload is deployed it can do all sorts of damage, such as delete and copy files to a remote location, download and execute malware from the internet or even add users and change user passwords in the system. Following from the example above, the most usual payload in the SMBv1 vulnerability exploit would be a windows powershel script to download software from a remote server, and once executed it would encrypt all the user's files. This type of malware is known as _ransomware_.
 
 This was a brief introduction into the most basic terminology and aspects used in vulnerability assessments and penetration testing by information security professionals. Take a look in my resources page to find helpful links which expand on these concepts in more detail and go some steps futher into more technical and hands on approaches.
+
+[Comments](Concepts of Information Security)
