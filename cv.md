@@ -16,19 +16,11 @@ I work on enterprise software and infrastructure.
 
 ### Professional Experience
 
-**May 2018 - present**: Senior Software Engineer, Trust International Insurance
+**October 2014 - present**: Senior Software Engineer, Trust International Insurance
 1. Design and development of peripheral insurance systems
 2. SDLC Project Management
 3. Software engineering team leader
 4. Software Development & IT Operations management
-
-**October 2014 - May 2018**: Systems Administration & Software Development, Trust International Insurance
-1. Information Systems Administration - Insurance ERP and Policy/Finance/Claims Systems
-2. Virtual Infrastructure - Installation, provisioning and administration of ESXi/vSphere, NetApp
-3. Network Administration - Cisco switching/routing
-4. Security Administration - Firewall, IPS/IDS, IPSec, internal PenTesting, security policy design
-5. Data Protection - Veeam Backup and Replication, vSphere Replication
-6. Software and Web Development for internal company systems
 
 **February 2012 - October 2014**: Software & Systems Engineer, SMK IdealHost Ltd
 1. Web Development - Development of IdealDNS (Python, PHP, Java)
