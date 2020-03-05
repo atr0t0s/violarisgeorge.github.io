@@ -54,6 +54,7 @@ Link digest curated for your reading pleasure. I collect the links and documents
 - [Free Interactive PHP Tutorial](http://www.learn-php.org/)
 - [PHP Manual](http://php.net/manual/en/)
 - [Advanced Java Programming](https://www.udemy.com/advanced-java-programming/) - Udemy
+- [Coding Glossary for Kids](https://www.smartadvocate.com/News/Blog/software-programming-and-coding-glossary-for-kids)
 
 ### Security
 - [CISSP: Certified Information Systems Security Professions (Study Guide)](https://drive.google.com/file/d/1JkIGC9V-yZG29hGPnaSMOj9YfwCWsyAN/view?usp=sharing)
