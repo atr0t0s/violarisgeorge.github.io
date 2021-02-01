@@ -1,13 +1,8 @@
 ## Curriculum Vitae
-[Download in PDF - not updated](https://drive.google.com/open?id=1JJy6N1Yat3HYPGATqaB0sEgbcUT3CT9_)
 
 **George Violaris**
 
 **Software Engineer and Information Security Specialist**
-
-**Email**: violarisgeorge@gmail.com
-
-**Phone**: +357 99433732
 
 I work on enterprise software and infrastructure.
 
