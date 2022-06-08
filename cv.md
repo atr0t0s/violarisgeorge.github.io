@@ -10,8 +10,16 @@ I work on enterprise software and infrastructure.
 
 ### Professional Experience
 
-**September 2019 - Present**: Senior Developer, [Hatchworks](https://www.hatchworksvc.com/) | [Betverse.io](https://betverse.io)
-- PHP, JavaScript, Node.js, Python
+**June 2021 - Present**: Chief Technology Officer, [SkillGaming](https://skillgaming.com/)
+- Go, PHP, JavaScript, TypeScript, Node.js, Python
+- Tech oversight, integration and strategic planning
+- Software teams management
+- Product management
+- Developer mentoring
+- Data security and compliance
+
+**September 2019 - June 2021**: Senior Developer, [Hatchworks](https://www.hatchworksvc.com/)
+- PHP, JavaScript, TypeScript, Node.js, Python
 
 **October 2014 - August 2019**: Senior Software Engineer, [Trust International Insurance](https://trustcyprusinsurance.com)
 - Java, Python, PHP, JavaScript
@@ -53,9 +61,9 @@ I work on enterprise software and infrastructure.
 ---
 
 ### Professional Skills
-**Programming Languages**: Java, Python, PHP, JavaScript
+**Programming Languages**: Go, TypeScript, Python, PHP, JavaScript
 
-**Programming Frameworks**: Laravel, Spring, Revel, CodeIgniter, Django, Node.js
+**Programming Frameworks**: Laravel, Spring, Revel, CodeIgniter, Django, Node.js, Next.js, Vue.js, React
 
 **Databases**: Oracle, Postgres, MySQL, MSSQL, MongoDB
 
