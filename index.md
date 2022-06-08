@@ -1,5 +1,6 @@
 > ### [Curriculum Vitae](cv.html#curriculum-vitae)
 > ### [Contact me and find me on Social Networks](https://about.me/violarisgeorge)
+> ### [Connect with me on LinkedIn](https://www.linkedin.com/in/georgeviolaris/)
 
 ---
 
