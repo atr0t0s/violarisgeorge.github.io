@@ -2,77 +2,81 @@
 
 **George Violaris**
 
-**Software Engineer and Information Security Specialist**
+**Software Engineer**
 
-I work on enterprise software and infrastructure.
-
----
-
-### Professional Experience
-
-**June 2021 - Present**: Chief Technology Officer, [SkillGaming](https://skillgaming.com/)
-- Go, PHP, JavaScript, TypeScript, Node.js, Python
-- Tech oversight, integration and strategic planning
-- Software teams management
-- Product management
-- Developer mentoring
-- Data security and compliance
-
-**September 2019 - June 2021**: Senior Developer, [Hatchworks](https://www.hatchworksvc.com/)
-- PHP, JavaScript, TypeScript, Node.js, Python
-
-**October 2014 - August 2019**: Senior Software Engineer, [Trust International Insurance](https://trustcyprusinsurance.com)
-- Java, Python, PHP, JavaScript
-
-**February 2012 - October 2014**: Software & Systems Engineer, [SMK IdealHost Ltd](https://www.idealhost.eu/)
-- PHP, Java, JavaScript
-
-**January 2010 - January 2012**: Software Engineer, Buytech Ltd
-- Java, Python, PHP, JavaScript
-
-**January 2008 - December 2009**: Web Application Developer, Freelance
-- Java, PHP, JavaScript
-
-**February 2007 - November 2007**: Security Systems Technician, SAPELE Security Systems Ltd
-- Installation and commissioning of security systems (CCTV, burglar and fire alarms, access control and time attendance systems)
+Email: violarisgeorge@gmail.com
 
 ---
 
-### Education
-**1996 - 2000**: Multinational School of Riyadh, Saudi Arabia
+**Professional Summary:**
 
-**2000 - 2002**: American International School of Riyadh, Saudi Arabia
-
-**Class of 2003**: High School Diploma, American International School of Cyprus
-
-**2007 - 2011**:BSc Computer Science, University of Nicosia
-
-**2011 - 2013**: MSc Computer & Network Security - Upper Second Class Honours, Middlesex University
+Dynamic and results-oriented Chief Technology Officer (CTO) with over a decade of experience in the software engineering industry. Demonstrated proficiency in leading technical teams, driving product innovation, and fostering strategic partnerships. Currently serving as the CTO at Hatchworks VC, leveraging expertise in venture capital investments and startup incubation to spearhead technological advancements and drive business growth. Adept at architecting scalable solutions, optimizing system performance, and implementing cutting-edge technologies. Possess a strong foundation in backend and frontend development, coupled with extensive experience in system architecture, database management, and blockchain technologies.
 
 ---
 
-### Academic and Professional Publications
-1. Violaris C. G., Mavromoustakis X. C. “On the Performance Evaluation and Analysis of the Hybridised Bittorrent Protocol with Partial Mobility Characteristics” Proceedings of The Second International Conference on Advances in P2P Systems (AP2PS 2010), October 25-30, Florence, Italy.
+**Work Experience:**
 
-2. Charalambous M., Mavromoustakis X. C., Violaris C. G., and Muneer Bani Yassein. “On the Mobility Scenario Implementation Using a Graphical P2P Discrete Event Simulator for the Bittorrent Protocol”. Multi-Science Publishing, Journal of Algorithms and Computational Technology, Volume 7, Number 4, December 2013.
+**Chief Technology Officer (CTO)**
+Hatchworks VC, 2021 - Present
+- Lead the technological vision and strategy for venture capital investments and startup incubation.
+- Collaborate with executive leadership to identify emerging technologies and investment opportunities.
+- Drive innovation within portfolio companies, fostering a culture of creativity and experimentation.
 
-3. “Out-of-Band Authentication Model with Hashcash Brute-Force Prevention”. IEEE – The 6th International Symposium on Cyberspace Safety and Security. (CSS 2014) Paris, France, August 20 – 22, 2014. Violaris George, Dionysiou Ioanna.
+**Technical Lead**
+SkillGaming, 2019 - Present
+- Provide technical leadership and mentorship to development teams, ensuring alignment with project objectives and timelines.
+- Architect and implement scalable solutions leveraging technologies such as Redux, Rocket, Rust Tokio, Web3.js, and Ethers.js.
+
+**Technical Advisor**
+Phoenix (DeFi liquidity provider startup), 2022 - Present
+- Offer strategic technical guidance and expertise to support the development and growth of the startup.
+- Advise on blockchain integration, smart contract development, and decentralized finance (DeFi) protocols.
+
+**Senior Software Engineer**
+Trust Insurance Cyprus, October 2014 - August 2019
+- Designed and developed broker portals utilizing technologies including Redis, MySQL, Oracle PL/SQL, MongoDB, and PostgreSQL.
+- Implemented robust backend systems and APIs to support insurance quotation issuance, policy management, and claims processing.
 
 ---
 
-### Professional Skills
-**Programming Languages**: Go, TypeScript, Python, PHP, JavaScript
+**Education:**
 
-**Programming Frameworks**: Laravel, Spring, Revel, CodeIgniter, Django, Node.js, Next.js, Vue.js, React
+**Master of Science (MSc) in Computer Science**
+Middlesex University London, Upper Second Class Honours
 
-**Databases**: Oracle, Postgres, MySQL, MSSQL, MongoDB
+**Bachelor of Science (BSc) in Computer Science**
+University of Nicosia
 
-**Security**: Metasploit, w3af, Nmap, Wireshark, Ettercap
+---
 
-**Protocols**: TCP/IP, JSON-RPC, REST, SOAP, AJAX
+**Skills:**
+- Programming Languages: Go, PHP, JavaScript, TypeScript, Python, Java, Rust, Solidity
+- Frameworks/Libraries: Redux, Rocket, Rust Tokio, Web3.js, Ethers.js
+- Database Management: MySQL, Oracle PL/SQL, MongoDB, PostgreSQL
+- Blockchain Technologies: Smart contract development, Ethereum ecosystem, Solidity
+- System Architecture: VMware ESX, Microsoft Hyper-V
+- Containerization: Docker
+- Version Control: Git
+- Text Editor: Vim
 
-**Operating Systems**: RedHat, CentOS, Oracle Linux, Ubuntu Server, Windows 2008/2012/2016 
+---
 
-**Web Servers**: Apache, Weblogic, Nginx, Tomcat, Glassfish
+**Additional Experience:**
 
-**Environments**: Docker, Vagrant, vmWare ESXi, Virtualbox
+**Software and Systems Engineer**
+SMK IdealHost Ltd, February 2012 - October 2014
+- Designed and maintained frontend and backend systems for managing servers and datacenters, utilizing Java, JavaScript, bash scripting, and C++.
+
+**Freelance PHP Developer**
+Self-employed, January 2008 - December 2009
+- Developed custom websites and intranets for diverse clients, employing PHP and frontend technologies.
+
+**Alarm System and CCTV Commissioning Engineer**
+SAPELE Security Systems Ltd, February 2007 - November 2007
+- Installed and configured alarm systems and CCTV equipment for commercial and residential clients.
+
+---
+
+**References available upon request.**
+
+---
