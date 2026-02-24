@@ -266,6 +266,46 @@ li::marker {
   border-bottom-color: var(--accent);
 }
 
+/* ---------- Project Cards ---------- */
+.project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: border-color var(--transition);
+}
+
+.project-card:hover {
+  border-color: var(--accent);
+}
+
+.project-card h3 {
+  margin-top: 0;
+}
+
+.project-card h3 a {
+  border-bottom: none;
+}
+
+.project-card p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* ---------- Lab Entries ---------- */
+.lab-entry {
+  margin-bottom: 0;
+}
+
+.lab-entry h3 a {
+  border-bottom: none;
+}
+
+.lab-entry p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
 /* Landing About Section */
 .landing-about {
   max-width: 720px;
@@ -929,7 +969,8 @@ tr:hover td {
   }
 
   .landing-nav {
-    max-width: 620px;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 720px;
   }
 
   .wrapper {
