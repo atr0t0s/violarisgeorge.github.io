@@ -9,7 +9,7 @@ title: CV
 
 Nicosia, Cyprus
 
-[@atr0t0s](https://x.com/atr0t0s) | [Medium @gvio](https://medium.com/@gvio) | [violaris.org](http://violaris.org)
+[@atr0t0s](https://x.com/atr0t0s) | [Medium @gvio](https://medium.com/@gvio) | [violaris.org](https://violaris.org)
 
 ---
 
