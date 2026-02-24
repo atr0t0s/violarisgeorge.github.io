@@ -1,142 +1,175 @@
-## Resources
+# Resources
 
-Link digest curated for your reading pleasure. I collect the links and documents below as a database of things I have learnt or things I might need to refer to in the future. For suggestions, dead links or just to have a discussion, please [contact me](mailto:violarisgeorge@gmail.com).
+A reading list I maintain for myself and anyone else who finds it useful. Heavy on AI, LLMs, crypto, security, and the places where software meets finance.
 
-### Interesting findings
-- [How to make a mint: The cryptography of anonymous electronic cash](nsamint.html) - (NSA document)
+Last updated: February 2026
 
-### Bitcoin
-- [The Bitcoin White Paper](https://bitcoin.org/bitcoin.pdf) - Satoshi Nakamoto
-- [Mastering Bitcoin](https://unglueit-files.s3.amazonaws.com/ebf/05db7df4f31840f0a873d6ea14dcc28d.pdf) - Andreas Antonopoulos
-- [How does Bitcoin work?](http://panteracapital.com/wp-content/uploads/43517996c44ec1d3372ed7eb0a6138bd-pantera.primer.03.2014-af.pdf) - Pantera Capital
-- [Introduction to Digital Currencies, free MOOC](https://digitalcurrency.unic.ac.cy/free-introductory-mooc/) - University of Nicosia
-- [How the Bitcoin Protocol Actually Works](https://gotocon.com/dl/goto-cph-sept-2014/slides/JanMller_HowTheBitcoinProtocolActuallyWorks.pdf) - Jan Møller, Mycelium
-- [The Complete Satoshi](http://satoshi.nakamotoinstitute.org/) - Satoshi Nakamoto Institute
-- [Blockchain Demo](https://anders.com/blockchain/) - Anders Brownworth
-- [Lightning Network Summary](https://drive.google.com/open?id=1OQLRc3MiKoDhVi5PytbsBk7nRjtAzlvS) - lighnting.network website
-- [Lightning Network Paper](https://drive.google.com/open?id=1W2E3aOa66_s1JwGELpOowTZVbmV3hzOE) - J. Poon, T. Dryja, 2016
-- [List of Bitcoin software development tools: Awesome Bitcoin](https://github.com/igorbarinov/awesome-bitcoin) - Igor Barinov
-- [Ultimate Bitcoin Resources List](http://lopp.net/bitcoin.html) - Jameson Lopp
-- [Raspnode: Bitcoin full node + LND 0.4 Beta installation script for RaspberryPi](https://github.com/jochemin/raspnode)
-- [Pizza for (lightning) Bitcoins?](pizza-for-lightning-bitcoins.html) - Laszlo Hanyecz
+---
 
+## AI and LLMs
 
-### Cryptography
-- [Principles of Modern Cryptography](https://crypto.stanford.edu/~dabo/cryptobook/draft_0_2.pdf) - Dan Boneh, Victor Shoup
-- [New Directions in Cryptography](https://www-ee.stanford.edu/~hellman/publications/24.pdf) - Whitfield Diffie, Martin Hellman
-- [A digital signature based on a conventional encryption function](https://www.dropbox.com/s/uwsiungepm7xbjj/merkle%5B1%5D.pdf?dl=0)
-- [Cryptographic Apparatus and Method (Diffie-Hellman Key Exchange)](https://docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/US4200770.pdf) - Diffie, Hellman, Merkle
-- [Cryptographic Communications System and Method (RSA)](https://docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/US4405829.pdf)- Rivest, Shamir, Adleman
-- [An Efficient Protocol for Authenticated Key Agreement](http://cacr.uwaterloo.ca/techreports/1998/corr98-05.pdf) (Elliptic-Curve Diffie-Hellman, ECDH) - Law, Qu, Menezes, Solinas, Vanstone
-- [The Elliptic Curve Digital Signature Algorithm](http://residentrf.ucoz.ru/_ld/0/34_Digital_Signatu.pdf) - Johnson, Menezes
-- [Introduction to Cryptography](https://www.youtube.com/channel/UC1usFRN4LCMcfIV7UjHNuQg/videos "Video Lectures") - Video lectures by Prof. Christof Paar
+### Papers worth reading
 
-### Cypherpunks
-- [Underground](https://drive.google.com/open?id=0B-SzhzqoXgcPTHJ5MXhGVVhKZlU) - Suelette Dreyfus, Julian Assange
-- [Cyphernomicon](https://drive.google.com/open?id=0B-SzhzqoXgcPYXFzTjUtb0NzcGs) - Timothy C. May
-- [Cypherpunk Manifesto](https://drive.google.com/open?id=0B-SzhzqoXgcPYXFzTjUtb0NzcGs) - Eric Hughes
-- [The Cypherpunk Revolution](https://drive.google.com/open?id=0B-SzhzqoXgcPZzBTTTl2M3V4bzA) - Thomas Rid
-- [Cypherpunk Research](https://github.com/tombusby/cypherpunk-research) - Tom Busby
+The ones I keep coming back to, roughly in the order you'd want to read them if starting from scratch.
 
-### Programming
-- [Go Programming Language Specification](https://golang.org/ref/spec)
-- [Learn Go](https://github.com/golang/go/wiki/Learn)
-- [Go by Example](https://gobyexample.com/)
-- [Learn Go Programming](https://blog.learngoprogramming.com/)
-- [Learn Python](https://www.learnpython.org/) - Free interactive Python tutorial
-- [The Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/intro/learning/)
-- [Learn Python the Hard Way](https://learnpythonthehardway.org/)
-- [C++ Bjarne Stroustrup's Homepage](http://www.stroustrup.com/C++.html)
-- [Learn C++](http://www.learncpp.com/) - This is the internet's best website
-- [Shell Programming with Bash](http://matt.might.net/articles/bash-by-example/)
-- [Bash Scripting Tutorial](https://linuxconfig.org/bash-scripting-tutorial)
-- [PHP at the Core: A Hacker's Guide](http://php.net/manual/en/internals2.php)
-- [Free Interactive PHP Tutorial](http://www.learn-php.org/)
-- [PHP Manual](http://php.net/manual/en/)
-- [Advanced Java Programming](https://www.udemy.com/advanced-java-programming/) - Udemy
-- [Coding Glossary for Kids](https://www.smartadvocate.com/News/Blog/software-programming-and-coding-glossary-for-kids)
+- [Attention Is All You Need](https://arxiv.org/abs/1706.03762) — Vaswani et al., 2017. The Transformer paper. Everything since builds on this.
+- [BERT](https://arxiv.org/abs/1810.04805) — Devlin et al., 2018. Bidirectional pre-training; set the template for fine-tuning that lasted years.
+- [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165) — Brown et al., 2020. The GPT-3 paper. Showed that scale alone gets you surprisingly far without fine-tuning.
+- [Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361) — Kaplan et al., 2020. Loss scales predictably with model size, data, and compute. Changed how labs plan training runs.
+- [Training Compute-Optimal Large Language Models](https://arxiv.org/abs/2203.15556) — Hoffmann et al., 2022. The Chinchilla paper. Most models at the time were undertrained for their compute budget.
+- [Training language models to follow instructions with human feedback](https://arxiv.org/abs/2203.02155) — Ouyang et al., 2022. The RLHF paper. A 1.3B InstructGPT beat the 175B GPT-3 on human preference.
+- [Constitutional AI: Harmlessness from AI Feedback](https://arxiv.org/abs/2212.08073) — Bai et al., 2022. Anthropic's approach to alignment using AI feedback guided by a written constitution.
+- [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903) — Wei et al., 2022. Asking the model to show its work actually makes it better at hard problems.
+- [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401) — Lewis et al., 2020. The original RAG paper. Combines what the model knows with what it can look up.
+- [GPT-4 Technical Report](https://arxiv.org/abs/2303.08774) — OpenAI, 2023. Capabilities, safety evals, multimodal inputs.
 
-### Security
-- [CISSP: Certified Information Systems Security Professions (Study Guide)](https://drive.google.com/file/d/1JkIGC9V-yZG29hGPnaSMOj9YfwCWsyAN/view?usp=sharing)
-- [Guide to Malware Incident Prevention and Handling for Desktops and Laptops](https://drive.google.com/file/d/1kIgolZAvAmcs3xc3SCDT_cUEHNh28nda/view?usp=sharing) - NIST
-- [The Basic Building Blocks of Malware](https://drive.google.com/open?id=1PMEyHAkxsBzEhqh9PGprfEdXG9fgB3jw) - J. Shin, D. F. Spears, University of Wyoming
-- [Network Intrusion Detection. IEEE Network, 1994](https://drive.google.com/open?id=175gOUqy8xouuUWr85hFhSZhsdpRuTDif) - B. Mukherjee, L. T. Heberlein, K. N. Levitt
-- [Cisco Network-Based Intrusion Detection - Functionalities and Configuration](https://drive.google.com/open?id=1KZTNY2NkQVpoNo8h0CpKeQ1meMwQcCMC)
-- [Data Mining for Network Intrusion Detection:  How to Get Started. The MITRE Corporation.](https://drive.google.com/open?id=1TI02bncUIZvxReF_mZPv_yY_yyYLM4-f) - E. Bloedorn,  A. D. Christiansen,  W. Hill, C. Skorupka,  L. M. Talbot,  J. Tivel
-- [Network Intrusion Detection Systems - False Positive Reduction Through Anomaly Detection](https://drive.google.com/open?id=1J3Ke7vHXo-kPfilFSK0X02q2dwtrrRF9) - E. Zambon, D. Bolzoni
-- [Insertion, Evasion, and Denial of Service: Eluding Network Intrusion Detection](https://drive.google.com/open?id=19FIodZJyERgiT04GTwOWl5tuZi-hVZzp) - T. H. Ptacek, T. N. Newsham, Secure Networks, Inc. 1998.
-- [Meltdown Attack](https://drive.google.com/open?id=1m31KmBtY-n89sPUSsZvhYHgE_aiYfeU6) - M. Lipp, M. Schwarz, D. Gruss, T. Prescher, W. Haas, S. Mangard, P. Kocher, D. Genkin, Y. Yarom, M. Hamburg
-- [Spectre Attacks: Exploiting Speculative Execution](https://drive.google.com/open?id=1-M3ugPWnkNbemUMLpi2tp0uwCnQavSJN) - P. Kocher, D. Genkin, D. Gruss, W. Haas, M. Hamburg, M. Lipp, S. Mangard, T. Prescher, M. Schwarz, Y. Yarom
-- [A Red Teamer's guide to pivoting](https://artkond.com/2017/03/23/pivoting-guide/) - Artem Kordatenko
-- [How to Build a Successful Information Security Career](https://danielmiessler.com/blog/build-successful-infosec-career/) - Daniel Miessler
-- [Awesome Red Teaming](https://github.com/yeyintminthuhtut/Awesome-Red-Teaming) - Ultimate Red Teams Resource List
-- [Pentest Tips and Tricks](https://jivoi.github.io/2015/07/01/pentest-tips-and-tricks/) - EK
-- [Fuzzy Security](http://www.fuzzysecurity.com/)
+### Agent frameworks
 
-#### Security - Penetration Testing Practice
-- [HackTheBox](https://www.hackthebox.eu/)
-- [VulnHub](https://www.vulnhub.com/)
-- [Exploit-Exercises](https://exploit-exercises.com/)
-- [ShellterLabs](https://shellterlabs.com/en/)
+- [LangChain](https://github.com/langchain-ai/langchain) / [LangGraph](https://github.com/langchain-ai/langgraph) — The most widely used agent framework. LangGraph is the newer, graph-based approach for stateful agents.
+- [CrewAI](https://github.com/crewAIInc/crewAI) — Multi-agent orchestration where agents have defined roles and collaborate. Independent of LangChain.
+- [Microsoft AutoGen](https://github.com/microsoft/autogen) — Conversation-based multi-agent framework from Microsoft Research.
+- [OpenAI Agents SDK](https://github.com/openai/openai-agents-python) — Released March 2025. Lightweight Python framework for tool use, handoffs, and guardrails.
+- [LlamaIndex](https://github.com/run-llama/llama_index) — Best for document ingestion, RAG pipelines, and agentic workflows over your own data.
+- [Model Context Protocol (MCP)](https://modelcontextprotocol.io) — Anthropic's open standard for connecting LLMs to external tools and data. Adopted by OpenAI, Google, JetBrains, and others.
 
-### Tools
-- [KeepNote](http://keepnote.org/) - Best note keeping tool for documentation and organization
-- [Immunity Debugger](http://www.immunityinc.com/products/debugger/) - Debugger that can be used to write exploits, analyze malware and reverse engineer binary files.
-- [Metasploit Framework](https://www.metasploit.com/download) - Mega tool for vulnerability scanning, exploit execution and payload deployment
-- [Nmap](https://nmap.org/) - Powerful network and host scanner
-- [Ettercap](http://www.ettercap-project.org/) - Man in the middle attack tool 
-- [Bettercap](https://www.bettercap.org/) - Man in the middle attack and credential sniffing tool (a.k.a. Ettercap on steroids, or Ninja Etercap)
-- [mitmproxy](https://mitmproxy.org/) - HTTPS proxy for man in the middle attacks
-- [Wireshark](https://www.wireshark.org/) - Network packet and protocol analyzer
-- [w3af](http://w3af.org/) - Web application security audit framework
-- [Burpsuite](https://portswigger.net/burp/) - Web application vulnerability scanner
-- [Cain & Abel](http://www.oxid.it/cain.html) - Windows password cracker
-- [John the Ripper](http://www.openwall.com/john/) - Password cracking
-- [sqlninja](http://sqlninja.sourceforge.net/) - SQL Server injection and takeover tool
-- [BeEF](http://beefproject.com/) - Browswer exploitation framework
-- [Nikto](https://cirt.net/nikto2) - Web server vulnerability scanner
+### Memory and retrieval
+
+- [Letta](https://github.com/letta-ai/letta) (formerly MemGPT) — Stateful agents with self-editing persistent memory. The research project that became a production framework.
+- [Qdrant](https://qdrant.tech) — Open-source vector database. Fast, good filtering, free tier.
+- [Pinecone](https://www.pinecone.io) — Managed vector database. Minimal ops if you don't want to run your own.
+- [Weaviate](https://github.com/weaviate/weaviate) — Open-source with built-in hybrid search (vector + BM25).
+- [Milvus](https://github.com/milvus-io/milvus) — Built for billion-scale vector search.
+- [Chroma](https://github.com/chroma-core/chroma) — Embedded-first. Good for local prototyping and small RAG pipelines.
+
+### Developer tools
+
+- [Claude Code](https://github.com/anthropics/claude-code) — Terminal-native agentic coding. Understands full codebases, runs commands, manages git.
+- [Cursor](https://cursor.com) — AI-first code editor forked from VS Code. 200K context window, codebase-aware completions.
+- [Windsurf](https://windsurf.com/editor) — Agentic IDE with auto-context discovery. Good for monorepos.
+- [GitHub Copilot](https://github.com/features/copilot) — AI pair programmer in VS Code, JetBrains, etc. Now includes autonomous agent mode.
+- [Hugging Face](https://huggingface.co) — Where the open-source models live. The [Transformers library](https://huggingface.co/docs/transformers) and [LLM Course](https://huggingface.co/learn/llm-course) are good starting points.
+- [Weights & Biases](https://wandb.ai) — Experiment tracking and model registry. The standard for anyone fine-tuning or managing models in production.
+
+### Blogs and newsletters
+
+- [Simon Willison](https://simonwillison.net) — Covers practical LLM usage and AI tooling with more depth and honesty than anyone else writing regularly.
+- [Lilian Weng](https://lilianweng.github.io) — Long-form technical posts on architectures, agents, and RLHF. Her [LLM Powered Autonomous Agents](https://lilianweng.github.io/posts/2023-06-23-agent/) post is still a canonical reference.
+- [Chip Huyen](https://huyenchip.com/blog) — ML systems design, AI engineering, MLOps. Author of "AI Engineering" (O'Reilly, 2025).
+- [The Batch](https://www.deeplearning.ai/the-batch) — Andrew Ng's weekly AI newsletter. Good signal-to-noise ratio.
+- [Andrej Karpathy](https://karpathy.ai) — His [Zero to Hero](https://karpathy.ai/zero-to-hero.html) course builds neural networks from scratch and ends with a GPT. Nobody explains this stuff better.
+- [Anthropic Research](https://www.anthropic.com/research) — Papers, model cards, and the Responsible Scaling Policy.
+
+---
+
+## AI and Finance
+
+### Research
+
+- [From Deep Learning to LLMs: A Survey of AI in Quantitative Investment](https://arxiv.org/abs/2503.21422) — March 2025. Comprehensive survey covering the full pipeline from predictive modeling to agent-based automation.
+- [FinGPT: Open-Source Financial Large Language Models](https://arxiv.org/abs/2306.06031) — Lightweight, open alternative to BloombergGPT.
+- [FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading](https://arxiv.org/abs/2011.09607) — The paper behind the FinRL framework. DQN, DDPG, PPO, SAC across multiple markets.
+- [ACM ICAIF Proceedings](https://dl.acm.org/doi/proceedings/10.1145/3768292) — The main academic venue for AI in finance. The 2025 edition covers LLM market regime forecasting, adversarial RL for market making, and more.
+
+### Open-source trading tools
+
+- [FinRL](https://github.com/AI4Finance-Foundation/FinRL) — Deep RL framework for stock trading. Supports PPO, DDPG, SAC, and others.
+- [FinGPT](https://github.com/AI4Finance-Foundation/FinGPT) — Open-source financial LLMs. Sentiment analysis, news summarization, return forecasting.
+- [QuantConnect / LEAN](https://github.com/QuantConnect/Lean) — Open-source algo trading engine. Python and C#, cloud or local.
+- [Backtrader](https://github.com/mementum/backtrader) — Event-driven backtesting in Python. Supports live trading through Interactive Brokers and Oanda.
+- [Freqtrade](https://github.com/freqtrade/freqtrade) — Crypto trading bot with backtesting and ML strategy optimization.
+- [Zipline](https://github.com/quantopian/zipline) — The backtesting library that powered Quantopian. Still widely used for strategy research.
+- [QuantLib](https://www.quantlib.org/) — The standard C++ library for derivatives pricing and risk management. Python bindings available.
+- [Awesome Quant](https://github.com/wilsonfreitas/awesome-quant) — Curated list of quant finance libraries across Python, R, Julia, and more. Good bookmark.
+
+### Data APIs
+
+- [Alpha Vantage](https://www.alphavantage.co/) — Free tier (25 calls/day), extensive indicators, NASDAQ vendor. Good for research.
+- [Twelve Data](https://twelvedata.com/) — Real-time WebSocket ticks, multi-asset. Clean APIs.
+- [Polygon.io](https://polygon.io/) — Low-latency production data. Preferred for execution systems.
+- [yfinance](https://github.com/ranaroussi/yfinance) — Python wrapper for Yahoo Finance. Free historical data. Research only, not production.
+- [Financial Modeling Prep](https://financialmodelingprep.com/developer/docs/) — Fundamentals, DCF, earnings calendars. Generous free tier.
+- [FRED](https://fred.stlouisfed.org/) — Macro and economic time series from the St. Louis Fed.
+
+### Books
+
+- **Advances in Financial Machine Learning** — Marcos Lopez de Prado. The practitioner textbook for ML in finance. Feature engineering, labeling, backtesting pitfalls.
+- **Machine Learning for Asset Managers** — Lopez de Prado. Shorter companion covering clustering, feature importance, and portfolio construction.
+- **Python for Algorithmic Trading** — Yves Hilpisch. End-to-end strategy development, backtesting, and deployment.
+- [Lopez de Prado's lecture notes](https://www.quantresearch.org/Lectures.htm) — Free slides from his Cornell course. Good alternative if you want the ideas without buying the books.
+
+### Blogs and communities
+
+- [Quantocracy](https://quantocracy.com/) — Aggregator of the best quant trading blog posts. Fastest way to see what the community is reading.
+- [QuantStart](https://www.quantstart.com/) — Educational articles on algo trading, ML, and backtesting in Python.
+- [AI4Finance Foundation](https://github.com/AI4Finance-Foundation) — The org behind FinRL and FinGPT. Worth watching on GitHub.
+- [Ernie Chan's blog](http://epchan.blogspot.com/) — Practitioner blog from the author of "Algorithmic Trading." Recent posts cover AI and corrective ML for forex.
+
+---
+
+## Blockchain and Crypto
+
+Trimmed down from the original version of this page. Kept the stuff that still matters.
+
+- [Bitcoin Whitepaper](https://bitcoin.org/bitcoin.pdf) — Satoshi Nakamoto's 9 pages. Still the clearest explanation of how and why.
+- [Ethereum Whitepaper](https://ethereum.org/whitepaper/) — Buterin's 2014 vision for a programmable blockchain, with annotations on what changed since.
+- [Mastering Bitcoin](https://github.com/bitcoinbook/bitcoinbook) — Antonopoulos. The technical deep-dive. 3rd edition (2023) is free under Creative Commons.
+- [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) — Antonopoulos and Wood. Free, comprehensive, still the best single-volume reference.
+- [Ethereum Developer Docs](https://ethereum.org/developers/docs/) — Official reference for EVM, gas, accounts, consensus, and smart contract standards.
+- [DeFi Specialization — Duke University](https://www.coursera.org/specializations/decentralized-finance-duke) — Campbell Harvey's four-course Coursera specialization. The most rigorous DeFi education available.
+- [Uniswap Protocol Docs](https://docs.uniswap.org/) — Useful primary source for understanding how AMMs and DeFi liquidity actually work.
+- [The Complete Satoshi](http://satoshi.nakamotoinstitute.org/) — All of Satoshi Nakamoto's known writings, emails, and forum posts.
+- [Jameson Lopp's Bitcoin Resources](https://lopp.net/bitcoin.html) — Comprehensive and regularly updated.
+- [Trail of Bits Blog](https://blog.trailofbits.com/) — One of the top smart contract audit firms. Covers blockchain security and exploit techniques.
+
+---
+
+## Security
+
+### References
+
+- [OWASP Top Ten 2025](https://owasp.org/Top10/2025/) — The baseline web application security risk list.
+- [OWASP Top 10 for LLM Applications 2025](https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/) — AI-specific attack surfaces: prompt injection, training data poisoning, etc. Worth reading if you're building anything with LLMs.
+- [PortSwigger Web Security Academy](https://portswigger.net/web-security) — Free, hands-on web security training with interactive labs. From the Burp Suite team.
+- [PortSwigger Research Blog](https://portswigger.net/blog) — Where new vulnerability classes get published first. HTTP request smuggling, web cache poisoning, DOM clobbering all came from here.
+
+### Practice
+
+- [Hack The Box](https://www.hackthebox.com/) — The main competitive hacking platform. Active machines, CTFs, career-path labs.
+- [TryHackMe](https://tryhackme.com/) — More structured and beginner-friendly than HTB. Good for getting started.
+- [CTFtime](https://ctftime.org/) — Directory for CTF competitions worldwide. Past challenges, upcoming events, team writeups.
 
 ### Blogs
-- [Schneier on Security](https://www.schneier.com/)
-- [Briston Cryptography Blog](http://bristolcrypto.blogspot.com.cy/)
-- [Cryptofails - Examples of bad cryptography](http://www.cryptofails.com/)
-- [Elliptic News](https://ellipticnews.wordpress.com/)
-- [Sockpuppet](https://sockpuppet.org/blog/archives/)
-- [A Few thoughts on Cryptographic Engineering - Matt Green's blog](https://blog.cryptographyengineering.com/)
-- [Microfocus](https://www.voltage.com/blog/) - Data Security blog
-- [Stack Overflow blog](https://stackoverflow.blog/)
-- [Jeff Atwood's blog](https://blog.codinghorror.com/)
-- [Daniel Miessler's blog](https://danielmiessler.com)
-- [Red Teams](https://redteams.net)
-- [Dark Reading](https://www.darkreading.com/Default.asp)
-- [Harmj0y](http://www.harmj0y.net/blog/) - Security at the misfortune of others
-- [SANS Pen-testing blog](https://pen-testing.sans.org/blog/)
-- [Small Team Tactics](https://smallteamtactics.com/)
-- [Social Egineer](https://www.social-engineer.org/blog/)
-- [Red Team Analysis Society](https://www.redanalysis.org/about-2/)
-- [High on Coffee](https://highon.coffee) - A site about Penetration Testing & Security
-- [SecuritySift](https://www.securitysift.com/)
-- [g0tmi1k](https://blog.g0tmi1k.com/)
-- [Pentest blog](https://pentest.blog/)
-- [Abatchy's Security Blog](https://www.abatchy.com/)
 
-### Audiovisual
-- [SecurityTube](http://www.securitytube.net/) - Huge collection of security and hacking related videos
+- [Schneier on Security](https://www.schneier.com/) — Bruce Schneier on security, privacy, and policy. Been publishing for decades, still going.
+- [Krebs on Security](https://krebsonsecurity.com/) — Brian Krebs. Investigative journalism on cybercrime and breaches.
+- [Daniel Miessler](https://danielmiessler.com) — Security, technology, and AI.
 
-### Forums
-- [Bitcoin Subreddit](https://reddit.com/r/bitcoin)
-- [BTC Subreddit](https://reddit.com/r/btc)
-- [Bitcointalk.org - Forum started by Satoshi](https://bitcointalk.org)
-- [BTC Warriors](http://btcwarriors.com/)
+---
 
-### Products
-- [Pwnie Express](https://www.pwnieexpress.com/)
-- [Hakshop](https://hakshop.com/) - by Hak5
+## Cryptography
 
-### Documentaries
-- [Banking on Bitcoin](https://gostream.is/film/banking-on-bitcoin-18789/watching.html?ep=704633)
-- [Bitcoins in Argentina](https://www.youtube.com/watch?v=e__m-w4N7NI)
-- [Bitcoin in Uganda](https://www.youtube.com/watch?v=BrRXP1tp6Kw)
-- [Life on Bitcoin](https://www.youtube.com/watch?v=xRtC_SZfSk8)
-- [The Rise and Rise of Bitcoin](https://www.youtube.com/watch?v=rkoXmwvREmk)
-- [Bitcoin: The end of money as we know it](https://www.youtube.com/watch?v=lUF6klWuB38)
+- [Cryptography I — Dan Boneh](https://www.coursera.org/learn/crypto) — Stanford course on Coursera. Stream ciphers, block ciphers, MACs, public-key, digital signatures. Free to audit. The best intro available.
+- [A Graduate Course in Applied Cryptography](https://toc.cryptobook.us/) — Boneh and Shoup. Free textbook. Graduate-level with formal proofs.
+- [New Directions in Cryptography](https://www-ee.stanford.edu/~hellman/publications/24.pdf) — Diffie and Hellman, 1976. The paper that started public-key cryptography.
+- [NIST Post-Quantum Cryptography Standards](https://www.nist.gov/pqc) — Finalized ML-KEM, ML-DSA, and SLH-DSA standards in August 2024. Required reading if you're doing any crypto system design now.
+- [The Illustrated TLS 1.3](https://tls13.xargs.org/) — Interactive byte-level walkthrough of a TLS 1.3 handshake. Best way to understand how transport security works in practice.
+
+---
+
+## Cypherpunks
+
+Kept these because the history matters.
+
+- [Cypherpunk Manifesto](https://www.activism.net/cypherpunk/manifesto.html) — Eric Hughes, 1993.
+- [Cyphernomicon](https://nakamotoinstitute.org/library/cyphernomicon/) — Timothy C. May.
+- [Cypherpunk Research](https://github.com/tombusby/cypherpunk-research) — Tom Busby's collection of primary sources.
+
+---
+
+## Programming
+
+- [Go by Example](https://gobyexample.com/) — Annotated example programs in Go.
+- [Go Language Spec](https://golang.org/ref/spec) — The official specification.
+- [The Hitchhiker's Guide to Python](https://docs.python-guide.org/) — Opinionated guide to Python best practices.
+- [Stack Overflow Blog](https://stackoverflow.blog/) — Still worth reading for the engineering culture pieces.
+- [Coding Horror](https://blog.codinghorror.com/) — Jeff Atwood. Software engineering, culture, and the human side of building things.
