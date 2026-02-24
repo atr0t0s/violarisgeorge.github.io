@@ -1,24 +1,14 @@
 # About me
-- CTO [@HatchworksVC](https://twitter.com/HatchworksVC)
-- Tech Lead [@SkillGamingcom](https://twitter.com/SkillgamingCom)
-- Technical Advisor [@Phoenixapp2023](https://twitter.com/Phoenixapp2023)
+I'm George, CTO at Hatchworks VC in Nicosia, Cyprus. I build AI products — **Zeig.ai**, which does financial analysis through conversation using multiple LLMs and vision AI, and **Spectre.ai**, a memory layer that gives AI agents persistent recall across sessions. Spectre ships with plugins for Claude Code and OpenCode today, with more on the way.
 
-🚀 With 15+ years of experience across tech, finance, insurance, venture capital, and private equity, I'm your go-to expert in software engineering, technology, and team leadership. From JavaScript to Go, databases to APIs, I've driven innovation and delivered impactful solutions throughout my career.
+I've been writing software for about 15 years, and the stack has changed a few times. Started with PHP freelancing and alarm system installations (everyone has an origin story), moved through server infrastructure and datacenter work, spent five years building insurance systems, then shifted into blockchain gaming and DeFi. Now it's mostly LLMs, agent orchestration, and figuring out how to make AI tools that are actually useful rather than just impressive.
 
-🎓 I bring a solid blend of theory and practice to the table. Currently, as the CTO at [Hatchworks VC](https://hatchworksvc.com), Tech Lead at [SkillGaming](https://skillgaming.com), and Technical Advisor at [Phoenix](https://phoenixapp.io), I'm spearheading teams focused on hyper-casual mini skill games, cryptocurrency exchanges and blockchain technologies.
+I also advise Phoenix, a DeFi liquidity provider, on protocol architecture and smart contracts.
 
-💡 I believe in teamwork, reliability, authenticity, and integrity—values I instill in every project. Passionate about the web's boundless possibilities for expression and innovation, I'm dedicated to helping organizations and individuals realize their goals.
+I write occasionally about what I'm building and what breaks along the way — you can find that on [Medium](https://medium.com/@gvio). Recent pieces include "The Model That Never Made a Trade" and "What We Learned Building Agent Memory at Scale."
 
-🔍 Committed to staying ahead of technological advancements, I leverage communication, positivity, and a forward-thinking mindset to drive positive change. Explore my curated collection of resources on my website, reflecting my passion for continuous learning.
+On the academic side, I have a couple of peer-reviewed papers on P2P protocols and an out-of-band authentication model, from a time when I thought I might end up in research. I didn't, but the papers are still out there.
 
-🌟 Join me on a journey of exploration, innovation, and growth in the ever-evolving landscape of technology. Let's build a brighter future—one line of code at a time. Follow me for insights, updates, and inspiration!
+I'm also the proud dad of two awesome twin boys.
 
-- 🔭 I’m currently working on [Vio](https://github.com/0xAtrotos/vio-boilerplate), an open source project spearheaded and resourced by [Elicon](https://elicon.io)
-- 🌱 I’m currently learning Rust
-- 👯 I’m looking to collaborate on open source projects
-- 🤔 I’m looking for help with adding Vio features
-- 💬 Ask me about TypeScript
-- 📫 How to reach me: [@atr0t0s on X](https://x.com/atr0t0s)
-- ⚡ Fun fact: I am the proud dad of two awesome twin boys!
-
-**[Read my resume](https://github.com/0xAtrotos/0xAtrotos/blob/main/RESUME.md)**
+[Resume](https://github.com/0xAtrotos/0xAtrotos/blob/main/RESUME.md) | [@atr0t0s](https://x.com/atr0t0s) | [Blog](https://medium.com/@gvio)
