@@ -72,6 +72,15 @@
   color: #fff;
 }
 
+[data-theme="light"] .post-list .post-title,
+[data-theme="light"] .nav-logo {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .nav-logo:hover {
+  color: var(--accent);
+}
+
 /* ---------- CSS Reset / Base ---------- */
 *,
 *::before,
