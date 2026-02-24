@@ -54,6 +54,8 @@
   var history = [];
   var historyIndex = -1;
   var savedInput = '';
+  var matrixRunning = false;
+  var pingRunning = false;
 
   // ─── DOM References ──────────────────────────────────────────────────
   var toggle = document.getElementById('terminal-toggle');
@@ -62,14 +64,22 @@
   var body = document.getElementById('terminal-body');
   var input = document.getElementById('terminal-input');
 
-  if (!toggle || !panel || !input) return;
+  if (!toggle || !panel || !closeBtn || !body || !input) return;
 
   // ─── Helpers ─────────────────────────────────────────────────────────
 
   function escapeHTML(str) {
-    var div = document.createElement('div');
-    div.textContent = str;
-    return div.innerHTML;
+    return str.replace(/&/g, '&amp;')
+              .replace(/</g, '&lt;')
+              .replace(/>/g, '&gt;')
+              .replace(/"/g, '&quot;');
+  }
+
+  function printMultiLine(text, cls) {
+    var lines = text.split('\n');
+    for (var i = 0; i < lines.length; i++) {
+      printLine(lines[i], cls || '');
+    }
   }
 
   function scrollToBottom() {
@@ -253,10 +263,7 @@
       printLine('cat: ' + args[0] + ': Is a directory', 'error');
       return;
     }
-    var lines = node.split('\n');
-    for (var i = 0; i < lines.length; i++) {
-      printLine(lines[i], '');
-    }
+    printMultiLine(node);
   };
 
   commands.pwd = function () {
@@ -266,19 +273,11 @@
   // ─── Info Shortcuts ──────────────────────────────────────────────────
 
   commands.about = function () {
-    var content = getNode('~/about.txt');
-    var lines = content.split('\n');
-    for (var i = 0; i < lines.length; i++) {
-      printLine(lines[i], '');
-    }
+    printMultiLine(getNode('~/about.txt'));
   };
 
   commands.skills = function () {
-    var content = getNode('~/skills.txt');
-    var lines = content.split('\n');
-    for (var i = 0; i < lines.length; i++) {
-      printLine(lines[i], '');
-    }
+    printMultiLine(getNode('~/skills.txt'));
   };
 
   commands.projects = function () {
@@ -287,10 +286,7 @@
     var dir = getNode('~/projects');
     var keys = Object.keys(dir).sort();
     for (var i = 0; i < keys.length; i++) {
-      var lines = dir[keys[i]].split('\n');
-      for (var j = 0; j < lines.length; j++) {
-        printLine(lines[j], '');
-      }
+      printMultiLine(dir[keys[i]]);
       if (i < keys.length - 1) printBlank();
     }
   };
@@ -301,20 +297,13 @@
     var dir = getNode('~/blog');
     var keys = Object.keys(dir).sort();
     for (var i = 0; i < keys.length; i++) {
-      var lines = dir[keys[i]].split('\n');
-      for (var j = 0; j < lines.length; j++) {
-        printLine(lines[j], '');
-      }
+      printMultiLine(dir[keys[i]]);
       if (i < keys.length - 1) printBlank();
     }
   };
 
   commands.contact = function () {
-    var content = getNode('~/contact.txt');
-    var lines = content.split('\n');
-    for (var i = 0; i < lines.length; i++) {
-      printLine(lines[i], '');
-    }
+    printMultiLine(getNode('~/contact.txt'));
   };
 
   commands.whoami = function () {
@@ -389,6 +378,8 @@
   };
 
   commands.matrix = function () {
+    if (matrixRunning) return;
+    matrixRunning = true;
     var canvas = document.createElement('canvas');
     canvas.className = 'terminal-matrix-canvas';
     canvas.style.position = 'absolute';
@@ -435,6 +426,7 @@
       } else {
         cancelAnimationFrame(animId);
         if (canvas.parentNode) canvas.parentNode.removeChild(canvas);
+        matrixRunning = false;
         printLine('Wake up, Neo...', 'success');
         scrollToBottom();
       }
@@ -449,6 +441,8 @@
   };
 
   commands.ping = function (args) {
+    if (pingRunning) return;
+    pingRunning = true;
     var host = args.length > 0 ? args[0] : 'violaris.org';
     var count = 0;
 
@@ -462,6 +456,7 @@
         printLine('^C', '');
         printLine('--- ' + host + ' ping statistics ---', '');
         printLine('just kidding, this is a static site.', 'accent');
+        pingRunning = false;
         scrollToBottom();
       }
     }
@@ -597,6 +592,7 @@
     }
 
     history.push(trimmed);
+    if (history.length > 100) history.shift();
     historyIndex = -1;
     savedInput = '';
 
@@ -606,7 +602,7 @@
     var cmd = parts[0].toLowerCase();
     var args = parts.slice(1);
 
-    if (commands[cmd]) {
+    if (commands.hasOwnProperty(cmd)) {
       commands[cmd](args);
     } else {
       printLine(cmd + ': command not found. Type \'help\' for available commands.', 'error');
