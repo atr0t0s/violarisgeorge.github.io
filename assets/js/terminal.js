@@ -349,7 +349,7 @@
       'Uptime: since 2024',
       'Packages: 7 sections',
       'Shell: terminal.js',
-      'Theme: Dark Premium [cyan]',
+      'Theme: ' + (document.documentElement.getAttribute('data-theme') === 'light' ? 'Light Warm' : 'Dark Premium') + ' [cyan]',
       'Font: JetBrains Mono / Inter'
     ];
     var pad = '                                 ';
