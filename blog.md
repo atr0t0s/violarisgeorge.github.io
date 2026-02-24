@@ -3,7 +3,7 @@ layout: default
 title: Blog
 ---
 
-## Blog
+## Articles & Writing
 
 Writing about what I'm building and what breaks along the way. All posts live on [Medium](https://medium.com/@gvio).
 
