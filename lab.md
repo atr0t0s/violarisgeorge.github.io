@@ -11,6 +11,16 @@ Architecture decisions from production systems. No proprietary code -- just the 
 
 <div class="lab-entry" markdown="1">
 
+### [Building a vim editor as a pure state machine](lab-obsitui-vim-editor.html)
+
+How I implemented a vim-style editor in 867 lines of TypeScript using pure functions and immutable state. Every operation -- motions, operators, undo, dot repeat -- is a state machine transition with no side effects.
+
+</div>
+
+---
+
+<div class="lab-entry" markdown="1">
+
 ### [Orchestrating multi-model AI pipelines](lab-multi-model-pipelines.html)
 
 How I use one LLM as an orchestrator that plans which tools to invoke, runs them in parallel, and synthesizes results through streaming. Why different models handle different jobs, and why rigid function-calling schemas weren't flexible enough.
