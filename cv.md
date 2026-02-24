@@ -6,6 +6,7 @@ title: CV
 **George Violaris**
 
 **CTO - AI Systems & Software Engineering**
+
 Nicosia, Cyprus
 [@atr0t0s](https://x.com/atr0t0s) | [Medium @gvio](https://medium.com/@gvio) | [violaris.org](http://violaris.org)
 
