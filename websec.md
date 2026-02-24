@@ -1,3 +1,9 @@
+---
+layout: article
+title: Web Security and Unique User Tracking
+published: false
+---
+
 ## Web Security and Unique User Tracking
 ### Tracking Web Users via a Proxy Server with Unique Cookie Key Analysis
 

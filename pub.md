@@ -1,3 +1,8 @@
+---
+layout: default
+title: Research
+---
+
 ## Publications
 
 The following are my peer reviewed research publications.

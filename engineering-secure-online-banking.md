@@ -1,3 +1,9 @@
+---
+layout: article
+title: Engineering Secure Online Banking
+published: false
+---
+
 ## Engineering Secure Online Banking
 
 <a href="https://twitter.com/intent/tweet?screen_name=ViolarisGeorge&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-related="ViolarisGeorge" data-show-count="false">Tweet to @ViolarisGeorge</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>

@@ -1,3 +1,9 @@
+---
+layout: article
+title: "NSA: The Cryptography of Anonymous Electronic Cash"
+published: false
+---
+
 ## HOW TO MAKE A MINT: THE CRYPTOGRAPHY OF ANONYMOUS ELECTRONIC CASH
 
 The following document is NSA's take on cryptographic currency. Many concepts found within this document are eerily close to Bitcoin. This is a mirror, the original was found at http://groups.csail.mit.edu/mac/classes/6.805/articles/money/nsamint/nsamint.htm

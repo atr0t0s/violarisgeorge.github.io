@@ -1,3 +1,9 @@
+---
+layout: article
+title: Network Management Overview
+published: false
+---
+
 ## Network Management Overview
 
 [Tweet to @ViolarisGeorge](https://twitter.com/intent/tweet?screen_name=ViolarisGeorge&ref_src=twsrc%5Etfw)

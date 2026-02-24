@@ -1,3 +1,9 @@
+---
+layout: article
+title: Simple Blockchain Logic in Go
+published: false
+---
+
 ## Simple blockchain logic in Go
 <a href="https://twitter.com/intent/tweet?screen_name=ViolarisGeorge&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-related="ViolarisGeorge" data-show-count="false">Tweet to @ViolarisGeorge</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
