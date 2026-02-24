@@ -229,16 +229,11 @@ li::marker {
   border-bottom: none;
 }
 
-.nav-card .card-icon {
-  font-size: 1.6rem;
-  margin-bottom: 0.5rem;
-}
-
-.nav-card .card-label {
+.nav-card .nav-card-title {
   font-size: 0.95rem;
 }
 
-.nav-card .card-desc {
+.nav-card .nav-card-desc {
   font-size: 0.75rem;
   color: var(--text-muted);
   font-family: var(--font-body);
@@ -869,7 +864,7 @@ tr:hover td {
    ========================================================================== */
 @media (min-width: 768px) {
   .landing-nav {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
   }
 
   .nav-hamburger {
