@@ -62,6 +62,8 @@
   var body = document.getElementById('terminal-body');
   var input = document.getElementById('terminal-input');
 
+  if (!toggle || !panel || !input) return;
+
   // ─── Helpers ─────────────────────────────────────────────────────────
 
   function escapeHTML(str) {
