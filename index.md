@@ -1,3 +1,8 @@
+---
+layout: landing
+title: George Violaris - CTO & Software Engineer
+---
+
 # About me
 I'm George, CTO at Hatchworks VC in Nicosia, Cyprus. I build AI products — **Zeig.ai**, which does financial analysis through conversation using multiple LLMs and vision AI, and **Spectre.ai**, a memory layer that gives AI agents persistent recall across sessions. Spectre ships with plugins for Claude Code and OpenCode today, with more on the way.
 

@@ -1,3 +1,9 @@
+---
+layout: default
+title: Writing
+published: false
+---
+
 ## Articles
 
 - 21/03/2018 » [Concepts of Information Security](infosec-concepts.html#concepts-of-information-security)

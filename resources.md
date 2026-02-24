@@ -1,3 +1,8 @@
+---
+layout: default
+title: Resources
+---
+
 # Resources
 
 A reading list I maintain for myself and anyone else who finds it useful. Heavy on AI, LLMs, crypto, security, and the places where software meets finance.

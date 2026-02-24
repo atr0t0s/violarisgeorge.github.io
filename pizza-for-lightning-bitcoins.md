@@ -1,3 +1,9 @@
+---
+layout: article
+title: Pizza for Lightning Bitcoins
+published: false
+---
+
 ## [Lightning-dev] Pizza for (lightning) bitcoins?
 
 Laszlo Hanyecz [laszlo at heliacal.net](mailto:lightning-dev@lists.linuxfoundation.org)
