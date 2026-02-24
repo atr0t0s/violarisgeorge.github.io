@@ -5,7 +5,7 @@ I've been writing software for about 15 years, and the stack has changed a few t
 
 I also advise Phoenix, a DeFi liquidity provider, on protocol architecture and smart contracts.
 
-I write occasionally about what I'm building and what breaks along the way — you can find that on [Medium](https://medium.com/@gvio). Recent pieces include "The Model That Never Made a Trade" and "What We Learned Building Agent Memory at Scale."
+I write occasionally about what I'm building and what breaks along the way - you can find that on [Medium](https://medium.com/@gvio). Recent pieces include "The Model That Never Made a Trade" and "What We Learned Building Agent Memory at Scale."
 
 On the academic side, I have a couple of peer-reviewed papers on P2P protocols and an out-of-band authentication model, from a time when I thought I might end up in research. I didn't, but the papers are still out there.
 
