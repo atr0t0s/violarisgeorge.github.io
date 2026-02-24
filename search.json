@@ -2,7 +2,7 @@
 layout: null
 ---
 [
-  {% assign pages = site.pages | where_exp: "p", "p.title and p.title != '' and p.url != '/search.json'" %}
+  {% assign pages = site.pages | where_exp: "p", "p.title != nil" | where_exp: "p", "p.title != ''" | where_exp: "p", "p.url != '/search.json'" %}
   {% for page in pages %}
   {
     "title": {{ page.title | jsonify }},
