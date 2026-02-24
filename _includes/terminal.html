@@ -1,0 +1,21 @@
+<footer class="site-footer">
+  <p>George Violaris &copy; 2026 <span class="terminal-toggle" id="terminal-toggle" title="Open terminal" aria-label="Toggle terminal">>_</span></p>
+</footer>
+
+<div class="terminal-panel" id="terminal-panel" role="region" aria-label="Interactive terminal">
+  <div class="terminal-header">
+    <div class="terminal-header-title">
+      <div class="terminal-header-dots"><span></span><span></span><span></span></div>
+      <span>visitor@violaris.org</span>
+    </div>
+    <button class="terminal-close" id="terminal-close" aria-label="Close terminal">&times;</button>
+  </div>
+  <div class="terminal-body" id="terminal-body">
+    <div class="terminal-input-line">
+      <span class="prompt">visitor@violaris.org:~$ </span>
+      <input type="text" class="terminal-input" id="terminal-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="type 'help' to get started">
+    </div>
+  </div>
+</div>
+
+<script src="{{ '/assets/js/terminal.js' | relative_url }}"></script>
