@@ -9,7 +9,7 @@ title: Projects
 
 <div class="project-card" markdown="1">
 
-### [ObsiTUI](https://github.com/0xAtrotos/obsitui)
+### [ObsiTUI](https://github.com/atr0t0s/obsitui)
 
 A terminal client for Obsidian with real vim modal editing.
 
@@ -24,6 +24,6 @@ I spend my day in the terminal and my knowledge base lived in Obsidian's Electro
 
 301 tests. TypeScript.
 
-[GitHub](https://github.com/0xAtrotos/obsitui)
+[GitHub](https://github.com/atr0t0s/obsitui)
 
 </div>
