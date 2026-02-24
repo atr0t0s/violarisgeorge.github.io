@@ -5,8 +5,9 @@ title: CV
 
 **George Violaris**
 
-**CTO | AI Systems & Software Engineering**
-Nicosia, Cyprus | [@atr0t0s](https://x.com/atr0t0s) | [Medium @gvio](https://medium.com/@gvio) | [violaris.org](http://violaris.org)
+**CTO - AI Systems & Software Engineering**
+Nicosia, Cyprus
+[@atr0t0s](https://x.com/atr0t0s) | [Medium @gvio](https://medium.com/@gvio) | [violaris.org](http://violaris.org)
 
 ---
 
@@ -20,6 +21,7 @@ CTO with 15 years in software engineering. I run technology at Hatchworks VC, wh
 
 **Chief Technology Officer**
 Hatchworks VC, 2021 – Present
+
 - Building **Zeig.ai** — financial analysis through conversation. Multiple LLMs plus vision AI for reading charts and pulling market signals.
 - Building **Spectre.ai** — a memory layer for AI agents. Persistent cross-session recall and shared knowledge pools. Plugins for Claude Code and OpenCode ship today; more coming.
 - Moved from a reinforcement learning trading agent (PPO) to LLM tool-calling when it became clear that got us to product faster. RL work parked for later.
@@ -27,14 +29,17 @@ Hatchworks VC, 2021 – Present
 
 **Technical Advisor**
 Phoenix (DeFi liquidity provider), 2022 – Present
+
 - Advising on blockchain architecture, smart contracts, and protocol design.
 
 **Technical Lead**
 SkillGaming, 2019 – 2021
+
 - Full-stack development of a skill-gaming platform. React, Redux, Laravel, Web3.js, Ethers.js.
 
 **Senior Software Engineer**
 Trust Insurance Cyprus, October 2014 – August 2019
+
 - Broker portals and core insurance systems — quotation, policy management, claims. PHP, Java, MySQL, Oracle PL/SQL.
 
 ---
@@ -65,7 +70,7 @@ Trust Insurance Cyprus, October 2014 – August 2019
 
 **Education**
 
-**MSc Computer Science** – Middlesex University London (Upper Second Class Honours)
+**MSc Computer Network Security** – Middlesex University London (Upper Second Class Honours)
 
 **BSc Computer Science** – University of Nicosia
 
