@@ -35,9 +35,17 @@
   --border:         #ddd5c8;
 }
 
-[data-theme="light"] body {
+html[data-theme="light"],
+html[data-theme="light"] body {
+  background-color: #faf8f5 !important;
+  color: #2a2a2a !important;
+}
+
+[data-theme="light"] main.content,
+[data-theme="light"] .content,
+[data-theme="light"] .wrapper,
+[data-theme="light"] .wrapper > section {
   background-color: #faf8f5;
-  color: #2a2a2a;
 }
 
 [data-theme="light"] h1,
