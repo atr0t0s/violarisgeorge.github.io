@@ -19,8 +19,16 @@
     xhr.open('GET', '/search.json');
     xhr.onreadystatechange = function () {
       if (xhr.readyState !== 4) return;
-      if (xhr.status !== 200) return;
-      documents = JSON.parse(xhr.responseText);
+      if (xhr.status !== 200) {
+        searchResults.innerHTML = '<div class="search-no-results">Search unavailable</div>';
+        return;
+      }
+      try {
+        documents = JSON.parse(xhr.responseText);
+      } catch (e) {
+        searchResults.innerHTML = '<div class="search-no-results">Search index error</div>';
+        return;
+      }
       index = lunr(function () {
         this.ref('url');
         this.field('title', { boost: 10 });
@@ -51,6 +59,7 @@
     var start = Math.max(0, bestPos - 60);
     var end = Math.min(content.length, bestPos + 140);
     var excerpt = (start > 0 ? '...' : '') + content.substring(start, end) + (end < content.length ? '...' : '');
+    excerpt = escapeHTML(excerpt);
     for (var j = 0; j < terms.length; j++) {
       var re = new RegExp('(' + terms[j].replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
       excerpt = excerpt.replace(re, '<mark>$1</mark>');
@@ -78,7 +87,7 @@
       var doc = getDocument(results[i].ref);
       if (!doc) continue;
       var excerpt = getExcerpt(doc.content, terms);
-      html += '<a class="search-result-item" href="' + doc.url + '">';
+      html += '<a class="search-result-item" href="' + escapeHTML(doc.url) + '">';
       html += '<div class="search-result-title">' + escapeHTML(doc.title) + '</div>';
       html += '<div class="search-result-excerpt">' + excerpt + '</div>';
       html += '</a>';
