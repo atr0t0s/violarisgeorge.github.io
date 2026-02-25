@@ -1,9 +1,13 @@
-<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Site search" aria-modal="true">
-  <div class="search-container">
-    <div class="search-header">
-      <input type="text" class="search-input" id="search-input" placeholder="Search site..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-      <button class="search-close" id="search-close" aria-label="Close search">&times;</button>
+<div class="cmd-palette-overlay" id="cmd-palette">
+  <div class="cmd-palette">
+    <div class="cmd-palette-header">
+      <input type="text" class="cmd-palette-input" id="cmd-input" placeholder="Search pages, run actions..." autocomplete="off" spellcheck="false">
     </div>
-    <div class="search-results" id="search-results"></div>
+    <div class="cmd-palette-results" id="cmd-results"></div>
+    <div class="cmd-palette-footer">
+      <span class="cmd-palette-hint"><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+      <span class="cmd-palette-hint"><kbd>Enter</kbd> open</span>
+      <span class="cmd-palette-hint"><kbd>Esc</kbd> close</span>
+    </div>
   </div>
 </div>
