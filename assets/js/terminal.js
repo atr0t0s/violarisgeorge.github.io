@@ -8,6 +8,7 @@
       'skills.txt': "AI:        LLMs, tool-calling, agent orchestration, persistent memory,\n           RL (PPO, Gymnasium), vector databases (Qdrant), RAG\nLanguages: TypeScript/JavaScript, Python, Go, PHP, Java\nFrontend:  React, Next.js, Vue.js, Laravel, Redux, Web3.js, Ethers.js\nDatabases: PostgreSQL, MySQL, MongoDB, Redis, Docker, Qdrant\nOther:     Blockchain/DeFi, Git, Neovim, system architecture",
       'contact.txt': "Email:   george@violaris.org\nGitHub:  https://github.com/atr0t0s\nX:       https://x.com/atr0t0s\nBlog:    https://blog.violaris.org\nWeb:     https://violaris.org",
       'projects': {
+        'vio.txt': "Vio \u2014 AI-agent-first frontend framework\nhttps://github.com/atr0t0s/vio\n\nComponents are pure JSON data structures. State is immutable.\nEvery mutation is observable. No JSX, no hooks, no implicit context.\nVirtual DOM with diff/patch, two-level state management,\nobservable event bus, full programmatic control surface.\n\n~1200 lines of TypeScript. No external dependencies.",
         'obsitui.txt': "ObsiTUI \u2014 Terminal client for Obsidian\nhttps://github.com/atr0t0s/obsitui\n\nVim modal editing (actual modal, not a plugin approximation).\nAI-powered RAG search \u2014 Anthropic, OpenAI, or local via Ollama.\nPure functional editor \u2014 every operation returns new immutable state.\nReads your existing .obsidian config. No migration, no sync, no lock-in.\n\n301 tests. TypeScript."
       },
       'blog': {
