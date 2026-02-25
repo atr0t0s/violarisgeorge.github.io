@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=6' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=7' | relative_url }}">
 </head>
 <body>
   <nav class="site-nav landing-nav-bar">
@@ -30,6 +30,26 @@
           <a href="https://x.com/atr0t0s" class="hero-link">X</a>
           <a href="https://blog.violaris.org" class="hero-link">Medium</a>
           <a href="{{ '/cv.html' | relative_url }}" class="hero-link">Resume</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="landing-glance" data-reveal>
+      <div class="glance-grid">
+        <div class="glance-card" id="glance-resource">
+          <h2 class="section-label">From the Reading List</h2>
+          <div class="glance-scroll" id="glance-resource-body"></div>
+          <a href="{{ '/resources.html' | relative_url }}" class="glance-more">Browse all &rarr;</a>
+        </div>
+        <div class="glance-card" id="glance-wisdom">
+          <h2 class="section-label">Wisdom</h2>
+          <div class="glance-scroll" id="glance-wisdom-body"></div>
+        </div>
+        <div class="glance-card" id="glance-tweet">
+          <h2 class="section-label">Pinned</h2>
+          <div id="glance-tweet-embed">
+            <blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">Whoever tells you that apps or saas will die because of AI fits into one of these: they&#39;re either selling AI or they have no clue how software is built and why non-software companies or just normal people buy their software from software companies, be it off the shelf or bespoke.</p>&mdash; George Violaris (@atr0t0s) <a href="https://twitter.com/atr0t0s/status/2026018546992472347?ref_src=twsrc%5Etfw">February 23, 2026</a></blockquote>
+          </div>
         </div>
       </div>
     </section>
@@ -73,6 +93,7 @@
   <script src="{{ '/assets/js/command-palette.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/canvas.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/animations.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/glance.js' | relative_url }}" defer></script>
 
   {% if site.google_analytics %}
   <script>
