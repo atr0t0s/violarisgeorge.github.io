@@ -30,3 +30,15 @@
     observer.observe(el);
   });
 })();
+
+// Open external links in new tab
+(function () {
+  'use strict';
+  var host = window.location.hostname;
+  document.querySelectorAll('a[href]').forEach(function (a) {
+    if (a.hostname && a.hostname !== host && !a.hasAttribute('target')) {
+      a.setAttribute('target', '_blank');
+      a.setAttribute('rel', 'noopener');
+    }
+  });
+})();

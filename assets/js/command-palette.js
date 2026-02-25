@@ -169,7 +169,7 @@
     executeItem(idx);
   });
 
-  // Global shortcuts — single handler for both Cmd+K and Escape
+  // Global shortcuts
   document.addEventListener('keydown', function (e) {
     if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
       e.preventDefault();
@@ -178,13 +178,14 @@
       } else {
         open();
       }
-      return;
     }
+  });
+
+  // Escape closes palette — use keyup so we act after browser's default blur
+  document.addEventListener('keyup', function (e) {
     if (e.key === 'Escape' && overlay.classList.contains('open')) {
       e.preventDefault();
-      e.stopPropagation();
       close();
-      return;
     }
   }, true);
 })();

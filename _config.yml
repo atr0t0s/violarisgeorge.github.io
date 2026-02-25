@@ -2,6 +2,8 @@ title: George Violaris
 description: CTO & Software Engineer. Building AI products at Hatchworks VC.
 url: https://violaris.org
 comments: true
+plugins:
+  - jekyll-seo-tag
 exclude:
   - docs
   - Gemfile
