@@ -11,6 +11,7 @@
         'obsitui.txt': "ObsiTUI \u2014 Terminal client for Obsidian\nhttps://github.com/atr0t0s/obsitui\n\nVim modal editing (actual modal, not a plugin approximation).\nAI-powered RAG search \u2014 Anthropic, OpenAI, or local via Ollama.\nPure functional editor \u2014 every operation returns new immutable state.\nReads your existing .obsidian config. No migration, no sync, no lock-in.\n\n301 tests. TypeScript."
       },
       'blog': {
+        '1500-lines.txt': "1,500 Lines, One Commit\nhttps://blog.violaris.org/1-500-lines-one-commit-fc7afc3fa6d5",
         'typescript-and-python.txt': "Building Real-Time AI Financial Analysis:\nWhy We Use TypeScript AND Python\nhttps://blog.violaris.org/building-real-time-ai-financial-analysis-why-we-use-typescript-and-python-and-when-each-shines-412a1bae2eed",
         'model-never-traded.txt': "The Model That Never Made a Trade\nhttps://blog.violaris.org/the-model-that-never-made-a-trade-2d44289d116a",
         'eu-regulation.txt': "The EU Doesn't Kill Innovation. The US Regulatory Mess Might.\nhttps://blog.violaris.org/the-eu-doesnt-kill-innovation-the-us-regulatory-mess-might-8ba87d53d1c1",
