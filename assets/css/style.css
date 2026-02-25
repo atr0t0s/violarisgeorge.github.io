@@ -995,6 +995,22 @@ details li {
   box-shadow: 0 0 10px var(--accent-glow);
 }
 
+/* Blog tags */
+.blog-tag {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  color: var(--accent-secondary);
+  border: 1px solid var(--accent-secondary-glow);
+  background: transparent;
+  padding: 0.15rem 0.5rem;
+  border-radius: 20px;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
 /* ==========================================================================
    PROFILE IMAGE
    ========================================================================== */
