@@ -11,6 +11,16 @@ Architecture decisions from production systems. No proprietary code -- just the 
 
 <div class="lab-entry" markdown="1">
 
+### [Building a frontend framework for AI agents](lab-vio-ai-first-framework.html)
+
+How I built a frontend framework where components are JSON, state is immutable, and every mutation is observable. Why existing frameworks fight AI agents, and what happens when you design for programmatic control from the start.
+
+</div>
+
+---
+
+<div class="lab-entry" markdown="1">
+
 ### [Building a vim editor as a pure state machine](lab-obsitui-vim-editor.html)
 
 How I implemented a vim-style editor in 867 lines of TypeScript using pure functions and immutable state. Every operation -- motions, operators, undo, dot repeat -- is a state machine transition with no side effects.
