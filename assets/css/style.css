@@ -390,7 +390,11 @@ li::marker {
 
 /* Light theme overrides for landing */
 [data-theme="light"] .landing {
-  background: var(--bg);
+  background: #faf8f5;
+}
+
+[data-theme="light"] .landing-hero {
+  background: #faf8f5;
 }
 
 [data-theme="light"] .landing h1 {
