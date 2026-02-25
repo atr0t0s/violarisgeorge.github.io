@@ -142,7 +142,6 @@
   });
 
   input.addEventListener('keydown', function (e) {
-    var items = results.querySelectorAll('.cmd-palette-item');
     if (e.key === 'ArrowDown') {
       e.preventDefault();
       setActive(activeIndex + 1);
@@ -154,8 +153,6 @@
       if (activeIndex >= 0) {
         executeItem(activeIndex);
       }
-    } else if (e.key === 'Escape') {
-      close();
     }
   });
 
@@ -172,7 +169,7 @@
     executeItem(idx);
   });
 
-  // Global shortcut
+  // Global shortcuts — single handler for both Cmd+K and Escape
   document.addEventListener('keydown', function (e) {
     if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
       e.preventDefault();
@@ -181,10 +178,13 @@
       } else {
         open();
       }
+      return;
     }
     if (e.key === 'Escape' && overlay.classList.contains('open')) {
       e.preventDefault();
+      e.stopPropagation();
       close();
+      return;
     }
-  });
+  }, true);
 })();
