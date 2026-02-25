@@ -788,6 +788,41 @@ main.content,
 }
 
 /* ==========================================================================
+   CASE STUDY
+   ========================================================================== */
+.case-study {
+  max-width: var(--reading-width);
+  margin: 0 auto;
+}
+
+.case-study-hero {
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--border);
+}
+
+.case-study-hero h1 {
+  margin-top: 0;
+  margin-bottom: var(--space-sm);
+}
+
+.case-study-pitch {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: var(--space-md);
+}
+
+.case-study-content h2 {
+  color: var(--accent);
+  margin-top: var(--space-xl);
+}
+
+.case-study-content h2:first-child {
+  margin-top: 0;
+}
+
+/* ==========================================================================
    CODE BLOCKS
    ========================================================================== */
 code {
