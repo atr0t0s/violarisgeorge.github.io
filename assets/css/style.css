@@ -739,11 +739,16 @@ pre {
 }
 
 pre code {
-  background: none;
+  background: none !important;
   border: none;
   padding: 0;
-  color: var(--text);
   font-size: 0.88rem;
+}
+
+/* Let highlight.js handle token colors, but keep our container styles */
+pre code.hljs {
+  background: none !important;
+  padding: 0;
 }
 
 /* ==========================================================================
