@@ -6,21 +6,21 @@
     '~': {
       'about.txt': "I'm George, CTO at Hatchworks VC in Nicosia, Cyprus.\nI build AI products \u2014 Zeig.ai (financial analysis through conversation)\nand Spectre.ai (persistent memory for AI agents).\n\n15 years in software. PHP freelancing \u2192 server infrastructure \u2192\ninsurance systems \u2192 blockchain/DeFi \u2192 LLMs & agent orchestration.\n\nAlso advising Phoenix (DeFi liquidity provider) on protocol architecture.\n\nProud dad of two awesome twin boys.",
       'skills.txt': "AI:        LLMs, tool-calling, agent orchestration, persistent memory,\n           RL (PPO, Gymnasium), vector databases (Qdrant), RAG\nLanguages: TypeScript/JavaScript, Python, Go, PHP, Java\nFrontend:  React, Next.js, Vue.js, Laravel, Redux, Web3.js, Ethers.js\nDatabases: PostgreSQL, MySQL, MongoDB, Redis, Docker, Qdrant\nOther:     Blockchain/DeFi, Git, Neovim, system architecture",
-      'contact.txt': "Email:   george@violaris.org\nGitHub:  https://github.com/atr0t0s\nX:       https://x.com/atr0t0s\nMedium:  https://medium.com/@gvio\nWeb:     https://violaris.org",
+      'contact.txt': "Email:   george@violaris.org\nGitHub:  https://github.com/atr0t0s\nX:       https://x.com/atr0t0s\nBlog:    https://blog.violaris.org\nWeb:     https://violaris.org",
       'projects': {
         'obsitui.txt': "ObsiTUI \u2014 Terminal client for Obsidian\nhttps://github.com/atr0t0s/obsitui\n\nVim modal editing (actual modal, not a plugin approximation).\nAI-powered RAG search \u2014 Anthropic, OpenAI, or local via Ollama.\nPure functional editor \u2014 every operation returns new immutable state.\nReads your existing .obsidian config. No migration, no sync, no lock-in.\n\n301 tests. TypeScript."
       },
       'blog': {
-        'typescript-and-python.txt': "Building Real-Time AI Financial Analysis:\nWhy We Use TypeScript AND Python\nhttps://medium.com/@gvio/building-real-time-ai-financial-analysis-why-we-use-typescript-and-python-and-when-each-shines-412a1bae2eed",
-        'model-never-traded.txt': "The Model That Never Made a Trade\nhttps://medium.com/@gvio/the-model-that-never-made-a-trade-2d44289d116a",
-        'eu-regulation.txt': "The EU Doesn't Kill Innovation. The US Regulatory Mess Might.\nhttps://medium.com/@gvio/the-eu-doesnt-kill-innovation-the-us-regulatory-mess-might-8ba87d53d1c1",
-        'software-not-dead.txt': "Software Is Not Dead \u2014 It's Evolving\nhttps://medium.com/@gvio/software-is-not-dead-its-evolving-e3dd683ded2f",
-        'obsitui.txt': "ObsiTUI: Why I Built a Terminal UI for Obsidian\nhttps://medium.com/@gvio/obsitui-why-i-built-a-terminal-ui-for-obsidian-7f1ebc2fcd15",
-        'agent-memory.txt': "What We Learned Building Agent Memory at Scale\nhttps://medium.com/@gvio/what-we-learned-building-agent-memory-at-scale-10c1eeec81a4",
-        'ai-devops.txt': "AI-Powered DevOps Orchestration\nhttps://medium.com/@gvio/ai-powered-devops-orchestration-a-practical-approach-to-seamless-scaling-a5d79b39cc56",
-        'langchain.txt': "Boosting Our Financial AI Project with LangChain\nhttps://medium.com/@gvio/boosting-our-financial-ai-project-with-langchain-streamlined-development-and-model-testing-9f036bdece0c",
-        'mcp.txt': "Unleashing AI Trading Potential with Model Context Protocol (MCP)\nhttps://medium.com/@gvio/unleashing-ai-trading-potential-with-model-context-protocol-mcp-ce3bcf96ed3c",
-        'code-to-assets.txt': "From Code to Assets: Revolutionizing Trading with AI and LLMs\nhttps://medium.com/@gvio/from-code-to-assets-revolutionizing-trading-with-ai-and-llms-81bbd3954253"
+        'typescript-and-python.txt': "Building Real-Time AI Financial Analysis:\nWhy We Use TypeScript AND Python\nhttps://blog.violaris.org/building-real-time-ai-financial-analysis-why-we-use-typescript-and-python-and-when-each-shines-412a1bae2eed",
+        'model-never-traded.txt': "The Model That Never Made a Trade\nhttps://blog.violaris.org/the-model-that-never-made-a-trade-2d44289d116a",
+        'eu-regulation.txt': "The EU Doesn't Kill Innovation. The US Regulatory Mess Might.\nhttps://blog.violaris.org/the-eu-doesnt-kill-innovation-the-us-regulatory-mess-might-8ba87d53d1c1",
+        'software-not-dead.txt': "Software Is Not Dead \u2014 It's Evolving\nhttps://blog.violaris.org/software-is-not-dead-its-evolving-e3dd683ded2f",
+        'obsitui.txt': "ObsiTUI: Why I Built a Terminal UI for Obsidian\nhttps://blog.violaris.org/obsitui-why-i-built-a-terminal-ui-for-obsidian-7f1ebc2fcd15",
+        'agent-memory.txt': "What We Learned Building Agent Memory at Scale\nhttps://blog.violaris.org/what-we-learned-building-agent-memory-at-scale-10c1eeec81a4",
+        'ai-devops.txt': "AI-Powered DevOps Orchestration\nhttps://blog.violaris.org/ai-powered-devops-orchestration-a-practical-approach-to-seamless-scaling-a5d79b39cc56",
+        'langchain.txt': "Boosting Our Financial AI Project with LangChain\nhttps://blog.violaris.org/boosting-our-financial-ai-project-with-langchain-streamlined-development-and-model-testing-9f036bdece0c",
+        'mcp.txt': "Unleashing AI Trading Potential with Model Context Protocol (MCP)\nhttps://blog.violaris.org/unleashing-ai-trading-potential-with-model-context-protocol-mcp-ce3bcf96ed3c",
+        'code-to-assets.txt': "From Code to Assets: Revolutionizing Trading with AI and LLMs\nhttps://blog.violaris.org/from-code-to-assets-revolutionizing-trading-with-ai-and-llms-81bbd3954253"
       },
       'research': {
         'publications.txt': "1. \"On the Performance Evaluation and Analysis of the Hybridised\n   Bittorrent Protocol with Partial Mobility Characteristics\"\n   Violaris C.G., Mavromoustakis X.C. \u2014 AP2PS 2010\n   https://arxiv.org/abs/1009.1708\n\n2. \"On the Mobility Scenario Implementation Using a Graphical P2P\n   Discrete Event Simulator for the Bittorrent Protocol\"\n   Charalambous M. et al. \u2014 J. Algorithms & Computational Technology, 2013\n\n3. \"Out-of-Band Authentication Model with Hashcash Brute-Force Prevention\"\n   Violaris G., Dionysiou I. \u2014 IEEE CSS 2014"
