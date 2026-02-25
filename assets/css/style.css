@@ -464,6 +464,7 @@ li::marker {
   padding: 2rem;
   margin-bottom: 2rem;
   transition: border-color var(--transition);
+  scroll-margin-top: 5rem;
 }
 
 .project-card:hover {
@@ -1343,12 +1344,21 @@ tr:hover td {
   display: inline;
 }
 
-/* Cmd+K hint */
+/* Search trigger */
+.cmd-k-trigger {
+  gap: 0.4rem;
+}
+
+.cmd-k-trigger .search-icon {
+  display: block;
+  flex-shrink: 0;
+}
+
 .cmd-k-hint {
-  font-family: var(--font-heading);
-  font-size: 0.7rem;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
   color: var(--text-muted);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
 }
 
 .cmd-k-trigger:hover .cmd-k-hint {
