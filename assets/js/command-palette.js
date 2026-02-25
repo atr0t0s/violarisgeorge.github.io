@@ -16,7 +16,7 @@
   var actions = [
     { type: 'action', label: 'Toggle theme', desc: 'Light / Dark', icon: '&#9788;', action: function () { document.getElementById('theme-toggle').click(); } },
     { type: 'action', label: 'GitHub', desc: 'github.com/atr0t0s', icon: '&#10132;', action: function () { window.open('https://github.com/atr0t0s', '_blank'); } },
-    { type: 'action', label: 'Blog', desc: 'blog.violaris.org', icon: '&#10132;', action: function () { window.open('https://blog.violaris.org', '_blank'); } }
+    { type: 'action', label: 'Insights', desc: 'blog.violaris.org', icon: '&#10132;', action: function () { window.open('https://blog.violaris.org', '_blank'); } }
   ];
 
   // Load search index
@@ -159,8 +159,10 @@
     }
   });
 
-  overlay.addEventListener('click', function (e) {
-    if (e.target === overlay) close();
+  // Prevent clicks inside palette from bubbling and keep focus on input
+  overlay.addEventListener('mousedown', function (e) {
+    e.preventDefault();
+    if (input) input.focus();
   });
 
   results.addEventListener('click', function (e) {
@@ -179,6 +181,10 @@
       } else {
         open();
       }
+    }
+    if (e.key === 'Escape' && overlay.classList.contains('open')) {
+      e.preventDefault();
+      close();
     }
   });
 })();

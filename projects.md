@@ -5,7 +5,26 @@ title: Projects
 
 # Projects
 
-What I'm building — AI products, developer tools, and open source.
+What I'm building — personal open source, and products at Hatchworks VC.
+
+## Open Source
+
+<div class="featured-grid">
+  <a href="https://github.com/atr0t0s/vio" class="featured-card">
+    <span class="featured-icon">&#9656;</span>
+    <h3>Vio</h3>
+    <p>An AI-agent-first frontend framework. ~1,200 lines of TypeScript, no dependencies.</p>
+    <span class="blog-tag">Framework</span>
+  </a>
+  <a href="https://github.com/atr0t0s/obsitui" class="featured-card">
+    <span class="featured-icon">&#9656;</span>
+    <h3>ObsiTUI</h3>
+    <p>Terminal client for Obsidian with vim modal editing and AI-powered RAG search. 301 tests.</p>
+    <span class="blog-tag">Tools</span>
+  </a>
+</div>
+
+## At Hatchworks VC
 
 <div class="featured-grid">
   <a href="{{ '/projects.html' | relative_url }}#spectre" class="featured-card">
@@ -19,18 +38,6 @@ What I'm building — AI products, developer tools, and open source.
     <h3>Zeig.ai</h3>
     <p>Financial analysis through conversation using multiple LLMs and vision AI.</p>
     <span class="blog-tag">AI</span> <span class="blog-tag">Finance</span>
-  </a>
-  <a href="https://github.com/atr0t0s/vio" class="featured-card">
-    <span class="featured-icon">&#9656;</span>
-    <h3>Vio</h3>
-    <p>An AI-agent-first frontend framework. ~1,200 lines of TypeScript, no dependencies.</p>
-    <span class="blog-tag">Framework</span>
-  </a>
-  <a href="https://github.com/atr0t0s/obsitui" class="featured-card">
-    <span class="featured-icon">&#9656;</span>
-    <h3>ObsiTUI</h3>
-    <p>Terminal client for Obsidian with vim modal editing and AI-powered RAG search. 301 tests.</p>
-    <span class="blog-tag">Tools</span>
   </a>
 </div>
 

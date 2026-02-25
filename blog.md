@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Blog
+title: Insights
 ---
 
-# Blog
+# Insights
 
 Writing about what I'm building and what breaks along the way. All posts live on [my blog](https://blog.violaris.org).
 
