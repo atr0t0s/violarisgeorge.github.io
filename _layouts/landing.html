@@ -34,7 +34,7 @@
       </div>
     </section>
 
-    <section class="landing-featured">
+    <section class="landing-featured" data-reveal>
       <h2 class="section-label">Featured Work</h2>
       <div class="featured-grid">
         <a href="{{ '/projects.html' | relative_url }}" class="featured-card">
@@ -55,7 +55,7 @@
       </div>
     </section>
 
-    <section class="landing-explore">
+    <section class="landing-explore" data-reveal>
       <h2 class="section-label">Explore</h2>
       <div class="explore-row">
         <a href="{{ '/about.html' | relative_url }}" class="explore-link">About</a>
@@ -77,6 +77,7 @@
   <script src="https://unpkg.com/lunr@2.3.9/lunr.min.js" defer></script>
   <script src="{{ '/assets/js/command-palette.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/canvas.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/animations.js' | relative_url }}" defer></script>
 
   {% if site.google_analytics %}
   <script>
