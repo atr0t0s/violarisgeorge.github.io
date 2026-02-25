@@ -1248,6 +1248,18 @@ tr:hover td {
   display: inline;
 }
 
+/* Cmd+K hint */
+.cmd-k-hint {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+.cmd-k-trigger:hover .cmd-k-hint {
+  color: var(--accent);
+}
+
 /* ==========================================================================
    SEARCH OVERLAY
    ========================================================================== */
