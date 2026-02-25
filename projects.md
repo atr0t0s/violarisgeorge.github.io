@@ -48,6 +48,6 @@ I spend my day in the terminal and my knowledge base lived in Obsidian's Electro
 
 301 tests. TypeScript.
 
-[GitHub](https://github.com/atr0t0s/obsitui)
+[Lab article](lab-obsitui-vim-editor.html) &#183; [GitHub](https://github.com/atr0t0s/obsitui)
 
 </div>
