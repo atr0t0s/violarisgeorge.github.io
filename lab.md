@@ -11,6 +11,16 @@ Architecture decisions from production systems. No proprietary code -- just the 
 
 <div class="lab-entry" markdown="1">
 
+### [From framework API to agent tools with MCP](lab-vio-mcp-tooling.html)
+
+How I built an MCP server that gives AI agents runtime control over a live Vio application. Traces a single tool call from stdio through a WebSocket bridge into the browser and back.
+
+</div>
+
+---
+
+<div class="lab-entry" markdown="1">
+
 ### [Building a frontend framework for AI agents](lab-vio-ai-first-framework.html)
 
 How I built a frontend framework where components are JSON, state is immutable, and every mutation is observable. Why existing frameworks fight AI agents, and what happens when you design for programmatic control from the start.
