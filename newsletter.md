@@ -5,8 +5,8 @@ title: Newsletter
 
 <section class="newsletter-page">
   <div class="newsletter-hero">
-    <h1>The Violaris Newsletter</h1>
-    <p class="newsletter-tagline">Industry insights, technical deep dives, and lessons from building AI products — delivered to your inbox.</p>
+    <h1>Merge Conflict</h1>
+    <p class="newsletter-tagline">Where AI, engineering, and business collide — delivered to your inbox.</p>
   </div>
 
   <div class="newsletter-pitch">
