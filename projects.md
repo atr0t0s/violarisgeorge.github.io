@@ -16,7 +16,7 @@ What I'm building — personal open source, and products at Hatchworks VC.
     <p>A small footprint full-stack AI framework for PHP. Multi-provider AI gateway, vector search, and RAG built in.</p>
     <span class="blog-tag">Framework</span>
   </a>
-  <a href="https://github.com/atr0t0s/vio" class="featured-card">
+  <a href="https://vio.violaris.org" class="featured-card">
     <span class="featured-icon">&#9656;</span>
     <h3>Vio</h3>
     <p>An AI-agent-first frontend framework. ~1,200 lines of TypeScript, no dependencies.</p>
