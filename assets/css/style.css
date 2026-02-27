@@ -1666,3 +1666,135 @@ tr:hover td {
   }
 }
 
+/* ---------- Newsletter Page ---------- */
+.newsletter-page {
+  max-width: var(--reading-width);
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--space-md) var(--space-xl);
+}
+
+.newsletter-hero {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.newsletter-hero h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: var(--space-md);
+}
+
+.newsletter-tagline {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.newsletter-pitch {
+  margin-bottom: var(--space-xl);
+}
+
+.newsletter-pitch h2 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  margin-bottom: var(--space-md);
+}
+
+.newsletter-pitch ul {
+  list-style: none;
+  padding: 0;
+}
+
+.newsletter-pitch li {
+  position: relative;
+  padding-left: 1.5em;
+  margin-bottom: var(--space-md);
+  line-height: 1.6;
+}
+
+.newsletter-pitch li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+.newsletter-form-section {
+  text-align: center;
+}
+
+.newsletter-form-section h2 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  margin-bottom: var(--space-md);
+}
+
+.newsletter-form {
+  display: flex;
+  gap: var(--space-sm);
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.newsletter-form input[type="email"] {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color var(--transition);
+}
+
+.newsletter-form input[type="email"]:focus {
+  border-color: var(--accent);
+}
+
+.newsletter-form button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: var(--bg);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity var(--transition);
+  white-space: nowrap;
+}
+
+.newsletter-form button:hover {
+  opacity: 0.85;
+}
+
+.newsletter-form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.newsletter-msg {
+  margin-top: var(--space-md);
+  font-size: 0.95rem;
+  min-height: 1.4em;
+}
+
+.newsletter-msg--success {
+  color: var(--accent);
+}
+
+.newsletter-msg--error {
+  color: #e05555;
+}
+
+@media (max-width: 480px) {
+  .newsletter-form {
+    flex-direction: column;
+  }
+}
+
