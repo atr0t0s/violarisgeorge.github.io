@@ -10,6 +10,12 @@ What I'm building — personal open source, and products at Hatchworks VC.
 ## Open Source
 
 <div class="featured-grid">
+  <a href="https://smallwork.violaris.org" class="featured-card">
+    <span class="featured-icon">&#9656;</span>
+    <h3>Smallwork</h3>
+    <p>A small footprint full-stack AI framework for PHP. Multi-provider AI gateway, vector search, and RAG built in.</p>
+    <span class="blog-tag">Framework</span>
+  </a>
   <a href="https://github.com/atr0t0s/vio" class="featured-card">
     <span class="featured-icon">&#9656;</span>
     <h3>Vio</h3>
@@ -66,6 +72,30 @@ Financial analysis through conversation using multiple LLMs and vision AI.
 **The problem:** Financial analysis tools are either too simple (chatbots that can't do real math) or too complex (Bloomberg terminals with a learning cliff).
 
 **The approach:** Multi-model pipeline — TypeScript API layer for real-time WebSockets and type safety, Python backend for LLM orchestration and the ML toolkit, connected via gRPC. Vision AI for chart analysis.
+
+</div>
+
+---
+
+<div class="project-card" markdown="1">
+
+### [Smallwork](https://smallwork.violaris.org)
+
+A small footprint full-stack AI framework for PHP. Build AI-powered web applications with a unified multi-provider gateway, server-rendered templates, vector search, and enterprise features — without the overhead of a large framework.
+
+I kept running into the same problem on PHP projects: bolt on an HTTP client for OpenAI, write a normalizer, add another wrapper for Anthropic, then realize embeddings need a vector database, and suddenly half the codebase is glue. Smallwork puts the AI gateway, embeddings, semantic search, and RAG into the framework layer so application code stays focused on the application.
+
+**What it does:**
+
+- Unified AI gateway across OpenAI, Anthropic, and Grok — switch providers per request with one parameter
+- AI middleware pipeline — content moderation, intent classification, and auto-summarization that slot into the request lifecycle
+- Vector search with Qdrant and pgvector backends, plus a full RAG pipeline
+- Server-rendered Blade-like templates with HTMX helpers for interactive UIs without JavaScript
+- JWT, API keys, RBAC, query builder, migrations, CLI scaffolding
+
+PHP 8.2+. MIT licensed.
+
+[Lab article](lab-smallwork-php-ai-framework.html) &#183; [Website](https://smallwork.violaris.org) &#183; [GitHub](https://github.com/atr0t0s/smallwork)
 
 </div>
 

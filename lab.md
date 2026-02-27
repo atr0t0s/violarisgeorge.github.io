@@ -11,6 +11,16 @@ Architecture decisions from production systems. No proprietary code -- just the 
 
 <div class="lab-entry" markdown="1">
 
+### [Building a full-stack AI framework for PHP](lab-smallwork-php-ai-framework.html)
+
+How I built a PHP framework with a multi-provider AI gateway, AI middleware pipeline, vector search, and RAG — all integrated into the routing, auth, and database layers instead of bolted on as afterthoughts.
+
+</div>
+
+---
+
+<div class="lab-entry" markdown="1">
+
 ### [From framework API to agent tools with MCP](lab-vio-mcp-tooling.html)
 
 How I built an MCP server that gives AI agents runtime control over a live Vio application. Traces a single tool call from stdio through a WebSocket bridge into the browser and back.
