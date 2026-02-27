@@ -1670,7 +1670,7 @@ tr:hover td {
 .newsletter-page {
   max-width: var(--reading-width);
   margin: 0 auto;
-  padding: var(--space-2xl) var(--space-md) var(--space-xl);
+  padding: var(--space-lg) var(--space-md) var(--space-xl);
 }
 
 .newsletter-hero {
