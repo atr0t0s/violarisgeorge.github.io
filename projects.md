@@ -119,7 +119,7 @@ I got tired of watching LLMs generate broken JSX, violate hook ordering rules, a
 
 ~1200 lines of TypeScript. No external dependencies.
 
-[Lab article](lab-vio-ai-first-framework.html) &#183; [MCP tooling](lab-vio-mcp-tooling.html) &#183; [GitHub](https://github.com/atr0t0s/vio)
+[Lab article](lab-vio-ai-first-framework.html) &#183; [MCP tooling](lab-vio-mcp-tooling.html) &#183; [Website](https://vio.violaris.org) &#183; [GitHub](https://github.com/atr0t0s/vio)
 
 </div>
 
