@@ -20,49 +20,6 @@ title: Newsletter
 
   <div class="newsletter-form-section">
     <h2>Subscribe</h2>
-    <form id="newsletter-form" class="newsletter-form">
-      <input type="email" id="newsletter-email" placeholder="you@example.com" required>
-      <button type="submit">Subscribe</button>
-    </form>
-    <p id="newsletter-msg" class="newsletter-msg"></p>
+    <iframe src="https://mergeconf.substack.com/embed" width="480" height="320" style="border: 1px solid #EEE; background: white" frameborder="0" scrolling="no"></iframe>
   </div>
 </section>
-
-<script>
-document.getElementById('newsletter-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  var email = document.getElementById('newsletter-email').value;
-  var msg = document.getElementById('newsletter-msg');
-  var btn = this.querySelector('button');
-
-  btn.disabled = true;
-  btn.textContent = 'Subscribing...';
-  msg.textContent = '';
-  msg.className = 'newsletter-msg';
-
-  fetch('https://api.violaris.org/subscribe', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email: email })
-  })
-  .then(function(res) { return res.json(); })
-  .then(function(data) {
-    if (data.success) {
-      msg.textContent = 'You\'re in. Watch your inbox.';
-      msg.className = 'newsletter-msg newsletter-msg--success';
-      document.getElementById('newsletter-email').value = '';
-    } else {
-      msg.textContent = data.error || 'Something went wrong. Try again.';
-      msg.className = 'newsletter-msg newsletter-msg--error';
-    }
-  })
-  .catch(function() {
-    msg.textContent = 'Could not reach the server. Try again later.';
-    msg.className = 'newsletter-msg newsletter-msg--error';
-  })
-  .finally(function() {
-    btn.disabled = false;
-    btn.textContent = 'Subscribe';
-  });
-});
-</script>
