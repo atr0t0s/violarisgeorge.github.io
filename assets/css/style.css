@@ -526,28 +526,25 @@ li::marker {
   margin-bottom: var(--space-md);
 }
 
-/* Nav Explore link (far right, hidden by default) */
-.nav-explore-link {
-  position: absolute;
-  right: 6rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--text-muted);
-  font-family: var(--font-heading);
-  font-size: 0.8rem;
-  font-weight: 500;
+/* Nav Explore button (hidden until page is scrollable) */
+.nav-explore-btn {
+  gap: 0.4rem;
   text-decoration: none;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease, color 0.2s ease;
+  display: none;
 }
 
-.nav-explore-link.visible {
-  opacity: 1;
-  pointer-events: auto;
+.nav-explore-btn.visible {
+  display: flex;
 }
 
-.nav-explore-link:hover {
+.nav-explore-hint {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+}
+
+.nav-explore-btn:hover .nav-explore-hint {
   color: var(--accent);
 }
 
@@ -1684,9 +1681,8 @@ tr:hover td {
     transform: translateY(-50%);
   }
 
-  .nav-explore-link {
-    right: 7.5rem;
-    font-size: 0.75rem;
+  .nav-explore-hint {
+    display: none;
   }
 
   .explore-section {
