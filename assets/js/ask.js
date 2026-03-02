@@ -1,5 +1,5 @@
 (function () {
-  var WORKER_URL = 'https://violaris-ask.george-viol.workers.dev';
+  var WORKER_URL = 'https://violaris-ask.violarisgeorge.workers.dev';
 
   var form = document.getElementById('ask-form');
   var input = document.getElementById('ask-input');
