@@ -1,0 +1,1340 @@
+# =============================================================================
+# Resources — Curated library
+# Categories: ai-llms, ai-agents, ai-finance, software-engineering, devops,
+#             databases, frontend, security, career, books-podcasts, blockchain
+# Types: paper, tool, book, blog, course, video, podcast, reference, community
+# =============================================================================
+
+# ---------------------------------------------------------------------------
+# AI & LLMs
+# ---------------------------------------------------------------------------
+
+# Papers
+- title: "Attention Is All You Need"
+  url: "https://arxiv.org/abs/1706.03762"
+  description: "Vaswani et al., 2017. The Transformer paper. Everything since builds on this."
+  category: "ai-llms"
+  type: "paper"
+  curated: true
+
+- title: "BERT: Pre-training of Deep Bidirectional Transformers"
+  url: "https://arxiv.org/abs/1810.04805"
+  description: "Devlin et al., 2018. Bidirectional pre-training; set the template for fine-tuning that lasted years."
+  category: "ai-llms"
+  type: "paper"
+  curated: true
+
+- title: "Language Models are Few-Shot Learners (GPT-3)"
+  url: "https://arxiv.org/abs/2005.14165"
+  description: "Brown et al., 2020. Showed that scale alone gets you surprisingly far without fine-tuning."
+  category: "ai-llms"
+  type: "paper"
+  curated: true
+
+- title: "Scaling Laws for Neural Language Models"
+  url: "https://arxiv.org/abs/2001.08361"
+  description: "Kaplan et al., 2020. Loss scales predictably with model size, data, and compute."
+  category: "ai-llms"
+  type: "paper"
+  curated: true
+
+- title: "Training Compute-Optimal Large Language Models (Chinchilla)"
+  url: "https://arxiv.org/abs/2203.15556"
+  description: "Hoffmann et al., 2022. Most models were undertrained for their compute budget."
+  category: "ai-llms"
+  type: "paper"
+  curated: true
+
+- title: "Training Language Models to Follow Instructions (RLHF)"
+  url: "https://arxiv.org/abs/2203.02155"
+  description: "Ouyang et al., 2022. A 1.3B InstructGPT beat the 175B GPT-3 on human preference."
+  category: "ai-llms"
+  type: "paper"
+  curated: true
+
+- title: "Constitutional AI: Harmlessness from AI Feedback"
+  url: "https://arxiv.org/abs/2212.08073"
+  description: "Bai et al., 2022. Anthropic's approach to alignment using AI feedback guided by a written constitution."
+  category: "ai-llms"
+  type: "paper"
+  curated: true
+
+- title: "Chain-of-Thought Prompting Elicits Reasoning"
+  url: "https://arxiv.org/abs/2201.11903"
+  description: "Wei et al., 2022. Asking the model to show its work actually makes it better at hard problems."
+  category: "ai-llms"
+  type: "paper"
+
+- title: "Retrieval-Augmented Generation (RAG)"
+  url: "https://arxiv.org/abs/2005.11401"
+  description: "Lewis et al., 2020. The original RAG paper. Combines what the model knows with what it can look up."
+  category: "ai-llms"
+  type: "paper"
+  curated: true
+
+- title: "GPT-4 Technical Report"
+  url: "https://arxiv.org/abs/2303.08774"
+  description: "OpenAI, 2023. Capabilities, safety evals, multimodal inputs."
+  category: "ai-llms"
+  type: "paper"
+
+- title: "LLaMA: Open and Efficient Foundation Language Models"
+  url: "https://arxiv.org/abs/2302.13971"
+  description: "Touvron et al., 2023. Meta's open-weight model that launched the open-source LLM wave."
+  category: "ai-llms"
+  type: "paper"
+
+- title: "Mixture of Experts (Switch Transformers)"
+  url: "https://arxiv.org/abs/2101.03961"
+  description: "Fedus et al., 2022. Sparse MoE scaling to trillion-parameter models."
+  category: "ai-llms"
+  type: "paper"
+
+- title: "LoRA: Low-Rank Adaptation of Large Language Models"
+  url: "https://arxiv.org/abs/2106.09685"
+  description: "Hu et al., 2021. Efficient fine-tuning by injecting trainable rank-decomposition matrices."
+  category: "ai-llms"
+  type: "paper"
+
+- title: "Direct Preference Optimization (DPO)"
+  url: "https://arxiv.org/abs/2305.18290"
+  description: "Rafailov et al., 2023. Simpler alternative to RLHF that skips the reward model."
+  category: "ai-llms"
+  type: "paper"
+
+- title: "Mamba: Linear-Time Sequence Modeling"
+  url: "https://arxiv.org/abs/2312.00752"
+  description: "Gu & Dao, 2023. State-space model that matches Transformer quality with linear scaling."
+  category: "ai-llms"
+  type: "paper"
+
+- title: "Tree of Thoughts: Deliberate Problem Solving with LLMs"
+  url: "https://arxiv.org/abs/2305.10601"
+  description: "Yao et al., 2023. Extends chain-of-thought with branching and backtracking for complex reasoning."
+  category: "ai-llms"
+  type: "paper"
+
+- title: "Textbooks Are All You Need (Phi-1)"
+  url: "https://arxiv.org/abs/2306.11644"
+  description: "Gunasekar et al., 2023. High-quality data matters more than quantity for training small models."
+  category: "ai-llms"
+  type: "paper"
+
+- title: "DeepSeek-V3 Technical Report"
+  url: "https://arxiv.org/abs/2412.19437"
+  description: "DeepSeek, 2024. MoE model trained on 14.8T tokens with multi-token prediction."
+  category: "ai-llms"
+  type: "paper"
+
+- title: "The Llama 3 Herd of Models"
+  url: "https://arxiv.org/abs/2407.21783"
+  description: "Meta, 2024. Open-weight models up to 405B with multilingual and multimodal capabilities."
+  category: "ai-llms"
+  type: "paper"
+
+# Developer tools
+- title: "Claude Code"
+  url: "https://github.com/anthropics/claude-code"
+  description: "Terminal-native agentic coding. Understands full codebases, runs commands, manages git."
+  category: "ai-llms"
+  type: "tool"
+  curated: true
+
+- title: "Cursor"
+  url: "https://cursor.com"
+  description: "AI-first code editor forked from VS Code. 200K context window, codebase-aware completions."
+  category: "ai-llms"
+  type: "tool"
+
+- title: "Windsurf"
+  url: "https://windsurf.com/editor"
+  description: "Agentic IDE with auto-context discovery. Good for monorepos."
+  category: "ai-llms"
+  type: "tool"
+
+- title: "GitHub Copilot"
+  url: "https://github.com/features/copilot"
+  description: "AI pair programmer in VS Code, JetBrains, etc. Now includes autonomous agent mode."
+  category: "ai-llms"
+  type: "tool"
+
+- title: "Hugging Face"
+  url: "https://huggingface.co"
+  description: "Where open-source models live. Transformers library, model hub, LLM course."
+  category: "ai-llms"
+  type: "tool"
+  curated: true
+
+- title: "Weights & Biases"
+  url: "https://wandb.ai"
+  description: "Experiment tracking and model registry. The standard for fine-tuning and production ML."
+  category: "ai-llms"
+  type: "tool"
+
+- title: "Ollama"
+  url: "https://ollama.com"
+  description: "Run open-source LLMs locally. Simple CLI, supports GGUF models, GPU acceleration."
+  category: "ai-llms"
+  type: "tool"
+
+- title: "vLLM"
+  url: "https://github.com/vllm-project/vllm"
+  description: "High-throughput LLM inference engine. PagedAttention for efficient memory management."
+  category: "ai-llms"
+  type: "tool"
+
+- title: "LiteLLM"
+  url: "https://github.com/BerriAI/litellm"
+  description: "Unified API to call 100+ LLM providers. Drop-in OpenAI SDK replacement."
+  category: "ai-llms"
+  type: "tool"
+
+- title: "OpenRouter"
+  url: "https://openrouter.ai"
+  description: "Single API for all major LLM providers. Good for comparing models and managing costs."
+  category: "ai-llms"
+  type: "tool"
+
+- title: "Anthropic API"
+  url: "https://docs.anthropic.com"
+  description: "Official docs for Claude models. Tool use, streaming, vision, prompt caching."
+  category: "ai-llms"
+  type: "reference"
+
+- title: "OpenAI API Reference"
+  url: "https://platform.openai.com/docs"
+  description: "GPT-4, DALL-E, Whisper, embeddings. The most widely integrated LLM API."
+  category: "ai-llms"
+  type: "reference"
+
+# Blogs and newsletters
+- title: "Simon Willison's Blog"
+  url: "https://simonwillison.net"
+  description: "Covers practical LLM usage and AI tooling with more depth and honesty than anyone else."
+  category: "ai-llms"
+  type: "blog"
+  curated: true
+
+- title: "Lilian Weng's Blog"
+  url: "https://lilianweng.github.io"
+  description: "Long-form technical posts on architectures, agents, and RLHF from an OpenAI researcher."
+  category: "ai-llms"
+  type: "blog"
+  curated: true
+
+- title: "Chip Huyen's Blog"
+  url: "https://huyenchip.com/blog"
+  description: "ML systems design, AI engineering, MLOps. Author of 'AI Engineering' (O'Reilly, 2025)."
+  category: "ai-llms"
+  type: "blog"
+
+- title: "The Batch — Andrew Ng"
+  url: "https://www.deeplearning.ai/the-batch"
+  description: "Weekly AI newsletter. Good signal-to-noise ratio on what matters."
+  category: "ai-llms"
+  type: "blog"
+
+- title: "Andrej Karpathy — Zero to Hero"
+  url: "https://karpathy.ai/zero-to-hero.html"
+  description: "Builds neural networks from scratch, ending with a GPT. Nobody explains this stuff better."
+  category: "ai-llms"
+  type: "course"
+  curated: true
+
+- title: "Anthropic Research"
+  url: "https://www.anthropic.com/research"
+  description: "Papers, model cards, and the Responsible Scaling Policy from the Claude team."
+  category: "ai-llms"
+  type: "blog"
+
+- title: "Jay Alammar's Blog"
+  url: "https://jalammar.github.io"
+  description: "Visual explanations of Transformers, BERT, GPT. The Illustrated Transformer is a classic."
+  category: "ai-llms"
+  type: "blog"
+
+- title: "Sebastian Raschka's Blog"
+  url: "https://sebastianraschka.com/blog/"
+  description: "Deep dives on LLM training, fine-tuning, and evaluation. Author of 'Build an LLM from Scratch'."
+  category: "ai-llms"
+  type: "blog"
+
+- title: "fast.ai Course"
+  url: "https://course.fast.ai"
+  description: "Practical deep learning for coders. Top-down teaching approach that gets you building fast."
+  category: "ai-llms"
+  type: "course"
+
+- title: "Stanford CS229 — Machine Learning"
+  url: "https://cs229.stanford.edu"
+  description: "Andrew Ng's foundational ML course. Lectures, notes, and problem sets freely available."
+  category: "ai-llms"
+  type: "course"
+
+- title: "Stanford CS224N — NLP with Deep Learning"
+  url: "https://web.stanford.edu/class/cs224n/"
+  description: "Chris Manning's NLP course. Covers attention, transformers, pretraining, and modern NLP."
+  category: "ai-llms"
+  type: "course"
+
+# ---------------------------------------------------------------------------
+# AI Agents & Memory
+# ---------------------------------------------------------------------------
+
+- title: "LangChain"
+  url: "https://github.com/langchain-ai/langchain"
+  description: "The most widely used agent framework. Composable chains, tools, and retrieval."
+  category: "ai-agents"
+  type: "tool"
+  curated: true
+
+- title: "LangGraph"
+  url: "https://github.com/langchain-ai/langgraph"
+  description: "Graph-based approach for stateful, multi-step agent workflows."
+  category: "ai-agents"
+  type: "tool"
+
+- title: "CrewAI"
+  url: "https://github.com/crewAIInc/crewAI"
+  description: "Multi-agent orchestration where agents have defined roles and collaborate."
+  category: "ai-agents"
+  type: "tool"
+
+- title: "Microsoft AutoGen"
+  url: "https://github.com/microsoft/autogen"
+  description: "Conversation-based multi-agent framework from Microsoft Research."
+  category: "ai-agents"
+  type: "tool"
+
+- title: "OpenAI Agents SDK"
+  url: "https://github.com/openai/openai-agents-python"
+  description: "Lightweight Python framework for tool use, handoffs, and guardrails."
+  category: "ai-agents"
+  type: "tool"
+
+- title: "LlamaIndex"
+  url: "https://github.com/run-llama/llama_index"
+  description: "Best for document ingestion, RAG pipelines, and agentic workflows over your own data."
+  category: "ai-agents"
+  type: "tool"
+  curated: true
+
+- title: "Model Context Protocol (MCP)"
+  url: "https://modelcontextprotocol.io"
+  description: "Anthropic's open standard for connecting LLMs to external tools and data sources."
+  category: "ai-agents"
+  type: "reference"
+  curated: true
+
+- title: "DSPy"
+  url: "https://github.com/stanfordnlp/dspy"
+  description: "Stanford's framework for programming—not prompting—language models. Optimizes pipelines automatically."
+  category: "ai-agents"
+  type: "tool"
+
+- title: "Letta (formerly MemGPT)"
+  url: "https://github.com/letta-ai/letta"
+  description: "Stateful agents with self-editing persistent memory. Research project turned production framework."
+  category: "ai-agents"
+  type: "tool"
+
+- title: "Qdrant"
+  url: "https://qdrant.tech"
+  description: "Open-source vector database. Fast, good filtering, free tier."
+  category: "ai-agents"
+  type: "tool"
+
+- title: "Pinecone"
+  url: "https://www.pinecone.io"
+  description: "Managed vector database. Minimal ops if you don't want to run your own."
+  category: "ai-agents"
+  type: "tool"
+
+- title: "Weaviate"
+  url: "https://github.com/weaviate/weaviate"
+  description: "Open-source with built-in hybrid search (vector + BM25)."
+  category: "ai-agents"
+  type: "tool"
+
+- title: "Milvus"
+  url: "https://github.com/milvus-io/milvus"
+  description: "Built for billion-scale vector search. Production-grade."
+  category: "ai-agents"
+  type: "tool"
+
+- title: "Chroma"
+  url: "https://github.com/chroma-core/chroma"
+  description: "Embedded-first vector DB. Good for local prototyping and small RAG pipelines."
+  category: "ai-agents"
+  type: "tool"
+
+- title: "Semantic Kernel"
+  url: "https://github.com/microsoft/semantic-kernel"
+  description: "Microsoft's SDK for integrating LLMs into apps. Supports .NET, Python, Java."
+  category: "ai-agents"
+  type: "tool"
+
+- title: "Haystack"
+  url: "https://github.com/deepset-ai/haystack"
+  description: "End-to-end NLP framework for building RAG and search pipelines."
+  category: "ai-agents"
+  type: "tool"
+
+- title: "AutoGPT"
+  url: "https://github.com/Significant-Gravitas/AutoGPT"
+  description: "Autonomous AI agent that chains LLM calls. Early pioneer in the agent space."
+  category: "ai-agents"
+  type: "tool"
+
+- title: "Instructor"
+  url: "https://github.com/jxnl/instructor"
+  description: "Structured output extraction from LLMs using Pydantic models. Works with any provider."
+  category: "ai-agents"
+  type: "tool"
+
+- title: "LLM Powered Autonomous Agents — Lilian Weng"
+  url: "https://lilianweng.github.io/posts/2023-06-23-agent/"
+  description: "Canonical reference post on agent architectures, planning, memory, and tool use."
+  category: "ai-agents"
+  type: "blog"
+  curated: true
+
+- title: "Voyager: LLM-Powered Lifelong Learning Agent"
+  url: "https://arxiv.org/abs/2305.16291"
+  description: "Wang et al., 2023. GPT-4 agent that explores Minecraft, writes code, and learns skills."
+  category: "ai-agents"
+  type: "paper"
+
+- title: "Toolformer: Language Models Can Teach Themselves to Use Tools"
+  url: "https://arxiv.org/abs/2302.04761"
+  description: "Schick et al., 2023. Models learn when and how to call external APIs during generation."
+  category: "ai-agents"
+  type: "paper"
+
+- title: "ReAct: Synergizing Reasoning and Acting"
+  url: "https://arxiv.org/abs/2210.03629"
+  description: "Yao et al., 2022. Interleaving reasoning traces with actions for grounded problem-solving."
+  category: "ai-agents"
+  type: "paper"
+  curated: true
+
+# ---------------------------------------------------------------------------
+# AI & Finance
+# ---------------------------------------------------------------------------
+
+- title: "From Deep Learning to LLMs: AI in Quantitative Investment"
+  url: "https://arxiv.org/abs/2503.21422"
+  description: "March 2025 survey covering the full pipeline from predictive modeling to agent-based automation."
+  category: "ai-finance"
+  type: "paper"
+  curated: true
+
+- title: "FinGPT: Open-Source Financial LLMs"
+  url: "https://arxiv.org/abs/2306.06031"
+  description: "Lightweight, open alternative to BloombergGPT for financial NLP."
+  category: "ai-finance"
+  type: "paper"
+
+- title: "FinRL: Deep RL for Automated Stock Trading"
+  url: "https://arxiv.org/abs/2011.09607"
+  description: "The paper behind the FinRL framework. DQN, DDPG, PPO, SAC across multiple markets."
+  category: "ai-finance"
+  type: "paper"
+
+- title: "ACM ICAIF Proceedings"
+  url: "https://dl.acm.org/doi/proceedings/10.1145/3768292"
+  description: "The main academic venue for AI in finance. LLM market regime forecasting, adversarial RL."
+  category: "ai-finance"
+  type: "paper"
+
+- title: "FinRL Framework"
+  url: "https://github.com/AI4Finance-Foundation/FinRL"
+  description: "Deep RL framework for stock trading. Supports PPO, DDPG, SAC, and others."
+  category: "ai-finance"
+  type: "tool"
+  curated: true
+
+- title: "FinGPT"
+  url: "https://github.com/AI4Finance-Foundation/FinGPT"
+  description: "Open-source financial LLMs. Sentiment analysis, news summarization, return forecasting."
+  category: "ai-finance"
+  type: "tool"
+
+- title: "QuantConnect / LEAN"
+  url: "https://github.com/QuantConnect/Lean"
+  description: "Open-source algo trading engine. Python and C#, cloud or local."
+  category: "ai-finance"
+  type: "tool"
+
+- title: "Backtrader"
+  url: "https://github.com/mementum/backtrader"
+  description: "Event-driven backtesting in Python. Supports live trading through IB and Oanda."
+  category: "ai-finance"
+  type: "tool"
+
+- title: "Freqtrade"
+  url: "https://github.com/freqtrade/freqtrade"
+  description: "Crypto trading bot with backtesting and ML strategy optimization."
+  category: "ai-finance"
+  type: "tool"
+
+- title: "Zipline"
+  url: "https://github.com/quantopian/zipline"
+  description: "Backtesting library that powered Quantopian. Still widely used for strategy research."
+  category: "ai-finance"
+  type: "tool"
+
+- title: "QuantLib"
+  url: "https://www.quantlib.org/"
+  description: "Standard C++ library for derivatives pricing and risk management. Python bindings available."
+  category: "ai-finance"
+  type: "tool"
+
+- title: "Awesome Quant"
+  url: "https://github.com/wilsonfreitas/awesome-quant"
+  description: "Curated list of quant finance libraries across Python, R, Julia, and more."
+  category: "ai-finance"
+  type: "reference"
+
+- title: "Alpha Vantage"
+  url: "https://www.alphavantage.co/"
+  description: "Free tier (25 calls/day), extensive indicators, NASDAQ vendor. Good for research."
+  category: "ai-finance"
+  type: "tool"
+
+- title: "Twelve Data"
+  url: "https://twelvedata.com/"
+  description: "Real-time WebSocket ticks, multi-asset. Clean APIs."
+  category: "ai-finance"
+  type: "tool"
+
+- title: "Polygon.io"
+  url: "https://polygon.io/"
+  description: "Low-latency production data. Preferred for execution systems."
+  category: "ai-finance"
+  type: "tool"
+
+- title: "yfinance"
+  url: "https://github.com/ranaroussi/yfinance"
+  description: "Python wrapper for Yahoo Finance. Free historical data. Research only, not production."
+  category: "ai-finance"
+  type: "tool"
+
+- title: "Financial Modeling Prep"
+  url: "https://financialmodelingprep.com/developer/docs/"
+  description: "Fundamentals, DCF, earnings calendars. Generous free tier."
+  category: "ai-finance"
+  type: "tool"
+
+- title: "FRED — Federal Reserve Economic Data"
+  url: "https://fred.stlouisfed.org/"
+  description: "Macro and economic time series from the St. Louis Fed."
+  category: "ai-finance"
+  type: "reference"
+
+- title: "Advances in Financial Machine Learning"
+  url: "https://www.wiley.com/en-us/Advances+in+Financial+Machine+Learning-p-9781119482086"
+  description: "Marcos Lopez de Prado. The practitioner textbook for ML in finance."
+  category: "ai-finance"
+  type: "book"
+  curated: true
+
+- title: "Machine Learning for Asset Managers"
+  url: "https://www.cambridge.org/core/elements/machine-learning-for-asset-managers/6D9211305EA2E425D33A9F6F1D0F0506"
+  description: "Lopez de Prado. Clustering, feature importance, and portfolio construction."
+  category: "ai-finance"
+  type: "book"
+
+- title: "Python for Algorithmic Trading"
+  url: "https://www.oreilly.com/library/view/python-for-algorithmic/9781492053347/"
+  description: "Yves Hilpisch. End-to-end strategy development, backtesting, and deployment."
+  category: "ai-finance"
+  type: "book"
+
+- title: "Lopez de Prado's Lecture Notes"
+  url: "https://www.quantresearch.org/Lectures.htm"
+  description: "Free slides from his Cornell course. Good alternative to the books."
+  category: "ai-finance"
+  type: "course"
+
+- title: "Quantocracy"
+  url: "https://quantocracy.com/"
+  description: "Aggregator of the best quant trading blog posts. Fastest way to see what the community reads."
+  category: "ai-finance"
+  type: "community"
+
+- title: "QuantStart"
+  url: "https://www.quantstart.com/"
+  description: "Educational articles on algo trading, ML, and backtesting in Python."
+  category: "ai-finance"
+  type: "blog"
+
+- title: "AI4Finance Foundation"
+  url: "https://github.com/AI4Finance-Foundation"
+  description: "The org behind FinRL and FinGPT. Worth watching on GitHub."
+  category: "ai-finance"
+  type: "community"
+
+- title: "Ernie Chan's Blog"
+  url: "http://epchan.blogspot.com/"
+  description: "Practitioner blog from the author of 'Algorithmic Trading.' AI and corrective ML for forex."
+  category: "ai-finance"
+  type: "blog"
+
+- title: "Algorithmic Trading — Ernie Chan"
+  url: "https://www.wiley.com/en-us/Algorithmic+Trading-p-9781118460146"
+  description: "Practical mean reversion and momentum strategies. Accessible even without heavy math."
+  category: "ai-finance"
+  type: "book"
+
+- title: "Options, Futures, and Other Derivatives"
+  url: "https://www.pearson.com/en-us/subject-catalog/p/options-futures-and-other-derivatives/P200000005938"
+  description: "John Hull. The standard derivatives textbook used globally."
+  category: "ai-finance"
+  type: "book"
+
+# ---------------------------------------------------------------------------
+# Software Engineering
+# ---------------------------------------------------------------------------
+
+- title: "Designing Data-Intensive Applications"
+  url: "https://dataintensive.net/"
+  description: "Martin Kleppmann. The best single book on distributed systems, storage, and data processing."
+  category: "software-engineering"
+  type: "book"
+  curated: true
+
+- title: "System Design Interview — Alex Xu"
+  url: "https://www.amazon.com/System-Design-Interview-Insiders-Guide/dp/1736049119"
+  description: "Practical system design with diagrams. Good for interviews and real architecture."
+  category: "software-engineering"
+  type: "book"
+
+- title: "The Pragmatic Programmer"
+  url: "https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/"
+  description: "Hunt & Thomas. Timeless advice on craft, from DRY to tracer bullets."
+  category: "software-engineering"
+  type: "book"
+  curated: true
+
+- title: "Clean Code — Robert C. Martin"
+  url: "https://www.oreilly.com/library/view/clean-code-a/9780136083238/"
+  description: "Principles for writing readable, maintainable code. Opinionated but influential."
+  category: "software-engineering"
+  type: "book"
+
+- title: "Go by Example"
+  url: "https://gobyexample.com/"
+  description: "Annotated example programs in Go. The fastest way to learn Go syntax."
+  category: "software-engineering"
+  type: "reference"
+
+- title: "Go Language Spec"
+  url: "https://golang.org/ref/spec"
+  description: "The official Go specification. Concise and readable."
+  category: "software-engineering"
+  type: "reference"
+
+- title: "The Hitchhiker's Guide to Python"
+  url: "https://docs.python-guide.org/"
+  description: "Opinionated guide to Python best practices, project structure, and tooling."
+  category: "software-engineering"
+  type: "reference"
+
+- title: "Stack Overflow Blog"
+  url: "https://stackoverflow.blog/"
+  description: "Engineering culture pieces and developer surveys."
+  category: "software-engineering"
+  type: "blog"
+
+- title: "Coding Horror — Jeff Atwood"
+  url: "https://blog.codinghorror.com/"
+  description: "Software engineering, culture, and the human side of building things."
+  category: "software-engineering"
+  type: "blog"
+
+- title: "Martin Fowler's Blog"
+  url: "https://martinfowler.com"
+  description: "Patterns, refactoring, agile, and architecture. Decades of influential writing."
+  category: "software-engineering"
+  type: "blog"
+  curated: true
+
+- title: "The Architecture of Open Source Applications"
+  url: "https://aosabook.org/en/"
+  description: "Free book. How real projects (nginx, Git, LLVM) are architected by their creators."
+  category: "software-engineering"
+  type: "book"
+
+- title: "Refactoring — Martin Fowler"
+  url: "https://martinfowler.com/books/refactoring.html"
+  description: "Systematic approach to improving code structure without changing behavior."
+  category: "software-engineering"
+  type: "book"
+
+- title: "A Philosophy of Software Design"
+  url: "https://www.amazon.com/Philosophy-Software-Design-2nd/dp/173210221X"
+  description: "John Ousterhout. Short, opinionated take on complexity and module design."
+  category: "software-engineering"
+  type: "book"
+
+- title: "The Twelve-Factor App"
+  url: "https://12factor.net/"
+  description: "Methodology for building modern, portable, scalable SaaS applications."
+  category: "software-engineering"
+  type: "reference"
+
+- title: "Rust Book"
+  url: "https://doc.rust-lang.org/book/"
+  description: "The official Rust programming language book. Free, comprehensive, well-written."
+  category: "software-engineering"
+  type: "reference"
+
+- title: "Learn You a Haskell"
+  url: "http://learnyouahaskell.com/"
+  description: "Fun, illustrated introduction to Haskell and functional programming concepts."
+  category: "software-engineering"
+  type: "reference"
+
+- title: "Structure and Interpretation of Computer Programs"
+  url: "https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html"
+  description: "Abelson & Sussman. The MIT classic on computation and abstraction. Free online."
+  category: "software-engineering"
+  type: "book"
+  curated: true
+
+# ---------------------------------------------------------------------------
+# DevOps & Infrastructure
+# ---------------------------------------------------------------------------
+
+- title: "Kubernetes Documentation"
+  url: "https://kubernetes.io/docs/"
+  description: "Official k8s docs. Concepts, tutorials, and API reference."
+  category: "devops"
+  type: "reference"
+  curated: true
+
+- title: "Docker Documentation"
+  url: "https://docs.docker.com/"
+  description: "Official Docker guides. From getting started to multi-stage builds and Compose."
+  category: "devops"
+  type: "reference"
+
+- title: "Terraform Documentation"
+  url: "https://developer.hashicorp.com/terraform/docs"
+  description: "Infrastructure as code. Provider docs, modules, state management."
+  category: "devops"
+  type: "reference"
+
+- title: "Prometheus"
+  url: "https://prometheus.io/docs/"
+  description: "Open-source monitoring and alerting. Pull-based metrics, PromQL queries."
+  category: "devops"
+  type: "tool"
+
+- title: "Grafana"
+  url: "https://grafana.com/docs/"
+  description: "Visualization and dashboarding for metrics, logs, and traces."
+  category: "devops"
+  type: "tool"
+
+- title: "The Site Reliability Workbook"
+  url: "https://sre.google/workbook/table-of-contents/"
+  description: "Google's practical companion to the SRE book. Free online."
+  category: "devops"
+  type: "book"
+  curated: true
+
+- title: "Site Reliability Engineering — Google"
+  url: "https://sre.google/sre-book/table-of-contents/"
+  description: "The original Google SRE book. Free online. Defines the discipline."
+  category: "devops"
+  type: "book"
+
+- title: "ArgoCD"
+  url: "https://argo-cd.readthedocs.io/"
+  description: "Declarative GitOps continuous delivery for Kubernetes."
+  category: "devops"
+  type: "tool"
+
+- title: "Ansible Documentation"
+  url: "https://docs.ansible.com/"
+  description: "Agentless automation. Playbooks, roles, and collections for configuration management."
+  category: "devops"
+  type: "reference"
+
+- title: "Nginx Documentation"
+  url: "https://nginx.org/en/docs/"
+  description: "Web server, reverse proxy, load balancer. Configuration reference and guides."
+  category: "devops"
+  type: "reference"
+
+- title: "GitHub Actions Documentation"
+  url: "https://docs.github.com/en/actions"
+  description: "CI/CD workflows. Marketplace actions, reusable workflows, matrix builds."
+  category: "devops"
+  type: "reference"
+
+- title: "Kelsey Hightower — Kubernetes the Hard Way"
+  url: "https://github.com/kelseyhightower/kubernetes-the-hard-way"
+  description: "Bootstrap k8s from scratch. The best way to understand what's actually happening."
+  category: "devops"
+  type: "course"
+  curated: true
+
+- title: "The Phoenix Project"
+  url: "https://itrevolution.com/product/the-phoenix-project/"
+  description: "Novel about DevOps transformation. Makes the case for flow, feedback, and learning."
+  category: "devops"
+  type: "book"
+
+# ---------------------------------------------------------------------------
+# Databases
+# ---------------------------------------------------------------------------
+
+- title: "PostgreSQL Documentation"
+  url: "https://www.postgresql.org/docs/"
+  description: "The best database documentation. Comprehensive, accurate, well-organized."
+  category: "databases"
+  type: "reference"
+  curated: true
+
+- title: "Redis Documentation"
+  url: "https://redis.io/docs/"
+  description: "In-memory data store. Data structures, caching patterns, pub/sub."
+  category: "databases"
+  type: "reference"
+
+- title: "DuckDB"
+  url: "https://duckdb.org/docs/"
+  description: "Embedded analytical database. Fast OLAP queries, zero dependencies, great for local analysis."
+  category: "databases"
+  type: "tool"
+  curated: true
+
+- title: "Use The Index, Luke"
+  url: "https://use-the-index-luke.com/"
+  description: "SQL indexing and tuning explained clearly. Database-agnostic, free online."
+  category: "databases"
+  type: "course"
+  curated: true
+
+- title: "CMU Database Course (Andy Pavlo)"
+  url: "https://15445.courses.cs.cmu.edu/"
+  description: "The best database systems course. Lectures, projects, and notes freely available."
+  category: "databases"
+  type: "course"
+
+- title: "SQLite Documentation"
+  url: "https://www.sqlite.org/docs.html"
+  description: "The most deployed database engine. Architecture docs are a masterclass in simplicity."
+  category: "databases"
+  type: "reference"
+
+- title: "MongoDB University"
+  url: "https://learn.mongodb.com/"
+  description: "Free courses on MongoDB. Aggregation, indexing, data modeling."
+  category: "databases"
+  type: "course"
+
+- title: "ClickHouse"
+  url: "https://clickhouse.com/docs"
+  description: "Column-oriented OLAP database. Blazing fast for analytical queries at scale."
+  category: "databases"
+  type: "tool"
+
+- title: "CockroachDB Architecture"
+  url: "https://www.cockroachlabs.com/docs/stable/architecture/overview"
+  description: "Distributed SQL database. Good architecture docs for understanding consensus and transactions."
+  category: "databases"
+  type: "reference"
+
+- title: "Supabase"
+  url: "https://supabase.com/docs"
+  description: "Open-source Firebase alternative built on Postgres. Auth, storage, realtime, edge functions."
+  category: "databases"
+  type: "tool"
+
+- title: "Database Internals — Alex Petrov"
+  url: "https://www.databass.dev/"
+  description: "How databases work under the hood. B-trees, LSM-trees, consensus, distributed storage."
+  category: "databases"
+  type: "book"
+
+# ---------------------------------------------------------------------------
+# Frontend
+# ---------------------------------------------------------------------------
+
+- title: "React Documentation"
+  url: "https://react.dev"
+  description: "Official React docs. Hooks, Server Components, and the new mental model."
+  category: "frontend"
+  type: "reference"
+  curated: true
+
+- title: "TypeScript Handbook"
+  url: "https://www.typescriptlang.org/docs/handbook/"
+  description: "Official TypeScript docs. From basics to advanced type manipulation."
+  category: "frontend"
+  type: "reference"
+
+- title: "Next.js Documentation"
+  url: "https://nextjs.org/docs"
+  description: "Full-stack React framework. App Router, Server Actions, ISR."
+  category: "frontend"
+  type: "reference"
+
+- title: "MDN Web Docs"
+  url: "https://developer.mozilla.org"
+  description: "The definitive web platform reference. HTML, CSS, JavaScript, Web APIs."
+  category: "frontend"
+  type: "reference"
+  curated: true
+
+- title: "CSS-Tricks"
+  url: "https://css-tricks.com"
+  description: "Practical CSS guides and techniques. Flexbox and Grid guides are canonical."
+  category: "frontend"
+  type: "blog"
+
+- title: "web.dev — Chrome DevRel"
+  url: "https://web.dev"
+  description: "Performance, Core Web Vitals, accessibility, and modern web patterns from Google."
+  category: "frontend"
+  type: "reference"
+
+- title: "Patterns.dev"
+  url: "https://www.patterns.dev/"
+  description: "Design patterns and component patterns for modern web apps. Free online book."
+  category: "frontend"
+  type: "reference"
+
+- title: "Tailwind CSS"
+  url: "https://tailwindcss.com/docs"
+  description: "Utility-first CSS framework. The docs are also a great CSS reference."
+  category: "frontend"
+  type: "reference"
+
+- title: "Svelte Documentation"
+  url: "https://svelte.dev/docs"
+  description: "Compile-time framework. Less boilerplate, great DX, small bundles."
+  category: "frontend"
+  type: "reference"
+
+- title: "Josh Comeau's Blog"
+  url: "https://www.joshwcomeau.com/"
+  description: "Interactive CSS and React tutorials. Best-in-class visual explanations."
+  category: "frontend"
+  type: "blog"
+  curated: true
+
+- title: "Kent C. Dodds' Blog"
+  url: "https://kentcdodds.com/blog"
+  description: "Testing, React patterns, and web development best practices."
+  category: "frontend"
+  type: "blog"
+
+- title: "Frontend Masters"
+  url: "https://frontendmasters.com"
+  description: "Premium video courses from industry experts. TypeScript, React, performance, Node."
+  category: "frontend"
+  type: "course"
+
+# ---------------------------------------------------------------------------
+# Security & Cryptography
+# ---------------------------------------------------------------------------
+
+- title: "OWASP Top Ten 2025"
+  url: "https://owasp.org/Top10/2025/"
+  description: "The baseline web application security risk list."
+  category: "security"
+  type: "reference"
+  curated: true
+
+- title: "OWASP Top 10 for LLM Applications 2025"
+  url: "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/"
+  description: "AI-specific attack surfaces: prompt injection, training data poisoning, and more."
+  category: "security"
+  type: "reference"
+  curated: true
+
+- title: "PortSwigger Web Security Academy"
+  url: "https://portswigger.net/web-security"
+  description: "Free, hands-on web security training with interactive labs."
+  category: "security"
+  type: "course"
+  curated: true
+
+- title: "PortSwigger Research Blog"
+  url: "https://portswigger.net/blog"
+  description: "Where new vulnerability classes get published first. HTTP smuggling, cache poisoning."
+  category: "security"
+  type: "blog"
+
+- title: "Hack The Box"
+  url: "https://www.hackthebox.com/"
+  description: "Competitive hacking platform. Active machines, CTFs, career-path labs."
+  category: "security"
+  type: "tool"
+
+- title: "TryHackMe"
+  url: "https://tryhackme.com/"
+  description: "Structured, beginner-friendly security training with guided paths."
+  category: "security"
+  type: "course"
+
+- title: "CTFtime"
+  url: "https://ctftime.org/"
+  description: "Directory for CTF competitions worldwide. Past challenges, upcoming events, writeups."
+  category: "security"
+  type: "community"
+
+- title: "Schneier on Security"
+  url: "https://www.schneier.com/"
+  description: "Bruce Schneier on security, privacy, and policy. Decades of trusted writing."
+  category: "security"
+  type: "blog"
+
+- title: "Krebs on Security"
+  url: "https://krebsonsecurity.com/"
+  description: "Brian Krebs. Investigative journalism on cybercrime and breaches."
+  category: "security"
+  type: "blog"
+
+- title: "Daniel Miessler"
+  url: "https://danielmiessler.com"
+  description: "Security, technology, and AI. Creator of the Fabric AI framework."
+  category: "security"
+  type: "blog"
+
+- title: "Cryptography I — Dan Boneh (Stanford)"
+  url: "https://www.coursera.org/learn/crypto"
+  description: "Stream ciphers, block ciphers, MACs, public-key, digital signatures. The best intro."
+  category: "security"
+  type: "course"
+  curated: true
+
+- title: "A Graduate Course in Applied Cryptography"
+  url: "https://toc.cryptobook.us/"
+  description: "Boneh and Shoup. Free textbook. Graduate-level with formal proofs."
+  category: "security"
+  type: "book"
+
+- title: "New Directions in Cryptography"
+  url: "https://www-ee.stanford.edu/~hellman/publications/24.pdf"
+  description: "Diffie and Hellman, 1976. The paper that started public-key cryptography."
+  category: "security"
+  type: "paper"
+  curated: true
+
+- title: "NIST Post-Quantum Cryptography Standards"
+  url: "https://www.nist.gov/pqc"
+  description: "ML-KEM, ML-DSA, and SLH-DSA standards finalized August 2024."
+  category: "security"
+  type: "reference"
+
+- title: "The Illustrated TLS 1.3"
+  url: "https://tls13.xargs.org/"
+  description: "Interactive byte-level walkthrough of a TLS 1.3 handshake."
+  category: "security"
+  type: "reference"
+
+- title: "Cypherpunk Manifesto"
+  url: "https://www.activism.net/cypherpunk/manifesto.html"
+  description: "Eric Hughes, 1993. Why privacy matters and code is speech."
+  category: "security"
+  type: "reference"
+
+- title: "Cyphernomicon — Timothy C. May"
+  url: "https://nakamotoinstitute.org/library/cyphernomicon/"
+  description: "FAQ and manifesto from the cypherpunks mailing list."
+  category: "security"
+  type: "reference"
+
+- title: "Cypherpunk Research — Tom Busby"
+  url: "https://github.com/tombusby/cypherpunk-research"
+  description: "Collection of primary source cypherpunk documents and papers."
+  category: "security"
+  type: "reference"
+
+- title: "Trail of Bits Blog"
+  url: "https://blog.trailofbits.com/"
+  description: "Top security auditors. Smart contract exploits, fuzzing, program analysis."
+  category: "security"
+  type: "blog"
+
+- title: "CyberChef"
+  url: "https://gchq.github.io/CyberChef/"
+  description: "GCHQ's web-based tool for encoding, decoding, encryption, and data analysis."
+  category: "security"
+  type: "tool"
+
+# ---------------------------------------------------------------------------
+# Career & Leadership
+# ---------------------------------------------------------------------------
+
+- title: "The Manager's Path — Camille Fournier"
+  url: "https://www.oreilly.com/library/view/the-managers-path/9781491973882/"
+  description: "Tech lead to CTO. The definitive guide for engineering management growth."
+  category: "career"
+  type: "book"
+  curated: true
+
+- title: "An Elegant Puzzle — Will Larson"
+  url: "https://lethain.com/elegant-puzzle/"
+  description: "Systems thinking for engineering management. Org design, hiring, technical strategy."
+  category: "career"
+  type: "book"
+  curated: true
+
+- title: "Staff Engineer — Will Larson"
+  url: "https://staffeng.com/book"
+  description: "What staff+ engineers actually do. Archetypes, operating at scale, getting promoted."
+  category: "career"
+  type: "book"
+
+- title: "StaffEng.com"
+  url: "https://staffeng.com/"
+  description: "Stories and guides from staff+ engineers at various companies."
+  category: "career"
+  type: "blog"
+
+- title: "Irrational Exuberance — Will Larson"
+  url: "https://lethain.com/"
+  description: "Blog on engineering leadership, strategy, and organizational design."
+  category: "career"
+  type: "blog"
+
+- title: "The CTO Craft Blog"
+  url: "https://ctocraft.com/blog/"
+  description: "Community and resources for CTOs and VP Engineering."
+  category: "career"
+  type: "blog"
+
+- title: "Charity Majors' Blog"
+  url: "https://charity.wtf/"
+  description: "Observability, engineering culture, and management from the Honeycomb co-founder."
+  category: "career"
+  type: "blog"
+
+- title: "High Output Management — Andy Grove"
+  url: "https://www.amazon.com/High-Output-Management-Andrew-Grove/dp/0679762884"
+  description: "Intel CEO on leverage, meetings, and OKRs. Still the best management book."
+  category: "career"
+  type: "book"
+  curated: true
+
+- title: "The Engineering Executive's Primer"
+  url: "https://lethain.com/eng-execs-primer/"
+  description: "Will Larson on the VP/CTO role. Strategy, managing managers, working with execs."
+  category: "career"
+  type: "book"
+
+- title: "Rands in Repose"
+  url: "https://randsinrepose.com/"
+  description: "Michael Lopp on engineering management, leadership, and organizational dynamics."
+  category: "career"
+  type: "blog"
+
+- title: "LeadDev"
+  url: "https://leaddev.com/"
+  description: "Articles, talks, and events for engineering leaders at every level."
+  category: "career"
+  type: "community"
+
+- title: "Accelerate — Forsgren, Humble, Kim"
+  url: "https://itrevolution.com/product/accelerate/"
+  description: "DORA metrics research on what makes high-performing tech organizations."
+  category: "career"
+  type: "book"
+
+# ---------------------------------------------------------------------------
+# Books & Podcasts
+# ---------------------------------------------------------------------------
+
+- title: "Thinking, Fast and Slow — Daniel Kahneman"
+  url: "https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555"
+  description: "System 1 vs System 2 thinking. Changed how we understand decision-making."
+  category: "books-podcasts"
+  type: "book"
+  curated: true
+
+- title: "Sapiens — Yuval Noah Harari"
+  url: "https://www.amazon.com/Sapiens-Humankind-Yuval-Noah-Harari/dp/0062316117"
+  description: "Brief history of humankind. Cognitive revolution, agriculture, empire, science."
+  category: "books-podcasts"
+  type: "book"
+
+- title: "The Black Swan — Nassim Nicholas Taleb"
+  url: "https://www.amazon.com/Black-Swan-Improbable-Robustness-Fragility/dp/081297381X"
+  description: "On rare events, uncertainty, and why we're bad at predicting the future."
+  category: "books-podcasts"
+  type: "book"
+  curated: true
+
+- title: "Zero to One — Peter Thiel"
+  url: "https://www.amazon.com/Zero-One-Notes-Startups-Future/dp/0804139296"
+  description: "Contrarian thinking about startups, monopolies, and building the future."
+  category: "books-podcasts"
+  type: "book"
+
+- title: "Lex Fridman Podcast"
+  url: "https://lexfridman.com/podcast/"
+  description: "Long-form conversations with researchers, engineers, and thinkers in AI and beyond."
+  category: "books-podcasts"
+  type: "podcast"
+
+- title: "Acquired Podcast"
+  url: "https://www.acquired.fm/"
+  description: "Deep-dive company histories. NVIDIA, Costco, Berkshire episodes are standouts."
+  category: "books-podcasts"
+  type: "podcast"
+  curated: true
+
+- title: "The Changelog"
+  url: "https://changelog.com/podcast"
+  description: "Conversations about open source, software development, and the developer ecosystem."
+  category: "books-podcasts"
+  type: "podcast"
+
+- title: "Latent Space Podcast"
+  url: "https://www.latent.space/podcast"
+  description: "AI engineering podcast. Technical depth on agents, RAG, and LLM infrastructure."
+  category: "books-podcasts"
+  type: "podcast"
+  curated: true
+
+- title: "3Blue1Brown"
+  url: "https://www.3blue1brown.com/"
+  description: "Grant Sanderson's math visualizations. Neural networks, linear algebra, calculus series."
+  category: "books-podcasts"
+  type: "video"
+  curated: true
+
+- title: "Computerphile"
+  url: "https://www.youtube.com/@Computerphile"
+  description: "University of Nottingham CS videos. Accessible explanations of hard topics."
+  category: "books-podcasts"
+  type: "video"
+
+- title: "Antifragile — Nassim Nicholas Taleb"
+  url: "https://www.amazon.com/Antifragile-Things-That-Disorder-Incerto/dp/0812979680"
+  description: "Things that gain from disorder. Applies to systems, careers, and investing."
+  category: "books-podcasts"
+  type: "book"
+
+- title: "The Almanack of Naval Ravikant"
+  url: "https://www.navalmanack.com/"
+  description: "Wealth creation and happiness from Naval's tweets and podcasts. Free online."
+  category: "books-podcasts"
+  type: "book"
+
+- title: "Hardcore History — Dan Carlin"
+  url: "https://www.dancarlin.com/hardcore-history-series/"
+  description: "Epic multi-hour history episodes. Blueprint for Armageddon on WWI is essential."
+  category: "books-podcasts"
+  type: "podcast"
+
+- title: "Two Minute Papers"
+  url: "https://www.youtube.com/@TwoMinutePapers"
+  description: "Quick visual summaries of AI research papers. Good for staying current."
+  category: "books-podcasts"
+  type: "video"
+
+# ---------------------------------------------------------------------------
+# Blockchain & Crypto
+# ---------------------------------------------------------------------------
+
+- title: "Bitcoin Whitepaper"
+  url: "https://bitcoin.org/bitcoin.pdf"
+  description: "Satoshi Nakamoto's 9 pages. Still the clearest explanation of how and why."
+  category: "blockchain"
+  type: "paper"
+  curated: true
+
+- title: "Ethereum Whitepaper"
+  url: "https://ethereum.org/whitepaper/"
+  description: "Buterin's 2014 vision for a programmable blockchain, with annotations on what changed."
+  category: "blockchain"
+  type: "paper"
+  curated: true
+
+- title: "Mastering Bitcoin"
+  url: "https://github.com/bitcoinbook/bitcoinbook"
+  description: "Antonopoulos. 3rd edition (2023) free under Creative Commons. The technical deep-dive."
+  category: "blockchain"
+  type: "book"
+  curated: true
+
+- title: "Mastering Ethereum"
+  url: "https://github.com/ethereumbook/ethereumbook"
+  description: "Antonopoulos and Wood. Free, comprehensive, still the best single-volume reference."
+  category: "blockchain"
+  type: "book"
+
+- title: "Ethereum Developer Docs"
+  url: "https://ethereum.org/developers/docs/"
+  description: "Official reference for EVM, gas, accounts, consensus, and smart contract standards."
+  category: "blockchain"
+  type: "reference"
+
+- title: "DeFi Specialization — Duke University"
+  url: "https://www.coursera.org/specializations/decentralized-finance-duke"
+  description: "Campbell Harvey's Coursera specialization. The most rigorous DeFi education available."
+  category: "blockchain"
+  type: "course"
+
+- title: "Uniswap Protocol Docs"
+  url: "https://docs.uniswap.org/"
+  description: "Primary source for understanding how AMMs and DeFi liquidity actually work."
+  category: "blockchain"
+  type: "reference"
+
+- title: "The Complete Satoshi"
+  url: "http://satoshi.nakamotoinstitute.org/"
+  description: "All of Satoshi Nakamoto's known writings, emails, and forum posts."
+  category: "blockchain"
+  type: "reference"
+
+- title: "Jameson Lopp's Bitcoin Resources"
+  url: "https://lopp.net/bitcoin.html"
+  description: "Comprehensive and regularly updated collection of Bitcoin resources."
+  category: "blockchain"
+  type: "reference"
+  curated: true
+
+- title: "Solidity Documentation"
+  url: "https://docs.soliditylang.org/"
+  description: "Official Solidity language docs. The standard for Ethereum smart contracts."
+  category: "blockchain"
+  type: "reference"
+
+- title: "Foundry"
+  url: "https://book.getfoundry.sh/"
+  description: "Blazing fast Ethereum development toolkit. Forge, Cast, Anvil, Chisel."
+  category: "blockchain"
+  type: "tool"
+
+- title: "CryptoZombies"
+  url: "https://cryptozombies.io/"
+  description: "Interactive Solidity tutorial. Build a zombie game while learning smart contracts."
+  category: "blockchain"
+  type: "course"
+
+- title: "Chainlink Documentation"
+  url: "https://docs.chain.link/"
+  description: "Decentralized oracle network. Price feeds, VRF, automation for smart contracts."
+  category: "blockchain"
+  type: "reference"
+
+- title: "DeFi Llama"
+  url: "https://defillama.com/"
+  description: "DeFi analytics dashboard. TVL, yields, protocol comparisons across all chains."
+  category: "blockchain"
+  type: "tool"
+
+- title: "Ethereum Improvement Proposals (EIPs)"
+  url: "https://eips.ethereum.org/"
+  description: "Standards and proposals shaping Ethereum. ERC-20, ERC-721, EIP-4844, and more."
+  category: "blockchain"
+  type: "reference"
