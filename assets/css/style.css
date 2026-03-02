@@ -1240,27 +1240,95 @@ details li {
 }
 
 /* ==========================================================================
-   CV TIMELINE
+   CV PAGE
    ========================================================================== */
+.cv-header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.cv-header h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0 0 var(--space-xs) 0;
+}
+
+.cv-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--accent);
+  margin-bottom: var(--space-xs);
+}
+
+.cv-location {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: var(--space-md);
+}
+
+.cv-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+
+.cv-links a {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition);
+}
+
+.cv-links a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+
+.cv-download {
+  color: var(--accent) !important;
+  border-color: var(--accent) !important;
+}
+
+.cv-summary {
+  max-width: var(--reading-width);
+  margin: 0 auto var(--space-xl);
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.cv-summary p {
+  margin: 0;
+}
+
+/* Timeline */
 .cv-timeline {
   border-left: 2px solid var(--border);
-  padding-left: 1.5rem;
+  padding-left: 2rem;
   margin-left: 0.5rem;
+  margin-bottom: var(--space-xl);
 }
 
-.cv-timeline section,
-.cv-timeline .cv-entry {
+.cv-entry {
   position: relative;
-  margin-bottom: 2.5rem;
-  padding-left: 0.5rem;
+  margin-bottom: var(--space-lg);
+  padding: var(--space-md);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color var(--transition), box-shadow var(--transition);
 }
 
-.cv-timeline section::before,
-.cv-timeline .cv-entry::before {
+.cv-entry::before {
   content: '';
   position: absolute;
-  left: -1.85rem;
-  top: 0.5rem;
+  left: calc(-2rem - 0.5rem - 1px);
+  top: 1.2rem;
   width: 10px;
   height: 10px;
   background: var(--accent);
@@ -1268,10 +1336,124 @@ details li {
   box-shadow: 0 0 8px var(--accent-glow);
 }
 
-.cv-timeline h3 {
-  border-left: 3px solid var(--accent);
-  padding-left: 0.8rem;
+.cv-entry--expandable {
+  cursor: pointer;
+}
+
+.cv-entry--expandable:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+.cv-entry--expandable h3::after {
+  content: '+';
+  float: right;
+  font-family: var(--font-code);
+  font-size: 1rem;
+  color: var(--text-muted);
+  transition: transform var(--transition);
+}
+
+.cv-entry--open h3::after {
+  content: '\2212';
+}
+
+.cv-date {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--accent-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-xs);
+}
+
+.cv-entry h3 {
+  font-size: 1.15rem;
+  margin: 0 0 var(--space-xs) 0;
+}
+
+.cv-company {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.cv-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.cv-entry--open .cv-details {
+  max-height: 600px;
+}
+
+.cv-details ul {
+  padding-left: 1.2em;
+  margin: var(--space-sm) 0 0;
+}
+
+.cv-details li {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-bottom: var(--space-sm);
+}
+
+.cv-oneliner {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* CV Sections (Writing, Education, Skills) */
+.cv-section {
+  margin-bottom: var(--space-xl);
+}
+
+.cv-section h2 {
+  font-size: 1.3rem;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+
+.cv-section h2:first-child {
   margin-top: 0;
+}
+
+.cv-section ul {
+  padding-left: 1.2em;
+}
+
+.cv-section li {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-bottom: var(--space-sm);
+}
+
+.cv-skills {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.cv-skill-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.cv-skill-label {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--accent-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  min-width: 80px;
+  margin-right: var(--space-sm);
 }
 
 /* Skills pills */
