@@ -511,7 +511,49 @@ li::marker {
 }
 
 /* Explore Row */
-.landing-explore {
+/* Explore section (shared across all pages) */
+.explore-section {
+  max-width: 900px;
+  margin: var(--space-2xl) auto var(--space-lg);
+  padding: 0 2rem;
+}
+
+.explore-section .section-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: var(--space-md);
+}
+
+/* Nav Explore link (far right, hidden by default) */
+.nav-explore-link {
+  position: absolute;
+  right: 6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, color 0.2s ease;
+}
+
+.nav-explore-link.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.nav-explore-link:hover {
+  color: var(--accent);
+}
+
+/* Landing page keeps its own explore width */
+.landing-explore,
+.landing .explore-section {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem var(--space-2xl);
@@ -592,7 +634,8 @@ li::marker {
 
   .landing-glance,
   .landing-featured,
-  .landing-explore {
+  .landing-explore,
+  .landing .explore-section {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
@@ -1639,6 +1682,15 @@ tr:hover td {
     right: 3rem;
     top: 50%;
     transform: translateY(-50%);
+  }
+
+  .nav-explore-link {
+    right: 7.5rem;
+    font-size: 0.75rem;
+  }
+
+  .explore-section {
+    padding: 0 1.5rem;
   }
 }
 
