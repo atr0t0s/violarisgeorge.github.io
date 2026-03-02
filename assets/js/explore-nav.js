@@ -18,17 +18,6 @@
     e.preventDefault();
     target.scrollIntoView({ behavior: 'smooth' });
 
-    // Create overlay after scroll finishes
-    var overlay = document.createElement('div');
-    overlay.className = 'explore-spotlight-overlay';
-    document.body.appendChild(overlay);
-    target.classList.add('explore-spotlight');
-
-    // Fade in
-    requestAnimationFrame(function () {
-      overlay.classList.add('active');
-    });
-
     function dismiss() {
       overlay.classList.remove('active');
       target.classList.remove('explore-spotlight');
@@ -53,14 +42,20 @@
       if (ev.key === 'Escape') dismiss();
     }
 
-    // Lock scroll while spotlight is active
-    document.body.style.overflow = 'hidden';
+    // Create overlay + lock scroll AFTER scroll completes
+    var overlay = document.createElement('div');
+    overlay.className = 'explore-spotlight-overlay';
 
-    // Delay listeners so the current click doesn't immediately dismiss
     setTimeout(function () {
+      document.body.appendChild(overlay);
+      target.classList.add('explore-spotlight');
+      requestAnimationFrame(function () {
+        overlay.classList.add('active');
+      });
+      document.body.style.overflow = 'hidden';
       document.addEventListener('click', onClickOutside, true);
       document.addEventListener('keydown', onEsc);
-    }, 400);
+    }, 600);
   });
 
   update();
