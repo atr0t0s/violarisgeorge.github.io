@@ -6,6 +6,63 @@
   var messages = document.getElementById('ask-messages');
   var submit = document.getElementById('ask-submit');
 
+  function escapeHtml(str) {
+    var div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  function renderMarkdown(text) {
+    var html = escapeHtml(text);
+
+    // Code blocks (```)
+    html = html.replace(/```(\w*)\n([\s\S]*?)```/g, function (_, lang, code) {
+      return '<pre><code>' + code.trim() + '</code></pre>';
+    });
+
+    // Inline code
+    html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+
+    // Bold
+    html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+
+    // Italic
+    html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
+
+    // Split into blocks for lists and paragraphs
+    var blocks = html.split(/\n\n+/);
+    var out = [];
+    for (var i = 0; i < blocks.length; i++) {
+      var block = blocks[i].trim();
+      if (!block) continue;
+
+      // Check if block is a list
+      var lines = block.split('\n');
+      var isList = true;
+      for (var j = 0; j < lines.length; j++) {
+        if (lines[j].trim() && !/^[-*]\s/.test(lines[j].trim())) {
+          isList = false;
+          break;
+        }
+      }
+
+      if (isList && lines.length > 0) {
+        var items = '';
+        for (var k = 0; k < lines.length; k++) {
+          var li = lines[k].trim().replace(/^[-*]\s/, '');
+          if (li) items += '<li>' + li + '</li>';
+        }
+        out.push('<ul>' + items + '</ul>');
+      } else if (/^<pre>/.test(block)) {
+        out.push(block);
+      } else {
+        out.push('<p>' + block.replace(/\n/g, '<br>') + '</p>');
+      }
+    }
+
+    return out.join('');
+  }
+
   function addMessage(role, text) {
     var div = document.createElement('div');
     div.className = 'ask-msg ask-msg--' + role;
@@ -17,7 +74,13 @@
 
     var body = document.createElement('div');
     body.className = 'ask-msg-body';
-    body.textContent = text;
+    if (text) {
+      if (role === 'ai') {
+        body.innerHTML = renderMarkdown(text);
+      } else {
+        body.textContent = text;
+      }
+    }
     div.appendChild(body);
 
     messages.appendChild(div);
@@ -53,7 +116,7 @@
       })
       .then(function (data) {
         var answer = data.response || 'Sorry, I couldn\'t generate a response.';
-        body.textContent = answer;
+        body.innerHTML = renderMarkdown(answer);
         history.push({ role: 'assistant', content: answer });
       })
       .catch(function () {
