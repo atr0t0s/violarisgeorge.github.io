@@ -1924,9 +1924,9 @@ tr:hover td {
   box-shadow: 0 0 12px var(--accent-glow);
 }
 
-a.nav-action-btn:hover,
 a.nav-action-btn:focus {
-  border-bottom-color: var(--accent);
+  border-color: transparent;
+  box-shadow: none;
 }
 
 .nav-action-btn svg {
