@@ -51,4 +51,4 @@ title: Notes
 
 </section>
 
-<script src="{{ '/assets/js/notes.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/notes.js?v=2' | relative_url }}" defer></script>
