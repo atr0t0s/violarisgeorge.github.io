@@ -3,7 +3,7 @@
   if (!link) return;
 
   function update() {
-    var scrollable = document.documentElement.scrollHeight > window.innerHeight + 100;
+    var scrollable = document.documentElement.scrollHeight > window.innerHeight + 50;
     if (scrollable) {
       link.classList.add('visible');
     } else {
@@ -65,5 +65,9 @@
 
   update();
   window.addEventListener('resize', update);
-  window.addEventListener('load', update);
+  window.addEventListener('load', function () {
+    update();
+    // Re-check after other scripts may have changed DOM height
+    setTimeout(update, 300);
+  });
 })();

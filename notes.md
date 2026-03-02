@@ -45,6 +45,8 @@ title: Notes
     {% endfor %}
   </div>
 
+  <nav class="notes-pagination" id="notes-pagination" aria-label="Notes pagination"></nav>
+
   <p class="notes-empty" id="notes-empty" style="display:none">No notes match that filter.</p>
 
 </section>
