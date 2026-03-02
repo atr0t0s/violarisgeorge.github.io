@@ -500,7 +500,6 @@ li::marker {
   padding: 2rem;
   text-decoration: none;
   transition: all 0.3s ease;
-  border-bottom: none;
 }
 
 .featured-card:hover {
@@ -508,7 +507,6 @@ li::marker {
   border-color: var(--accent);
   box-shadow: 0 0 30px var(--accent-glow), 0 8px 24px rgba(0, 0, 0, 0.3);
   transform: translateY(-4px);
-  border-bottom: none;
 }
 
 .featured-icon {
@@ -972,7 +970,6 @@ main.content,
   padding: 1.2rem 1.4rem;
   margin-bottom: 0.8rem;
   text-decoration: none;
-  border-bottom: none;
   transition: all var(--transition);
 }
 
@@ -981,7 +978,6 @@ main.content,
   border-color: var(--accent);
   box-shadow: 0 0 20px var(--accent-glow), 0 4px 12px rgba(0, 0, 0, 0.3);
   transform: translateY(-2px);
-  border-bottom: none;
 }
 
 .post-list .post-date {
@@ -2543,7 +2539,6 @@ a.nav-action-btn:focus {
   padding: 1.25rem;
   text-decoration: none;
   transition: all 0.3s ease;
-  border-bottom: none;
 }
 
 .resource-card:hover {
@@ -2551,7 +2546,6 @@ a.nav-action-btn:focus {
   border-color: var(--accent);
   box-shadow: 0 0 30px var(--accent-glow), 0 8px 24px rgba(0, 0, 0, 0.3);
   transform: translateY(-4px);
-  border-bottom: none;
 }
 
 .resource-card--curated {
