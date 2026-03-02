@@ -268,7 +268,29 @@ li::marker {
   color: var(--text);
 }
 
-.hero-links {
+.hero-socials {
+  display: flex;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.hero-social {
+  color: var(--text-muted);
+  transition: all var(--transition);
+  display: flex;
+  align-items: center;
+}
+
+.hero-social:hover {
+  color: var(--accent);
+  filter: drop-shadow(0 0 8px var(--accent-glow));
+}
+
+.hero-social svg {
+  display: block;
+}
+
+.hero-nav {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-sm);
@@ -289,7 +311,6 @@ li::marker {
   color: var(--accent);
   border-color: var(--accent);
   box-shadow: 0 0 12px var(--accent-glow);
-  border-bottom-color: var(--accent);
 }
 
 /* At a Glance */
