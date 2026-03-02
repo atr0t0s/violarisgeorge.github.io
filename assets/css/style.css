@@ -547,6 +547,30 @@ li::marker {
   color: var(--text);
 }
 
+/* Explore spotlight overlay */
+.explore-spotlight-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 90;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: auto;
+}
+
+.explore-spotlight-overlay.active {
+  opacity: 1;
+}
+
+.explore-spotlight {
+  position: relative;
+  z-index: 91;
+}
+
+[data-theme="light"] .explore-spotlight-overlay {
+  background: rgba(0, 0, 0, 0.45);
+}
+
 /* Nav Explore button (hidden until page is scrollable) */
 .nav-explore-btn {
   gap: 0.4rem;
