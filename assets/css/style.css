@@ -740,6 +740,15 @@ li::marker {
   box-shadow: 0 1px 12px rgba(0, 212, 255, 0.04);
 }
 
+.site-nav > .nav-logo {
+  flex: 1;
+}
+
+.site-nav > .nav-actions {
+  flex: 1;
+  justify-content: flex-end;
+}
+
 [data-theme="light"] .site-nav {
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
 }
