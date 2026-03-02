@@ -522,6 +522,10 @@ li::marker {
   color: var(--accent-secondary);
 }
 
+[data-theme="light"] .explore-section .section-label {
+  color: var(--text);
+}
+
 /* Nav Explore button (hidden until page is scrollable) */
 .nav-explore-btn {
   gap: 0.4rem;
