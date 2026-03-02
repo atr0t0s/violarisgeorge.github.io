@@ -551,7 +551,7 @@ li::marker {
 .explore-spotlight-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.85);
   z-index: 90;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -565,10 +565,21 @@ li::marker {
 .explore-spotlight {
   position: relative;
   z-index: 91;
+  border-radius: var(--radius);
+  box-shadow: 0 0 40px var(--accent-glow), 0 0 80px rgba(0, 212, 255, 0.08);
+  background: var(--bg);
+  padding: var(--space-md) 2rem;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  transition: box-shadow 0.3s ease;
+}
+
+[data-theme="light"] .explore-spotlight {
+  box-shadow: 0 0 40px rgba(0, 119, 170, 0.15), 0 0 80px rgba(0, 119, 170, 0.08);
 }
 
 [data-theme="light"] .explore-spotlight-overlay {
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 /* Nav Explore button (hidden until page is scrollable) */

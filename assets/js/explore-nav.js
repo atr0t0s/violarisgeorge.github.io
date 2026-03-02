@@ -32,6 +32,7 @@
     function dismiss() {
       overlay.classList.remove('active');
       target.classList.remove('explore-spotlight');
+      document.body.style.overflow = '';
       overlay.addEventListener('transitionend', function () {
         overlay.remove();
       });
@@ -51,6 +52,9 @@
     function onEsc(ev) {
       if (ev.key === 'Escape') dismiss();
     }
+
+    // Lock scroll while spotlight is active
+    document.body.style.overflow = 'hidden';
 
     // Delay listeners so the current click doesn't immediately dismiss
     setTimeout(function () {
