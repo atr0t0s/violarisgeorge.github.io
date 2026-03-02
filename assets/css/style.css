@@ -1477,6 +1477,16 @@ details ul {
   margin-top: 0.5rem;
 }
 
+/* Uses page icons */
+.uses-icon {
+  vertical-align: -2px;
+  margin-right: 4px;
+}
+
+[data-theme="light"] .uses-icon {
+  filter: brightness(0.47) sepia(1) saturate(3) hue-rotate(165deg);
+}
+
 details li {
   margin-bottom: 0.3rem;
 }
