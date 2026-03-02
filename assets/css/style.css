@@ -281,9 +281,11 @@ li::marker {
   align-items: center;
 }
 
-.hero-social:hover {
+.hero-social:hover,
+.hero-social:focus {
   color: var(--accent);
   filter: drop-shadow(0 0 8px var(--accent-glow));
+  border-bottom-color: transparent;
 }
 
 .hero-social svg {
@@ -1382,7 +1384,7 @@ details li {
   box-shadow: 0 0 12px var(--accent-glow);
 }
 
-.cv-download {
+.cv-download:hover {
   color: var(--accent) !important;
   border-color: var(--accent) !important;
 }
@@ -1900,6 +1902,11 @@ tr:hover td {
   color: var(--accent);
   border-color: var(--accent);
   box-shadow: 0 0 12px var(--accent-glow);
+}
+
+a.nav-action-btn:hover,
+a.nav-action-btn:focus {
+  border-bottom-color: transparent;
 }
 
 .nav-action-btn svg {
