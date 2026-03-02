@@ -10,6 +10,11 @@ layout: default
       {% if page.lab %}<a href="{{ page.lab }}" class="hero-link">Lab Article</a>{% endif %}
     </div>
   </header>
+  {% if page.demo %}
+  <div class="demo-embed">
+    <img src="{{ page.demo | relative_url }}" alt="Demo of {{ page.title }}" loading="lazy">
+  </div>
+  {% endif %}
   <div class="case-study-content">
     {{ content }}
   </div>
