@@ -13,7 +13,16 @@
   }
 
   function renderMarkdown(text) {
-    var html = escapeHtml(text);
+    // Normalize: insert newlines before bold headings like **Title:**
+    var normalized = text.replace(/\s*\*\*([^*]+?(?::\*\*|\*\*:))/g, '\n\n**$1');
+
+    // Normalize: split inline numbered lists (` 1. item 2. item`) onto separate lines
+    normalized = normalized.replace(/\s+(\d+)\.\s/g, '\n$1. ');
+
+    // Normalize: split inline bullet lists (` - item - item`)
+    normalized = normalized.replace(/\s+([-*])\s(?=[A-Z0-9])/g, '\n$1 ');
+
+    var html = escapeHtml(normalized);
 
     // Code blocks (```)
     html = html.replace(/```(\w*)\n([\s\S]*?)```/g, function (_, lang, code) {
@@ -26,35 +35,47 @@
     // Bold
     html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
 
-    // Italic
-    html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
+    // Italic (but not inside words)
+    html = html.replace(/(?<!\w)\*(.+?)\*(?!\w)/g, '<em>$1</em>');
 
-    // Split into blocks for lists and paragraphs
+    // Split into blocks
     var blocks = html.split(/\n\n+/);
     var out = [];
     for (var i = 0; i < blocks.length; i++) {
       var block = blocks[i].trim();
       if (!block) continue;
 
-      // Check if block is a list
-      var lines = block.split('\n');
-      var isList = true;
-      for (var j = 0; j < lines.length; j++) {
-        if (lines[j].trim() && !/^[-*]\s/.test(lines[j].trim())) {
-          isList = false;
-          break;
-        }
+      if (/^<pre>/.test(block)) {
+        out.push(block);
+        continue;
       }
 
-      if (isList && lines.length > 0) {
+      var lines = block.split('\n');
+
+      // Check if block is a numbered list
+      var isOl = lines.length > 1 && lines.every(function (l) {
+        return !l.trim() || /^\d+\.\s/.test(l.trim());
+      });
+
+      // Check if block is a bullet list
+      var isUl = lines.length > 1 && lines.every(function (l) {
+        return !l.trim() || /^[-*]\s/.test(l.trim());
+      });
+
+      if (isOl) {
         var items = '';
         for (var k = 0; k < lines.length; k++) {
-          var li = lines[k].trim().replace(/^[-*]\s/, '');
+          var li = lines[k].trim().replace(/^\d+\.\s/, '');
           if (li) items += '<li>' + li + '</li>';
         }
-        out.push('<ul>' + items + '</ul>');
-      } else if (/^<pre>/.test(block)) {
-        out.push(block);
+        out.push('<ol>' + items + '</ol>');
+      } else if (isUl) {
+        var items2 = '';
+        for (var k2 = 0; k2 < lines.length; k2++) {
+          var li2 = lines[k2].trim().replace(/^[-*]\s/, '');
+          if (li2) items2 += '<li>' + li2 + '</li>';
+        }
+        out.push('<ul>' + items2 + '</ul>');
       } else {
         out.push('<p>' + block.replace(/\n/g, '<br>') + '</p>');
       }
