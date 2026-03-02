@@ -2,7 +2,7 @@
   var section = document.getElementById('comments-section');
   if (!section) return;
 
-  var API = 'https://violaris-comments.violarisgeorge.workers.dev';
+  var API = 'https://comments.violaris.org';
   var pageSlug = section.getAttribute('data-page');
   var currentUser = null;
 
