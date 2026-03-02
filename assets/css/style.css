@@ -2145,3 +2145,127 @@ tr:hover td {
   }
 }
 
+/* ---------- Ask / Chat Page ---------- */
+.ask-page {
+  max-width: var(--reading-width);
+  margin: 0 auto;
+}
+
+.ask-header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.ask-header h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: var(--space-md);
+}
+
+.ask-tagline {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.ask-chat {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+
+.ask-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.ask-msg {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.ask-msg-label {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.ask-msg--user .ask-msg-label {
+  color: var(--accent);
+}
+
+.ask-msg--ai .ask-msg-label {
+  color: var(--accent-secondary);
+}
+
+.ask-msg-body {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.ask-msg--user .ask-msg-body {
+  color: var(--text);
+}
+
+.ask-input {
+  display: flex;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  border-top: 1px solid var(--border);
+}
+
+.ask-input input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color var(--transition);
+}
+
+.ask-input input:focus {
+  border-color: var(--accent);
+}
+
+.ask-input button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  color: var(--bg);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: opacity var(--transition);
+  white-space: nowrap;
+}
+
+.ask-input button:hover {
+  opacity: 0.85;
+}
+
+.ask-input button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
