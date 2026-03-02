@@ -9,30 +9,30 @@ Tools and setup I use daily. Last updated March 2026.
 
 ---
 
-<details open>
+<details open markdown="1">
 <summary>Editor & Terminal</summary>
 
 - **Neovim** — primary editor
-- **Alacritty / Kitty** — terminal emulator
+- **Ghostty** — terminal emulator
 - **zsh** — shell, custom config
 - **tmux** — session management
-- **JetBrains Mono** — font
+- **Fira Code** — font
 
 </details>
 
-<details>
+<details markdown="1">
 <summary>Languages & Frameworks</summary>
 
 - **TypeScript / JavaScript** — primary language
 - **Python** — AI/ML, orchestration
 - **Go** — tooling
-- **PHP (Laravel)** — legacy projects
+- **PHP** — lightweight monolithic backends, APIs, and legacy projects
 - **React, Next.js, Vue.js** — frontend
 - **Node.js, Bun** — runtime
 
 </details>
 
-<details>
+<details markdown="1">
 <summary>AI & Data</summary>
 
 - **Claude, GPT-4, Gemini** — LLM providers
@@ -44,16 +44,16 @@ Tools and setup I use daily. Last updated March 2026.
 
 </details>
 
-<details>
+<details markdown="1">
 <summary>Hardware</summary>
 
-- **MacBook Pro** — main machine
+- **MacBook Pro M4** — 128GB unified memory, main machine
 - **External monitor** — extended display
 - **Mechanical keyboard** — daily driver
 
 </details>
 
-<details>
+<details markdown="1">
 <summary>Apps & Productivity</summary>
 
 - **Obsidian** — notes, via ObsiTUI
