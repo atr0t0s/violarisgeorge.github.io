@@ -4,6 +4,13 @@ url: https://violaris.org
 comments: true
 plugins:
   - jekyll-seo-tag
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/og-image.png
+twitter:
+  card: summary_large_image
 exclude:
   - docs
   - Gemfile
