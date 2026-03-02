@@ -1105,11 +1105,13 @@ pre code.hljs {
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   color: var(--text-muted);
-  font-family: var(--font-heading);
-  font-size: 0.7rem;
-  padding: 0.2rem 0.5rem;
+  padding: 0.35rem;
   cursor: pointer;
   opacity: 0;
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: opacity var(--transition), color var(--transition), border-color var(--transition);
 }
 
