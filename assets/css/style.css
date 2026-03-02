@@ -652,6 +652,14 @@ li::marker {
   font-size: 0.95rem;
 }
 
+.lab-date {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+}
+
 /* ==========================================================================
    SITE NAVIGATION
    ========================================================================== */
