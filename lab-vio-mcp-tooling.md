@@ -1,6 +1,7 @@
 ---
 layout: article
 title: From Framework API to Agent Tools with MCP
+date: 2026-02-26
 ---
 
 ## From Framework API to Agent Tools with MCP
