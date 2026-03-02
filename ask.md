@@ -23,4 +23,4 @@ title: Ask
   </div>
 </section>
 
-<script src="{{ '/assets/js/ask.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/ask.js?v=2' | relative_url }}" defer></script>

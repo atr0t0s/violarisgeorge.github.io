@@ -7,26 +7,29 @@
   var submit = document.getElementById('ask-submit');
 
   function escapeHtml(str) {
-    var div = document.createElement('div');
-    div.textContent = str;
-    return div.innerHTML;
+    return str
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
   }
 
   function renderMarkdown(text) {
-    // Normalize: insert newlines before bold headings like **Title:**
-    var normalized = text.replace(/\s*\*\*([^*]+?(?::\*\*|\*\*:))/g, '\n\n**$1');
+    // Step 1: Normalize inline text into lines.
+    // Insert line breaks before **headings**
+    var s = text.replace(/\s*(\*\*[^*]+?\*\*)/g, '\n\n$1');
 
-    // Normalize: split inline numbered lists (` 1. item 2. item`) onto separate lines
-    normalized = normalized.replace(/\s+(\d+)\.\s/g, '\n$1. ');
+    // Split inline numbered lists: "1. foo 2. bar" → separate lines
+    // Match " N. " where N follows a non-digit (avoids "v2. " or "PHP 5. Java")
+    s = s.replace(/(?:^|\s)(\d+)\.\s/gm, '\n$1. ');
 
-    // Normalize: split inline bullet lists (` - item - item`)
-    normalized = normalized.replace(/\s+([-*])\s(?=[A-Z0-9])/g, '\n$1 ');
+    // Step 2: Escape HTML
+    var html = escapeHtml(s);
 
-    var html = escapeHtml(normalized);
-
-    // Code blocks (```)
-    html = html.replace(/```(\w*)\n([\s\S]*?)```/g, function (_, lang, code) {
-      return '<pre><code>' + code.trim() + '</code></pre>';
+    // Step 3: Inline formatting
+    // Code blocks
+    html = html.replace(/```(?:\w*)\n?([\s\S]*?)```/g, function (_, code) {
+      return '\n<pre><code>' + code.trim() + '</code></pre>\n';
     });
 
     // Inline code
@@ -35,53 +38,86 @@
     // Bold
     html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
 
-    // Italic (but not inside words)
-    html = html.replace(/(?<!\w)\*(.+?)\*(?!\w)/g, '<em>$1</em>');
+    // Italic (simple — single * not adjacent to another *)
+    html = html.replace(/\*([^*]+)\*/g, '<em>$1</em>');
 
-    // Split into blocks
-    var blocks = html.split(/\n\n+/);
+    // Step 4: Split into blocks and render
+    var blocks = html.split(/\n{2,}/);
     var out = [];
+
     for (var i = 0; i < blocks.length; i++) {
       var block = blocks[i].trim();
       if (!block) continue;
 
-      if (/^<pre>/.test(block)) {
+      // Already a pre block
+      if (block.indexOf('<pre>') === 0) {
         out.push(block);
         continue;
       }
 
+      // Check lines for list patterns
       var lines = block.split('\n');
-
-      // Check if block is a numbered list
-      var isOl = lines.length > 1 && lines.every(function (l) {
-        return !l.trim() || /^\d+\.\s/.test(l.trim());
-      });
-
-      // Check if block is a bullet list
-      var isUl = lines.length > 1 && lines.every(function (l) {
-        return !l.trim() || /^[-*]\s/.test(l.trim());
-      });
-
-      if (isOl) {
-        var items = '';
-        for (var k = 0; k < lines.length; k++) {
-          var li = lines[k].trim().replace(/^\d+\.\s/, '');
-          if (li) items += '<li>' + li + '</li>';
-        }
-        out.push('<ol>' + items + '</ol>');
-      } else if (isUl) {
-        var items2 = '';
-        for (var k2 = 0; k2 < lines.length; k2++) {
-          var li2 = lines[k2].trim().replace(/^[-*]\s/, '');
-          if (li2) items2 += '<li>' + li2 + '</li>';
-        }
-        out.push('<ul>' + items2 + '</ul>');
-      } else {
-        out.push('<p>' + block.replace(/\n/g, '<br>') + '</p>');
+      var nonEmpty = [];
+      for (var j = 0; j < lines.length; j++) {
+        if (lines[j].trim()) nonEmpty.push(lines[j].trim());
       }
+
+      if (nonEmpty.length === 0) continue;
+
+      // Numbered list?
+      var olCount = 0;
+      for (var a = 0; a < nonEmpty.length; a++) {
+        if (/^\d+\.\s/.test(nonEmpty[a])) olCount++;
+      }
+
+      if (olCount > 1 && olCount >= nonEmpty.length * 0.5) {
+        var items = '';
+        var pending = '';
+        for (var b = 0; b < nonEmpty.length; b++) {
+          if (/^\d+\.\s/.test(nonEmpty[b])) {
+            if (pending) items += '<li>' + pending + '</li>';
+            pending = nonEmpty[b].replace(/^\d+\.\s/, '');
+          } else {
+            // Heading or text before list — flush as paragraph
+            if (pending) items += '<li>' + pending + '</li>';
+            pending = '';
+            out.push('<p>' + nonEmpty[b] + '</p>');
+          }
+        }
+        if (pending) items += '<li>' + pending + '</li>';
+        if (items) out.push('<ol>' + items + '</ol>');
+        continue;
+      }
+
+      // Bullet list?
+      var ulCount = 0;
+      for (var c = 0; c < nonEmpty.length; c++) {
+        if (/^[-*]\s/.test(nonEmpty[c])) ulCount++;
+      }
+
+      if (ulCount > 1 && ulCount >= nonEmpty.length * 0.5) {
+        var uitems = '';
+        var upending = '';
+        for (var d = 0; d < nonEmpty.length; d++) {
+          if (/^[-*]\s/.test(nonEmpty[d])) {
+            if (upending) uitems += '<li>' + upending + '</li>';
+            upending = nonEmpty[d].replace(/^[-*]\s/, '');
+          } else {
+            if (upending) uitems += '<li>' + upending + '</li>';
+            upending = '';
+            out.push('<p>' + nonEmpty[d] + '</p>');
+          }
+        }
+        if (upending) uitems += '<li>' + upending + '</li>';
+        if (uitems) out.push('<ul>' + uitems + '</ul>');
+        continue;
+      }
+
+      // Default: paragraph
+      out.push('<p>' + nonEmpty.join('<br>') + '</p>');
     }
 
-    return out.join('');
+    return out.join('') || '<p>' + escapeHtml(text) + '</p>';
   }
 
   function addMessage(role, text) {
