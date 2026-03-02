@@ -1480,7 +1480,7 @@ details ul {
 /* Uses page icons */
 .uses-list {
   list-style: none;
-  padding-left: 0;
+  padding-left: 0.4rem;
 }
 
 .uses-list li {
@@ -1488,6 +1488,7 @@ details ul {
 }
 
 .uses-icon {
+  display: inline-block;
   vertical-align: -3px;
   margin-right: 6px;
 }
