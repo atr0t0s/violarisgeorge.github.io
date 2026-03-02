@@ -1055,6 +1055,29 @@ main.content,
   margin-top: 0;
 }
 
+/* Demo embed */
+.demo-embed {
+  margin-bottom: var(--space-xl);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
+.demo-embed img,
+.demo-embed video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.demo-embed iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  display: block;
+}
+
 /* ==========================================================================
    CODE BLOCKS
    ========================================================================== */
