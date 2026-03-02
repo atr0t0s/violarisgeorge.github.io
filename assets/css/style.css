@@ -519,11 +519,7 @@ li::marker {
 }
 
 .explore-section .section-label {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--text-muted);
-  margin-bottom: var(--space-md);
+  color: var(--accent-secondary);
 }
 
 /* Nav Explore button (hidden until page is scrollable) */
@@ -531,6 +527,7 @@ li::marker {
   gap: 0.4rem;
   text-decoration: none;
   display: none;
+  font-size: 1rem;
 }
 
 .nav-explore-btn.visible {
