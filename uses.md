@@ -9,57 +9,57 @@ Tools and setup I use daily. Last updated March 2026.
 
 ---
 
-<details open markdown="1">
+<details open>
 <summary>Editor & Terminal</summary>
-
-- <img class="uses-icon" src="https://cdn.simpleicons.org/neovim/00d4ff" width="16" height="16" alt=""> **Neovim** — primary editor
-- <img class="uses-icon" src="https://cdn.simpleicons.org/ghostty/00d4ff" width="16" height="16" alt=""> **Ghostty** — terminal emulator
-- <img class="uses-icon" src="https://cdn.simpleicons.org/zsh/00d4ff" width="16" height="16" alt=""> **zsh** — shell, custom config
-- <img class="uses-icon" src="https://cdn.simpleicons.org/tmux/00d4ff" width="16" height="16" alt=""> **tmux** — session management
-- <svg class="uses-icon uses-icon--lucide" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 16 4.039-9.69a.5.5 0 0 1 .923 0L11 16"/><path d="M22 9v7"/><path d="M3.304 13h6.392"/><circle cx="18.5" cy="12.5" r="3.5"/></svg> **Fira Code** — font
-
+<ul class="uses-list">
+  <li><img class="uses-icon" src="https://cdn.simpleicons.org/neovim/00d4ff" width="16" height="16" alt=""> <strong>Neovim</strong> — primary editor</li>
+  <li><img class="uses-icon" src="https://cdn.simpleicons.org/ghostty/00d4ff" width="16" height="16" alt=""> <strong>Ghostty</strong> — terminal emulator</li>
+  <li><img class="uses-icon" src="https://cdn.simpleicons.org/zsh/00d4ff" width="16" height="16" alt=""> <strong>zsh</strong> — shell, custom config</li>
+  <li><img class="uses-icon" src="https://cdn.simpleicons.org/tmux/00d4ff" width="16" height="16" alt=""> <strong>tmux</strong> — session management</li>
+  <li><svg class="uses-icon uses-icon--lucide" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 16 4.039-9.69a.5.5 0 0 1 .923 0L11 16"/><path d="M22 9v7"/><path d="M3.304 13h6.392"/><circle cx="18.5" cy="12.5" r="3.5"/></svg> <strong>Fira Code</strong> — font</li>
+</ul>
 </details>
 
-<details markdown="1">
+<details>
 <summary>Languages & Frameworks</summary>
-
-- <img class="uses-icon" src="https://cdn.simpleicons.org/typescript/00d4ff" width="16" height="16" alt=""> **TypeScript / JavaScript** — primary language
-- <img class="uses-icon" src="https://cdn.simpleicons.org/python/00d4ff" width="16" height="16" alt=""> **Python** — AI/ML, orchestration
-- <img class="uses-icon" src="https://cdn.simpleicons.org/go/00d4ff" width="16" height="16" alt=""> **Go** — tooling
-- <img class="uses-icon" src="https://cdn.simpleicons.org/php/00d4ff" width="16" height="16" alt=""> **PHP** — lightweight monolithic backends, APIs, and legacy projects
-- <img class="uses-icon" src="https://cdn.simpleicons.org/react/00d4ff" width="16" height="16" alt=""> **React**, <img class="uses-icon" src="https://cdn.simpleicons.org/nextdotjs/00d4ff" width="16" height="16" alt=""> **Next.js**, <img class="uses-icon" src="https://cdn.simpleicons.org/vuedotjs/00d4ff" width="16" height="16" alt=""> **Vue.js** — frontend
-- <img class="uses-icon" src="https://cdn.simpleicons.org/nodedotjs/00d4ff" width="16" height="16" alt=""> **Node.js**, <img class="uses-icon" src="https://cdn.simpleicons.org/bun/00d4ff" width="16" height="16" alt=""> **Bun** — runtime
-
+<ul class="uses-list">
+  <li><img class="uses-icon" src="https://cdn.simpleicons.org/typescript/00d4ff" width="16" height="16" alt=""> <strong>TypeScript / JavaScript</strong> — primary language</li>
+  <li><img class="uses-icon" src="https://cdn.simpleicons.org/python/00d4ff" width="16" height="16" alt=""> <strong>Python</strong> — AI/ML, orchestration</li>
+  <li><img class="uses-icon" src="https://cdn.simpleicons.org/go/00d4ff" width="16" height="16" alt=""> <strong>Go</strong> — tooling</li>
+  <li><img class="uses-icon" src="https://cdn.simpleicons.org/php/00d4ff" width="16" height="16" alt=""> <strong>PHP</strong> — lightweight monolithic backends, APIs, and legacy projects</li>
+  <li><img class="uses-icon" src="https://cdn.simpleicons.org/react/00d4ff" width="16" height="16" alt=""> <strong>React</strong>, <img class="uses-icon" src="https://cdn.simpleicons.org/nextdotjs/00d4ff" width="16" height="16" alt=""> <strong>Next.js</strong>, <img class="uses-icon" src="https://cdn.simpleicons.org/vuedotjs/00d4ff" width="16" height="16" alt=""> <strong>Vue.js</strong> — frontend</li>
+  <li><img class="uses-icon" src="https://cdn.simpleicons.org/nodedotjs/00d4ff" width="16" height="16" alt=""> <strong>Node.js</strong>, <img class="uses-icon" src="https://cdn.simpleicons.org/bun/00d4ff" width="16" height="16" alt=""> <strong>Bun</strong> — runtime</li>
+</ul>
 </details>
 
-<details markdown="1">
+<details>
 <summary>AI & Data</summary>
-
-- <img class="uses-icon" src="https://cdn.simpleicons.org/anthropic/00d4ff" width="16" height="16" alt=""> **Claude**, <img class="uses-icon" src="https://cdn.simpleicons.org/openai/00d4ff" width="16" height="16" alt=""> **GPT-4**, <img class="uses-icon" src="https://cdn.simpleicons.org/googlegemini/00d4ff" width="16" height="16" alt=""> **Gemini** — LLM providers
-- <img class="uses-icon" src="https://cdn.simpleicons.org/qdrant/00d4ff" width="16" height="16" alt=""> **Qdrant** — vector database
-- <img class="uses-icon" src="https://cdn.simpleicons.org/postgresql/00d4ff" width="16" height="16" alt=""> **PostgreSQL** — relational database
-- <img class="uses-icon" src="https://cdn.simpleicons.org/redis/00d4ff" width="16" height="16" alt=""> **Redis** — cache and queues
-- <img class="uses-icon" src="https://cdn.simpleicons.org/mongodb/00d4ff" width="16" height="16" alt=""> **MongoDB** — document store
-- <img class="uses-icon" src="https://cdn.simpleicons.org/docker/00d4ff" width="16" height="16" alt=""> **Docker** — containers
-
+<ul class="uses-list">
+  <li><img class="uses-icon" src="https://cdn.simpleicons.org/anthropic/00d4ff" width="16" height="16" alt=""> <strong>Claude</strong>, <svg class="uses-icon uses-icon--lucide" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6V2H8"/><path d="M15 11v2"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="M20 16a2 2 0 0 1-2 2H8.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 4 20.286V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z"/><path d="M9 11v2"/></svg> <strong>GPT-4</strong>, <img class="uses-icon" src="https://cdn.simpleicons.org/googlegemini/00d4ff" width="16" height="16" alt=""> <strong>Gemini</strong> — LLM providers</li>
+  <li><svg class="uses-icon uses-icon--lucide" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.034 12.681a.498.498 0 0 1 .647-.647l9 3.5a.5.5 0 0 1-.033.943l-3.444 1.068a1 1 0 0 0-.66.66l-1.067 3.443a.5.5 0 0 1-.943.033z"/><path d="M5 3a2 2 0 0 0-2 2"/><path d="M19 3a2 2 0 0 1 2 2"/><path d="M5 21a2 2 0 0 1-2-2"/><path d="M9 3h1"/><path d="M9 21h2"/><path d="M14 3h1"/><path d="M3 9v1"/><path d="M21 9v2"/><path d="M3 14v1"/></svg> <strong>Qdrant</strong> — vector database</li>
+  <li><img class="uses-icon" src="https://cdn.simpleicons.org/postgresql/00d4ff" width="16" height="16" alt=""> <strong>PostgreSQL</strong> — relational database</li>
+  <li><img class="uses-icon" src="https://cdn.simpleicons.org/redis/00d4ff" width="16" height="16" alt=""> <strong>Redis</strong> — cache and queues</li>
+  <li><img class="uses-icon" src="https://cdn.simpleicons.org/mongodb/00d4ff" width="16" height="16" alt=""> <strong>MongoDB</strong> — document store</li>
+  <li><img class="uses-icon" src="https://cdn.simpleicons.org/docker/00d4ff" width="16" height="16" alt=""> <strong>Docker</strong> — containers</li>
+</ul>
 </details>
 
-<details markdown="1">
+<details>
 <summary>Hardware</summary>
-
-- <img class="uses-icon" src="https://cdn.simpleicons.org/apple/00d4ff" width="16" height="16" alt=""> **MacBook Pro M4** — 128GB unified memory, main machine
-- **External monitor** — extended display
-- **Mechanical keyboard** — daily driver
-
+<ul class="uses-list">
+  <li><img class="uses-icon" src="https://cdn.simpleicons.org/apple/00d4ff" width="16" height="16" alt=""> <strong>MacBook Pro M4</strong> — 128GB unified memory, main machine</li>
+  <li><strong>External monitor</strong> — extended display</li>
+  <li><strong>Mechanical keyboard</strong> — daily driver</li>
+</ul>
 </details>
 
-<details markdown="1">
+<details>
 <summary>Apps & Productivity</summary>
-
-- <img class="uses-icon" src="https://cdn.simpleicons.org/obsidian/00d4ff" width="16" height="16" alt=""> **Obsidian** — notes, via ObsiTUI
-- <img class="uses-icon" src="https://cdn.simpleicons.org/zenbrowser/00d4ff" width="16" height="16" alt=""> **Zen** — browser
-- <img class="uses-icon" src="https://cdn.simpleicons.org/anthropic/00d4ff" width="16" height="16" alt=""> **Claude Code** — AI coding
-- <img class="uses-icon" src="https://cdn.simpleicons.org/git/00d4ff" width="16" height="16" alt=""> **Git** — version control
-- <img class="uses-icon" src="https://cdn.simpleicons.org/figma/00d4ff" width="16" height="16" alt=""> **Figma** — design
-
+<ul class="uses-list">
+  <li><img class="uses-icon" src="https://cdn.simpleicons.org/obsidian/00d4ff" width="16" height="16" alt=""> <strong>Obsidian</strong> — notes, via ObsiTUI</li>
+  <li><img class="uses-icon" src="https://cdn.simpleicons.org/zenbrowser/00d4ff" width="16" height="16" alt=""> <strong>Zen</strong> — browser</li>
+  <li><img class="uses-icon" src="https://cdn.simpleicons.org/anthropic/00d4ff" width="16" height="16" alt=""> <strong>Claude Code</strong> — AI coding</li>
+  <li><img class="uses-icon" src="https://cdn.simpleicons.org/git/00d4ff" width="16" height="16" alt=""> <strong>Git</strong> — version control</li>
+  <li><img class="uses-icon" src="https://cdn.simpleicons.org/figma/00d4ff" width="16" height="16" alt=""> <strong>Figma</strong> — design</li>
+</ul>
 </details>

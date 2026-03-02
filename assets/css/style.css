@@ -1478,12 +1478,21 @@ details ul {
 }
 
 /* Uses page icons */
-.uses-icon {
-  vertical-align: -2px;
-  margin-right: 4px;
+.uses-list {
+  list-style: none;
+  padding-left: 0;
 }
 
-[data-theme="light"] .uses-icon {
+.uses-list li {
+  padding: 0.35rem 0;
+}
+
+.uses-icon {
+  vertical-align: -3px;
+  margin-right: 6px;
+}
+
+[data-theme="light"] .uses-icon:not(.uses-icon--lucide) {
   filter: brightness(0.47) sepia(1) saturate(3) hue-rotate(165deg);
 }
 
