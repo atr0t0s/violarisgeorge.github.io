@@ -23,21 +23,68 @@ Blog: blog.violaris.org (on Medium). Writes about AI engineering, architecture d
 
 Keep answers concise and friendly. If you don't know something specific, say so rather than making it up. You represent George's work accurately.`;
 
+const ALLOWED_ORIGINS = [
+  'https://violaris.org',
+  'https://www.violaris.org',
+  'http://localhost:4000',
+];
+
+function getCorsHeaders(request) {
+  const origin = request.headers.get('Origin') || '';
+  const allowed = ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0];
+  return {
+    'Access-Control-Allow-Origin': allowed,
+    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type',
+    'Vary': 'Origin',
+  };
+}
+
+// Simple in-memory rate limiting (per-isolate, resets on cold start)
+const rateMap = new Map();
+const RATE_LIMIT = 10; // requests per window
+const RATE_WINDOW = 60_000; // 1 minute
+
+function isRateLimited(ip) {
+  const now = Date.now();
+  const entry = rateMap.get(ip);
+  if (!entry || now - entry.start > RATE_WINDOW) {
+    rateMap.set(ip, { start: now, count: 1 });
+    return false;
+  }
+  entry.count++;
+  return entry.count > RATE_LIMIT;
+}
+
 export default {
   async fetch(request, env) {
+    // Check origin
+    const origin = request.headers.get('Origin') || '';
+    if (origin && !ALLOWED_ORIGINS.includes(origin)) {
+      return new Response(JSON.stringify({ error: 'Forbidden' }), {
+        status: 403,
+        headers: { 'Content-Type': 'application/json' },
+      });
+    }
+
+    const cors = getCorsHeaders(request);
+
     // Handle CORS preflight
     if (request.method === 'OPTIONS') {
-      return new Response(null, {
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'POST, OPTIONS',
-          'Access-Control-Allow-Headers': 'Content-Type',
-        },
-      });
+      return new Response(null, { headers: cors });
     }
 
     if (request.method !== 'POST') {
       return new Response('Method not allowed', { status: 405 });
+    }
+
+    // Rate limit by IP
+    const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
+    if (isRateLimited(ip)) {
+      return new Response(JSON.stringify({ error: 'Too many requests. Try again in a minute.' }), {
+        status: 429,
+        headers: { 'Content-Type': 'application/json', ...cors },
+      });
     }
 
     try {
@@ -46,7 +93,7 @@ export default {
       if (!messages || !Array.isArray(messages) || messages.length === 0) {
         return new Response(JSON.stringify({ error: 'No messages provided' }), {
           status: 400,
-          headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
+          headers: { 'Content-Type': 'application/json', ...cors },
         });
       }
 
@@ -62,15 +109,12 @@ export default {
       });
 
       return new Response(JSON.stringify({ response: result.response }), {
-        headers: {
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*',
-        },
+        headers: { 'Content-Type': 'application/json', ...cors },
       });
     } catch (err) {
       return new Response(JSON.stringify({ error: 'Internal error' }), {
         status: 500,
-        headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
+        headers: { 'Content-Type': 'application/json', ...cors },
       });
     }
   },
