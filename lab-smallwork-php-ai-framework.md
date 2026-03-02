@@ -1,6 +1,7 @@
 ---
 layout: article
 title: Building a Full-Stack AI Framework for PHP
+date: 2026-02-27
 ---
 
 ## Building a Full-Stack AI Framework for PHP
