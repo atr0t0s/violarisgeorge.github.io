@@ -2,6 +2,7 @@
 layout: article
 title: Building a Vim Editor as a Pure State Machine
 date: 2026-02-24
+comments: true
 ---
 
 ## Building a Vim Editor as a Pure State Machine

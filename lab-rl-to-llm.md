@@ -2,6 +2,7 @@
 layout: article
 title: From Reinforcement Learning to LLM Tool-Calling
 date: 2026-02-24
+comments: true
 ---
 
 ## From Reinforcement Learning to LLM Tool-Calling

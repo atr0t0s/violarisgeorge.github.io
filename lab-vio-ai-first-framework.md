@@ -2,6 +2,7 @@
 layout: article
 title: Building a Frontend Framework for AI Agents
 date: 2026-02-25
+comments: true
 ---
 
 ## Building a Frontend Framework for AI Agents

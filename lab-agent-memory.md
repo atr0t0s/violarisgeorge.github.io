@@ -2,6 +2,7 @@
 layout: article
 title: Designing a Memory Layer for AI Agents
 date: 2026-02-24
+comments: true
 ---
 
 ## Designing a Memory Layer for AI Agents
