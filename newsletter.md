@@ -20,6 +20,6 @@ title: Newsletter
 
   <div class="newsletter-form-section">
     <h2>Subscribe</h2>
-    <iframe src="https://mergeconf.substack.com/embed" width="480" height="320" style="border: 1px solid #EEE; background: white" frameborder="0" scrolling="no"></iframe>
+    <iframe src="https://mergeconf.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white; max-width:100%;" frameborder="0" scrolling="no"></iframe>
   </div>
 </section>
