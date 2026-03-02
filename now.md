@@ -17,7 +17,8 @@ This is a [now page](https://nownownow.com/about). It's a snapshot of what I'm f
 
 ## Reading
 
-- *(updating this soon — currently between books)*
+- **The Gentleman Bastard Sequence** by Scott Lynch — fantasy heist novels with sharp dialogue and elaborate cons.
+- **The Law** by Frédéric Bastiat — short, sharp treatise on government overreach and individual liberty.
 - Recommendations welcome — [get in touch](mailto:george@violaris.org).
 
 ## Thinking about
