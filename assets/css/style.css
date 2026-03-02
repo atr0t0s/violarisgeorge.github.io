@@ -1906,7 +1906,7 @@ tr:hover td {
 
 a.nav-action-btn:hover,
 a.nav-action-btn:focus {
-  border-bottom-color: transparent;
+  border-bottom-color: var(--accent);
 }
 
 .nav-action-btn svg {
