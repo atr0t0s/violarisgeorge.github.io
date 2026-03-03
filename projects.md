@@ -33,13 +33,13 @@ What I'm building — personal open source, and products at Hatchworks VC.
 ## At Hatchworks VC
 
 <div class="featured-grid">
-  <a href="{{ '/projects.html' | relative_url }}#spectre" class="featured-card">
+  <a href="{{ '/projects' | relative_url }}#spectre" class="featured-card">
     <span class="featured-icon">&#9670;</span>
     <h3>Spectre.ai</h3>
     <p>A memory layer for AI agents. Persistent recall across sessions with plugins for Claude Code and OpenCode.</p>
     <span class="blog-tag">AI</span>
   </a>
-  <a href="{{ '/projects.html' | relative_url }}#zeig" class="featured-card">
+  <a href="{{ '/projects' | relative_url }}#zeig" class="featured-card">
     <span class="featured-icon">&#9670;</span>
     <h3>Zeig.ai</h3>
     <p>Financial analysis through conversation using multiple LLMs and vision AI.</p>
@@ -95,7 +95,7 @@ I kept running into the same problem on PHP projects: bolt on an HTTP client for
 
 PHP 8.2+. MIT licensed.
 
-[Lab article](lab-smallwork-php-ai-framework.html) &#183; [Website](https://smallwork.violaris.org) &#183; [GitHub](https://github.com/atr0t0s/smallwork)
+[Lab article](lab-smallwork-php-ai-framework) &#183; [Website](https://smallwork.violaris.org) &#183; [GitHub](https://github.com/atr0t0s/smallwork)
 
 </div>
 
@@ -119,7 +119,7 @@ I got tired of watching LLMs generate broken JSX, violate hook ordering rules, a
 
 ~1200 lines of TypeScript. No external dependencies.
 
-[Lab article](lab-vio-ai-first-framework.html) &#183; [MCP tooling](lab-vio-mcp-tooling.html) &#183; [Website](https://vio.violaris.org) &#183; [GitHub](https://github.com/atr0t0s/vio)
+[Lab article](lab-vio-ai-first-framework) &#183; [MCP tooling](lab-vio-mcp-tooling) &#183; [Website](https://vio.violaris.org) &#183; [GitHub](https://github.com/atr0t0s/vio)
 
 </div>
 
@@ -142,6 +142,6 @@ I spend my day in the terminal and my knowledge base lived in Obsidian's Electro
 
 301 tests. TypeScript.
 
-[Lab article](lab-obsitui-vim-editor.html) &#183; [GitHub](https://github.com/atr0t0s/obsitui)
+[Lab article](lab-obsitui-vim-editor) &#183; [GitHub](https://github.com/atr0t0s/obsitui)
 
 </div>

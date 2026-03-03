@@ -11,7 +11,7 @@ Architecture decisions from production systems. No proprietary code -- just the 
 
 <div class="lab-entry" markdown="1">
 
-### [Building a full-stack AI framework for PHP](lab-smallwork-php-ai-framework.html)
+### [Building a full-stack AI framework for PHP](lab-smallwork-php-ai-framework)
 
 <span class="lab-date">Feb 27, 2026</span>
 
@@ -23,7 +23,7 @@ How I built a PHP framework with a multi-provider AI gateway, AI middleware pipe
 
 <div class="lab-entry" markdown="1">
 
-### [From framework API to agent tools with MCP](lab-vio-mcp-tooling.html)
+### [From framework API to agent tools with MCP](lab-vio-mcp-tooling)
 
 <span class="lab-date">Feb 26, 2026</span>
 
@@ -35,7 +35,7 @@ How I built an MCP server that gives AI agents runtime control over a live Vio a
 
 <div class="lab-entry" markdown="1">
 
-### [Building a frontend framework for AI agents](lab-vio-ai-first-framework.html)
+### [Building a frontend framework for AI agents](lab-vio-ai-first-framework)
 
 <span class="lab-date">Feb 25, 2026</span>
 
@@ -47,7 +47,7 @@ How I built a frontend framework where components are JSON, state is immutable, 
 
 <div class="lab-entry" markdown="1">
 
-### [Building a vim editor as a pure state machine](lab-obsitui-vim-editor.html)
+### [Building a vim editor as a pure state machine](lab-obsitui-vim-editor)
 
 <span class="lab-date">Feb 24, 2026</span>
 
@@ -59,7 +59,7 @@ How I implemented a vim-style editor in 867 lines of TypeScript using pure funct
 
 <div class="lab-entry" markdown="1">
 
-### [Orchestrating multi-model AI pipelines](lab-multi-model-pipelines.html)
+### [Orchestrating multi-model AI pipelines](lab-multi-model-pipelines)
 
 <span class="lab-date">Feb 24, 2026</span>
 
@@ -71,7 +71,7 @@ How I use one LLM as an orchestrator that plans which tools to invoke, runs them
 
 <div class="lab-entry" markdown="1">
 
-### [Designing a memory layer for AI agents](lab-agent-memory.html)
+### [Designing a memory layer for AI agents](lab-agent-memory)
 
 <span class="lab-date">Feb 24, 2026</span>
 
@@ -83,7 +83,7 @@ Vector search alone doesn't work for agent memory. Semantic similarity doesn't u
 
 <div class="lab-entry" markdown="1">
 
-### [From reinforcement learning to LLM tool-calling](lab-rl-to-llm.html)
+### [From reinforcement learning to LLM tool-calling](lab-rl-to-llm)
 
 <span class="lab-date">Feb 24, 2026</span>
 

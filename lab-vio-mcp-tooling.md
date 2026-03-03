@@ -9,7 +9,7 @@ comments: true
 
 Configure an MCP server, point Claude at it, and suddenly the agent can inspect component trees, read and set state, dispatch store actions, navigate routes, and replay event history. No browser devtools open. No console. Just tool calls over stdio, and the app responds.
 
-That's the setup for [Vio](https://github.com/atr0t0s/vio)'s devtools package. The [previous article](lab-vio-ai-first-framework.html) covered why Vio exposes a programmatic API instead of hiding state behind component closures. This article traces what happens when an agent actually calls one of those APIs. MCP speaks stdio. The app runs in a browser. There are three boundaries to cross -- stdio to Node, Node to WebSocket, WebSocket to the browser tab -- and each one has its own failure modes. I'll follow a single tool call through every layer.
+That's the setup for [Vio](https://github.com/atr0t0s/vio)'s devtools package. The [previous article](lab-vio-ai-first-framework) covered why Vio exposes a programmatic API instead of hiding state behind component closures. This article traces what happens when an agent actually calls one of those APIs. MCP speaks stdio. The app runs in a browser. There are three boundaries to cross -- stdio to Node, Node to WebSocket, WebSocket to the browser tab -- and each one has its own failure modes. I'll follow a single tool call through every layer.
 
 ### Eleven tools, one app API
 
