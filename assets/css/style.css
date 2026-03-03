@@ -486,6 +486,47 @@ li::marker {
   color: var(--accent);
 }
 
+/* Substack Promos */
+.landing-substack {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem var(--space-2xl);
+}
+
+.substack-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .substack-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.substack-card {
+  display: block;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  transition: transform var(--transition), border-color var(--transition);
+}
+
+.substack-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+.substack-card img {
+  display: block;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
 /* Featured Work */
 .landing-featured {
   max-width: 1200px;
