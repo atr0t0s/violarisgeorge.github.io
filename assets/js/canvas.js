@@ -140,17 +140,17 @@
   function getColors() {
     var dark = isDark();
     return {
-      projectFill:    dark ? '#6ec6e0' : '#0077aa',
+      projectFill:    dark ? '#34d399' : '#0077aa',
       skillFill:      dark ? '#e0a85c' : '#b07830',
-      lineDim:        dark ? 'rgba(110,198,224,0.12)' : 'rgba(0,119,170,0.10)',
-      lineHighlight:  dark ? 'rgba(110,198,224,0.45)' : 'rgba(0,119,170,0.40)',
+      lineDim:        dark ? 'rgba(52,211,153,0.12)' : 'rgba(0,119,170,0.10)',
+      lineHighlight:  dark ? 'rgba(52,211,153,0.45)' : 'rgba(0,119,170,0.40)',
       labelColor:     dark ? 'rgba(255,255,255,1.0)' : 'rgba(0,0,0,0.75)',
       labelDimColor:  dark ? 'rgba(255,255,255,0.75)' : 'rgba(0,0,0,0.45)',
-      glowProject:    dark ? 'rgba(110,198,224,0.20)' : 'rgba(0,119,170,0.12)',
+      glowProject:    dark ? 'rgba(52,211,153,0.20)' : 'rgba(0,119,170,0.12)',
       glowSkill:      dark ? 'rgba(224,168,92,0.16)' : 'rgba(176,120,48,0.10)',
-      highlightProject: dark ? '#90daf0' : '#0099cc',
+      highlightProject: dark ? '#5ee8b5' : '#0099cc',
       highlightSkill:   dark ? '#f0c880' : '#cc8820',
-      dimProject:     dark ? 'rgba(110,198,224,0.35)' : 'rgba(0,119,170,0.35)',
+      dimProject:     dark ? 'rgba(52,211,153,0.35)' : 'rgba(0,119,170,0.35)',
       dimSkill:       dark ? 'rgba(224,168,92,0.35)' : 'rgba(176,120,48,0.35)'
     };
   }
