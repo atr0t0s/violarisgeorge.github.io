@@ -1,6 +1,10 @@
 (function () {
   'use strict';
 
+  // Skip full-page navigation on mobile — normal scrolling instead
+  var isMobile = window.matchMedia('(max-width: 767px)').matches;
+  if (isMobile) return;
+
   // Prevent browser from restoring scroll position on refresh
   if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
@@ -156,6 +160,11 @@
   }
 
   // Wheel navigation — snap between sections
+  // Accumulate trackpad delta to avoid double-scroll from momentum
+  var accumulatedDelta = 0;
+  var deltaResetTimer = null;
+  var DELTA_THRESHOLD = 50; // px of accumulated delta before triggering nav
+
   window.addEventListener('wheel', function (e) {
     if (isScrolling) { e.preventDefault(); return; }
 
@@ -169,9 +178,16 @@
     }
 
     e.preventDefault();
-    if (e.deltaY > 0) {
+
+    accumulatedDelta += e.deltaY;
+    clearTimeout(deltaResetTimer);
+    deltaResetTimer = setTimeout(function () { accumulatedDelta = 0; }, 200);
+
+    if (accumulatedDelta > DELTA_THRESHOLD) {
+      accumulatedDelta = 0;
       navigateTo(currentIndex + 1);
-    } else if (e.deltaY < 0) {
+    } else if (accumulatedDelta < -DELTA_THRESHOLD) {
+      accumulatedDelta = 0;
       navigateTo(currentIndex - 1);
     }
   }, { passive: false });

@@ -613,6 +613,11 @@ html:not([data-theme="light"]) .landing-body {
   color: var(--accent);
 }
 
+/* Prevent Twitter iframe from swallowing scroll events */
+#glance-tweet-embed iframe {
+  pointer-events: none;
+}
+
 /* Substack Promos */
 .landing-substack {
   max-width: 1200px;
@@ -3516,6 +3521,9 @@ a.nav-action-btn:focus {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  box-sizing: border-box;
 }
 
 /* Full-viewport-width background (content stays in its container) */
@@ -3543,15 +3551,37 @@ html:not([data-theme="light"]) .landing-body [data-section]::before {
   background: var(--bg);
 }
 
-/* Transparent fade on top edge (applied to background pseudo-element) */
-.landing-body [data-section]::before {
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 120px);
-  mask-image: linear-gradient(to bottom, transparent 0%, black 120px);
-}
-
 @media (max-width: 767px) {
+  /* Disable parallax: hero flows normally instead of fixed */
+  .landing-hero {
+    position: relative;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  /* Landing body flows normally, no margin offset */
+  .landing-body {
+    margin-top: 0;
+  }
+
+  /* Sections: normal flow, no sticky stacking */
   .landing-body [data-section] {
-    min-height: 80vh;
+    position: relative;
+    min-height: auto;
+  }
+
+  /* Hide section nav UI (not created by JS, but safety net) */
+  .section-indicator,
+  .section-arrows {
+    display: none;
+  }
+
+  /* Show scrollbar on mobile */
+  .landing-page-body {
+    scrollbar-width: auto;
+  }
+  .landing-page-body::-webkit-scrollbar {
+    display: initial;
   }
 }
 

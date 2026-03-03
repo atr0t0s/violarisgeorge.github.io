@@ -9,7 +9,10 @@
   var MOUSE_REPEL = 140;
   var LABEL_RADIUS = 200;
   var HIGHLIGHT_RADIUS = 60;
-  var running = true;
+  var animating = false;
+  var idleTimer = null;
+  var IDLE_TIMEOUT = 1000; // ms after last mouse move to stop animating
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // --- Data ---
 
@@ -78,14 +81,15 @@
         type: def.type,
         x: 40 + Math.random() * (w - 80),
         y: 40 + Math.random() * (h - 80),
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: (Math.random() - 0.5) * 0.3,
+        restX: 0, // set after placement
+        restY: 0,
+        vx: 0,
+        vy: 0,
         radius: def.type === 'project' ? 6 : 4,
-        driftPhase: Math.random() * Math.PI * 2,
-        driftSpeed: 0.0003 + Math.random() * 0.0004,
-        driftAmp: 0.004 + Math.random() * 0.008,
         edges: []
       };
+      node.restX = node.x;
+      node.restY = node.y;
       nodes.push(node);
       nodeMap[def.name] = node;
     }
@@ -144,8 +148,6 @@
       skillFill:      dark ? '#e0a85c' : '#b07830',
       lineDim:        dark ? 'rgba(52,211,153,0.12)' : 'rgba(0,119,170,0.10)',
       lineHighlight:  dark ? 'rgba(52,211,153,0.45)' : 'rgba(0,119,170,0.40)',
-      labelColor:     dark ? 'rgba(255,255,255,1.0)' : 'rgba(0,0,0,0.75)',
-      labelDimColor:  dark ? 'rgba(255,255,255,0.75)' : 'rgba(0,0,0,0.45)',
       glowProject:    dark ? 'rgba(52,211,153,0.20)' : 'rgba(0,119,170,0.12)',
       glowSkill:      dark ? 'rgba(224,168,92,0.16)' : 'rgba(176,120,48,0.10)',
       highlightProject: dark ? '#5ee8b5' : '#0099cc',
@@ -157,9 +159,7 @@
 
   // --- Draw ---
 
-  function draw() {
-    if (!running) return;
-
+  function render() {
     var w = canvas.offsetWidth;
     var h = canvas.offsetHeight;
     var colors = getColors();
@@ -200,48 +200,9 @@
       }
     }
 
-    // Update and draw nodes
-    var mouseDist;
-    var t = Date.now();
+    // Draw nodes
     for (var k = 0; k < nodes.length; k++) {
       var n = nodes[k];
-
-      // Gentle drift: sine-based ambient motion
-      n.vx += Math.sin(t * n.driftSpeed + n.driftPhase) * n.driftAmp;
-      n.vy += Math.cos(t * n.driftSpeed * 0.7 + n.driftPhase) * n.driftAmp;
-
-      // Mouse repel
-      mouseDist = dist(n.x, n.y, mouse.x, mouse.y);
-      if (mouseDist < MOUSE_REPEL && mouseDist > 0) {
-        var force = (1 - mouseDist / MOUSE_REPEL) * 0.35;
-        var angle = Math.atan2(n.y - mouse.y, n.x - mouse.x);
-        n.vx += Math.cos(angle) * force;
-        n.vy += Math.sin(angle) * force;
-      }
-
-      // Damping — keep speed gentle
-      n.vx *= 0.94;
-      n.vy *= 0.94;
-
-      // Clamp max speed
-      var speed = Math.sqrt(n.vx * n.vx + n.vy * n.vy);
-      if (speed > 0.8) {
-        n.vx = (n.vx / speed) * 0.8;
-        n.vy = (n.vy / speed) * 0.8;
-      }
-
-      // Move
-      n.x += n.vx;
-      n.y += n.vy;
-
-      // Bounce off edges with padding
-      var pad = 20;
-      if (n.x < pad) { n.x = pad; n.vx = Math.abs(n.vx); }
-      if (n.x > w - pad) { n.x = w - pad; n.vx = -Math.abs(n.vx); }
-      if (n.y < pad) { n.y = pad; n.vy = Math.abs(n.vy); }
-      if (n.y > h - pad) { n.y = h - pad; n.vy = -Math.abs(n.vy); }
-
-      // Determine visual state
       var isDimmed = hovered && !highlightSet[n.name];
       var isNodeHighlighted = hovered && highlightSet[n.name];
       var isProject = n.type === 'project';
@@ -281,22 +242,91 @@
         ctx.textAlign = 'center';
         ctx.textBaseline = 'top';
 
-        // Label color with fade
         var dark = isDark();
-        var r, g, b;
-        if (isDimmed) {
-          r = dark ? 255 : 0; g = dark ? 255 : 0; b = dark ? 255 : 0;
-          ctx.fillStyle = 'rgba(' + r + ',' + g + ',' + b + ',' + (labelAlpha * 0.3) + ')';
-        } else {
-          r = dark ? 255 : 0; g = dark ? 255 : 0; b = dark ? 255 : 0;
-          ctx.fillStyle = 'rgba(' + r + ',' + g + ',' + b + ',' + (labelAlpha * 0.85) + ')';
-        }
-
+        var r = dark ? 255 : 0, g = dark ? 255 : 0, b = dark ? 255 : 0;
+        var alpha = isDimmed ? labelAlpha * 0.3 : labelAlpha * 0.85;
+        ctx.fillStyle = 'rgba(' + r + ',' + g + ',' + b + ',' + alpha + ')';
         ctx.fillText(n.name, n.x, n.y + n.radius + 4);
       }
     }
+  }
 
-    requestAnimationFrame(draw);
+  // --- Physics tick (only during interaction) ---
+
+  function tick() {
+    if (!animating) return;
+
+    var w = canvas.offsetWidth;
+    var h = canvas.offsetHeight;
+    var settled = true;
+
+    for (var k = 0; k < nodes.length; k++) {
+      var n = nodes[k];
+
+      // Mouse repel
+      var mouseDist = dist(n.x, n.y, mouse.x, mouse.y);
+      if (mouseDist < MOUSE_REPEL && mouseDist > 0) {
+        var force = (1 - mouseDist / MOUSE_REPEL) * 0.35;
+        var angle = Math.atan2(n.y - mouse.y, n.x - mouse.x);
+        n.vx += Math.cos(angle) * force;
+        n.vy += Math.sin(angle) * force;
+      }
+
+      // Spring back to rest position
+      n.vx += (n.restX - n.x) * 0.02;
+      n.vy += (n.restY - n.y) * 0.02;
+
+      // Damping
+      n.vx *= 0.92;
+      n.vy *= 0.92;
+
+      // Clamp max speed
+      var speed = Math.sqrt(n.vx * n.vx + n.vy * n.vy);
+      if (speed > 0.8) {
+        n.vx = (n.vx / speed) * 0.8;
+        n.vy = (n.vy / speed) * 0.8;
+      }
+
+      // Move
+      n.x += n.vx;
+      n.y += n.vy;
+
+      // Bounce off edges
+      var pad = 20;
+      if (n.x < pad) { n.x = pad; n.vx = Math.abs(n.vx); }
+      if (n.x > w - pad) { n.x = w - pad; n.vx = -Math.abs(n.vx); }
+      if (n.y < pad) { n.y = pad; n.vy = Math.abs(n.vy); }
+      if (n.y > h - pad) { n.y = h - pad; n.vy = -Math.abs(n.vy); }
+
+      // Check if any node is still moving meaningfully
+      if (speed > 0.05) settled = false;
+    }
+
+    render();
+
+    // Stop loop once nodes have settled
+    if (settled) {
+      animating = false;
+    } else {
+      requestAnimationFrame(tick);
+    }
+  }
+
+  function startAnimating() {
+    if (animating) return;
+    animating = true;
+    if (!reduceMotion) {
+      requestAnimationFrame(tick);
+    }
+  }
+
+  function scheduleStop() {
+    clearTimeout(idleTimer);
+    idleTimer = setTimeout(function () {
+      mouse.x = -1000;
+      mouse.y = -1000;
+      // Let the spring-back animation play out (tick auto-stops when settled)
+    }, IDLE_TIMEOUT);
   }
 
   // --- Init ---
@@ -304,6 +334,7 @@
   function init() {
     resize();
     buildGraph();
+    render(); // single static draw — zero ongoing CPU
   }
 
   // --- Events ---
@@ -312,23 +343,23 @@
     var rect = canvas.getBoundingClientRect();
     mouse.x = e.clientX - rect.left;
     mouse.y = e.clientY - rect.top;
+    startAnimating();
+    scheduleStop();
   });
 
   canvas.parentElement.addEventListener('mouseleave', function () {
     mouse.x = -1000;
     mouse.y = -1000;
+    clearTimeout(idleTimer);
+    // Kick one last animation pass so nodes spring back and highlights clear
+    startAnimating();
   });
 
-  // Reduced motion
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    running = false;
+  // Reduced motion: render once, no animation
+  if (reduceMotion) {
     init();
-    running = true;
-    draw();
-    running = false;
   } else {
     init();
-    draw();
   }
 
   window.addEventListener('resize', function () {
@@ -339,6 +370,9 @@
     for (var i = 0; i < nodes.length; i++) {
       nodes[i].x = Math.min(nodes[i].x, w - 20);
       nodes[i].y = Math.min(nodes[i].y, h - 20);
+      nodes[i].restX = nodes[i].x;
+      nodes[i].restY = nodes[i].y;
     }
+    render();
   });
 })();
