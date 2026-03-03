@@ -1,4 +1,6 @@
 docs/plans
 worker/
+worker-news/
 worker-comments/
 .dev.vars
+_site/
