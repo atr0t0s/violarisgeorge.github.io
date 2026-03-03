@@ -322,7 +322,7 @@ li::marker {
 
 .hero-pitch {
   font-size: clamp(1rem, 1.8vw, 1.15rem);
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.8);
   line-height: 1.7;
   margin-bottom: var(--space-lg);
   max-width: 480px;
@@ -358,7 +358,7 @@ li::marker {
 }
 
 .hero-social {
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.7);
   transition: color var(--transition), filter var(--transition), transform var(--transition);
   display: flex;
   align-items: center;
@@ -383,7 +383,7 @@ li::marker {
 }
 
 .hero-link {
-  color: var(--text-muted);
+  color: #fff;
   font-family: var(--font-heading);
   font-size: 0.85rem;
   padding: 0.4rem 0.9rem;
