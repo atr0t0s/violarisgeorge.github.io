@@ -83,7 +83,7 @@
         radius: def.type === 'project' ? 6 : 4,
         driftPhase: Math.random() * Math.PI * 2,
         driftSpeed: 0.0003 + Math.random() * 0.0004,
-        driftRadius: 4 + Math.random() * 6,
+        driftAmp: 0.004 + Math.random() * 0.008,
         edges: []
       };
       nodes.push(node);
@@ -202,13 +202,13 @@
 
     // Update and draw nodes
     var mouseDist;
+    var t = Date.now();
     for (var k = 0; k < nodes.length; k++) {
       var n = nodes[k];
 
       // Gentle drift: sine-based ambient motion
-      var t = Date.now();
-      n.vx += Math.sin(t * n.driftSpeed + n.driftPhase) * 0.008;
-      n.vy += Math.cos(t * n.driftSpeed * 0.7 + n.driftPhase) * 0.008;
+      n.vx += Math.sin(t * n.driftSpeed + n.driftPhase) * n.driftAmp;
+      n.vy += Math.cos(t * n.driftSpeed * 0.7 + n.driftPhase) * n.driftAmp;
 
       // Mouse repel
       mouseDist = dist(n.x, n.y, mouse.x, mouse.y);
