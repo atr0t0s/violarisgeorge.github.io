@@ -501,7 +501,7 @@ li::marker {
 
 @media (min-width: 768px) {
   .substack-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -522,8 +522,7 @@ li::marker {
 .substack-card img {
   display: block;
   width: 100%;
-  max-height: 400px;
-  object-fit: cover;
+  height: auto;
 }
 
 /* Featured Work */
