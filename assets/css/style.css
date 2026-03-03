@@ -285,21 +285,37 @@ li::marker {
   z-index: 0;
 }
 
-/* Spacer so content starts below the fixed hero */
-.landing-hero + section {
+
+/* Parallax: landing-body scrolls over the fixed hero */
+.landing-body {
+  position: relative;
+  z-index: 1;
   margin-top: 100vh;
 }
 
-/* Parallax: content scrolls over the fixed hero on landing page */
-.landing > section:not(.landing-hero) {
-  position: relative;
-  z-index: 1;
+html:not([data-theme="light"]) .landing-body {
+  background:
+    radial-gradient(circle 280px at 8% 75%, rgba(220, 40, 160, 0.18) 0%, rgba(220, 40, 160, 0.06) 40%, transparent 70%),
+    radial-gradient(circle 200px at 88% 15%, rgba(140, 60, 220, 0.15) 0%, rgba(140, 60, 220, 0.04) 45%, transparent 70%),
+    radial-gradient(circle 120px at 78% 55%, rgba(255, 50, 150, 0.12) 0%, transparent 60%),
+    radial-gradient(circle 150px at 20% 40%, rgba(60, 180, 220, 0.08) 0%, transparent 55%),
+    radial-gradient(circle 100px at 85% 80%, transparent 55%, rgba(255, 255, 255, 0.04) 58%, rgba(255, 255, 255, 0.06) 62%, transparent 65%),
+    radial-gradient(circle 140px at 12% 20%, transparent 52%, rgba(255, 255, 255, 0.03) 55%, rgba(255, 255, 255, 0.05) 60%, transparent 63%),
+    radial-gradient(ellipse at 15% 10%, rgba(180, 40, 200, 0.25) 0%, transparent 45%),
+    radial-gradient(ellipse at 85% 20%, rgba(100, 40, 180, 0.20) 0%, transparent 40%),
+    radial-gradient(ellipse at 50% 80%, rgba(200, 40, 120, 0.18) 0%, transparent 45%),
+    radial-gradient(ellipse at 75% 60%, rgba(60, 20, 140, 0.15) 0%, transparent 50%),
+    linear-gradient(160deg, #0f0a1a 0%, #1a0e2e 25%, #2a1040 50%, #1a0e2e 75%, #0f0a1a 100%);
+}
+
+[data-theme="light"] .landing-body {
   background: var(--bg);
 }
 
 .landing ~ footer {
   position: relative;
   z-index: 1;
+  background: var(--bg);
 }
 
 .hero-canvas {
@@ -2024,6 +2040,8 @@ tr:hover td {
   border-top: 1px solid var(--border);
   color: var(--text-muted);
   font-size: 0.85rem;
+  position: relative;
+  z-index: 1;
 }
 
 [data-theme="light"] .site-footer {
