@@ -268,8 +268,7 @@ li::marker {
   color: var(--text);
 }
 
-.hero-socials,
-.hero-content .social-icons {
+.hero-socials {
   display: flex;
   gap: var(--space-md);
   margin-bottom: var(--space-md);
