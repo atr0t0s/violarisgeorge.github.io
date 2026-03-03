@@ -522,7 +522,8 @@ li::marker {
 .substack-card img {
   display: block;
   width: 100%;
-  height: auto;
+  max-height: 400px;
+  object-fit: cover;
 }
 
 /* Featured Work */
