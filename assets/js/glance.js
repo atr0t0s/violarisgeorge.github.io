@@ -83,73 +83,46 @@
     document.getElementById('glance-tweet-embed').appendChild(s);
   }
 
-  // Wait for tweet to render, then measure and build the other two cards
-  function waitForTweet(callback) {
-    var tweetCard = document.getElementById('glance-tweet');
-    if (!tweetCard) { callback(600); return; }
-    var attempts = 0;
-    var check = setInterval(function () {
-      attempts++;
-      var iframe = tweetCard.querySelector('iframe');
-      if (iframe && iframe.offsetHeight > 100) {
-        clearInterval(check);
-        // Small delay to let the iframe fully settle
-        setTimeout(function () { callback(tweetCard.offsetHeight); }, 200);
-      } else if (attempts > 50) {
-        // Fallback after 10s — use whatever height we have
-        clearInterval(check);
-        callback(Math.max(tweetCard.offsetHeight, 600));
-      }
-    }, 200);
+  // Populate resources
+  var resourceBody = document.getElementById('glance-resource-body');
+  if (resourceBody) {
+    var picked = shuffle(resources).slice(0, 15);
+    for (var i = 0; i < picked.length; i++) {
+      var r = picked[i];
+      var item = document.createElement('div');
+      item.className = 'glance-resource-item';
+      var tag = document.createElement('span');
+      tag.className = 'glance-resource-tag';
+      tag.textContent = r.tag;
+      var link = document.createElement('a');
+      link.href = r.url;
+      link.target = '_blank';
+      link.rel = 'noopener';
+      link.textContent = r.text;
+      link.className = 'glance-resource-link';
+      item.appendChild(tag);
+      item.appendChild(link);
+      resourceBody.appendChild(item);
+    }
   }
 
-  waitForTweet(function (tweetHeight) {
-    var grid = document.querySelector('.glance-grid');
-    if (grid) {
-      grid.style.gridTemplateRows = tweetHeight + 'px';
+  // Populate wisdom
+  var wisdomBody = document.getElementById('glance-wisdom-body');
+  if (wisdomBody) {
+    var pickedW = shuffle(fortunes).slice(0, 15);
+    for (var i = 0; i < pickedW.length; i++) {
+      var f = pickedW[i];
+      var item = document.createElement('div');
+      item.className = 'glance-wisdom-item';
+      var q = document.createElement('blockquote');
+      q.className = 'glance-quote';
+      q.textContent = f.quote;
+      var c = document.createElement('cite');
+      c.className = 'glance-cite';
+      c.textContent = '\u2014 ' + f.author;
+      item.appendChild(q);
+      item.appendChild(c);
+      wisdomBody.appendChild(item);
     }
-
-    // Now populate resources
-    var resourceBody = document.getElementById('glance-resource-body');
-    if (resourceBody) {
-      var picked = shuffle(resources).slice(0, 15);
-      for (var i = 0; i < picked.length; i++) {
-        var r = picked[i];
-        var item = document.createElement('div');
-        item.className = 'glance-resource-item';
-        var tag = document.createElement('span');
-        tag.className = 'glance-resource-tag';
-        tag.textContent = r.tag;
-        var link = document.createElement('a');
-        link.href = r.url;
-        link.target = '_blank';
-        link.rel = 'noopener';
-        link.textContent = r.text;
-        link.className = 'glance-resource-link';
-        item.appendChild(tag);
-        item.appendChild(link);
-        resourceBody.appendChild(item);
-      }
-    }
-
-    // Now populate wisdom
-    var wisdomBody = document.getElementById('glance-wisdom-body');
-    if (wisdomBody) {
-      var pickedW = shuffle(fortunes).slice(0, 15);
-      for (var i = 0; i < pickedW.length; i++) {
-        var f = pickedW[i];
-        var item = document.createElement('div');
-        item.className = 'glance-wisdom-item';
-        var q = document.createElement('blockquote');
-        q.className = 'glance-quote';
-        q.textContent = f.quote;
-        var c = document.createElement('cite');
-        c.className = 'glance-cite';
-        c.textContent = '\u2014 ' + f.author;
-        item.appendChild(q);
-        item.appendChild(c);
-        wisdomBody.appendChild(item);
-      }
-    }
-  });
+  }
 })();

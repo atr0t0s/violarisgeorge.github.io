@@ -331,6 +331,7 @@ li::marker {
 @media (min-width: 768px) {
   .glance-grid {
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 726px;
   }
 }
 
@@ -452,7 +453,23 @@ li::marker {
 
 #glance-tweet-embed {
   flex: 1;
-  min-height: 100px;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+#glance-tweet-embed::-webkit-scrollbar {
+  width: 4px;
+}
+
+#glance-tweet-embed::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#glance-tweet-embed::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 2px;
 }
 
 #glance-tweet-embed .twitter-tweet {
