@@ -96,6 +96,15 @@ html[data-theme="light"] body {
   color: var(--accent);
 }
 
+/* Dark-mode text brightness overrides */
+html:not([data-theme="light"]) .nav-links a,
+html:not([data-theme="light"]) .hero-link,
+html:not([data-theme="light"]) .explore-link,
+html:not([data-theme="light"]) .hero-pitch,
+html:not([data-theme="light"]) .hero-social {
+  color: rgba(255, 255, 255, 0.85);
+}
+
 /* ---------- CSS Reset / Base ---------- */
 *,
 *::before,
@@ -322,7 +331,7 @@ li::marker {
 
 .hero-pitch {
   font-size: clamp(1rem, 1.8vw, 1.15rem);
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--text-muted);
   line-height: 1.7;
   margin-bottom: var(--space-lg);
   max-width: 480px;
@@ -358,7 +367,7 @@ li::marker {
 }
 
 .hero-social {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--text-muted);
   transition: color var(--transition), filter var(--transition), transform var(--transition);
   display: flex;
   align-items: center;
@@ -383,7 +392,7 @@ li::marker {
 }
 
 .hero-link {
-  color: #fff;
+  color: var(--text-muted);
   font-family: var(--font-heading);
   font-size: 0.85rem;
   padding: 0.4rem 0.9rem;
@@ -778,7 +787,7 @@ li::marker {
 }
 
 .explore-link {
-  color: #fff;
+  color: var(--text-muted);
   font-family: var(--font-heading);
   font-size: 0.9rem;
   font-weight: 500;
@@ -978,7 +987,7 @@ li::marker {
 .nav-links a {
   display: block;
   padding: 0.5rem 0.8rem;
-  color: #fff;
+  color: var(--text-muted);
   font-family: var(--font-heading);
   font-size: 0.85rem;
   font-weight: 400;
