@@ -228,7 +228,12 @@ li::marker {
   width: 50%;
   height: 100%;
   pointer-events: none;
-  opacity: 0.6;
+  opacity: 0;
+  animation: canvasFadeIn 1.2s ease-out 0.3s forwards;
+}
+
+@keyframes canvasFadeIn {
+  to { opacity: 0.6; }
 }
 
 .hero-content {
@@ -245,6 +250,16 @@ li::marker {
   letter-spacing: -0.02em;
   line-height: 1.05;
   margin: 0 0 var(--space-md) 0;
+  transition: text-shadow 0.3s ease;
+  cursor: default;
+}
+
+.landing h1:hover {
+  text-shadow: 0 0 30px rgba(0, 212, 255, 0.15);
+}
+
+[data-theme="light"] .landing h1:hover {
+  text-shadow: 0 0 30px rgba(0, 119, 170, 0.12);
 }
 
 .hero-role {
@@ -266,6 +281,25 @@ li::marker {
 
 .hero-pitch strong {
   color: var(--text);
+  position: relative;
+  display: inline;
+}
+
+.hero-pitch strong::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.hero-pitch strong:hover::after {
+  transform: scaleX(1);
 }
 
 .hero-socials {
@@ -276,7 +310,7 @@ li::marker {
 
 .hero-social {
   color: var(--text-muted);
-  transition: all var(--transition);
+  transition: color var(--transition), filter var(--transition), transform var(--transition);
   display: flex;
   align-items: center;
 }
@@ -286,6 +320,7 @@ li::marker {
   color: var(--accent);
   filter: drop-shadow(0 0 8px var(--accent-glow));
   border-bottom-color: transparent;
+  transform: translateY(-2px);
 }
 
 .hero-social svg {
@@ -305,14 +340,15 @@ li::marker {
   padding: 0.4rem 0.9rem;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  transition: all var(--transition);
+  transition: color var(--transition), border-color var(--transition), box-shadow var(--transition), transform var(--transition);
   text-decoration: none;
 }
 
 .hero-link:hover {
   color: var(--accent);
   border-color: var(--accent);
-  box-shadow: 0 0 12px var(--accent-glow);
+  box-shadow: 0 0 16px var(--accent-glow);
+  transform: scale(1.04);
 }
 
 /* At a Glance */
@@ -748,7 +784,11 @@ li::marker {
 @media (max-width: 767px) {
   .hero-canvas {
     width: 100%;
-    opacity: 0.3;
+    animation: canvasFadeInMobile 1.2s ease-out 0.3s forwards;
+  }
+
+  @keyframes canvasFadeInMobile {
+    to { opacity: 0.3; }
   }
 
   .landing-hero {
@@ -2082,6 +2122,28 @@ tr:hover td {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
+  }
+
+  .hero-canvas {
+    animation: none;
+    opacity: 0.6;
+  }
+
+  .hero-social:hover,
+  .hero-social:focus {
+    transform: none;
+  }
+
+  .hero-link:hover {
+    transform: none;
+  }
+
+  .hero-pitch strong::after {
+    transition: none;
+  }
+
+  .landing h1 {
+    transition: none;
   }
 }
 
