@@ -16,6 +16,13 @@
     var target = document.getElementById('explore-section');
     if (!target) return;
     e.preventDefault();
+
+    // On landing page, use section nav so dots/arrows update
+    if (document.body.classList.contains('landing-page-body')) {
+      if (window.sectionNav) window.sectionNav.goTo('Explore');
+      return;
+    }
+
     target.scrollIntoView({ behavior: 'smooth' });
 
     function dismiss() {

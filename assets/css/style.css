@@ -285,53 +285,6 @@ li::marker {
   z-index: 0;
 }
 
-
-/* Scroll hint arrow */
-.scroll-hint {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  z-index: 10;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: rgba(255, 255, 255, 0.7);
-  text-decoration: none;
-  transition: opacity 0.3s, transform 0.3s, background 0.2s;
-  animation: scrollHintBounce 2s ease-in-out infinite;
-}
-
-.scroll-hint:hover {
-  background: rgba(255, 255, 255, 0.18);
-  color: #fff;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  transform: translateY(2px);
-  animation: none;
-}
-
-@keyframes scrollHintBounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(6px); }
-}
-
-[data-theme="light"] .scroll-hint {
-  background: rgba(0, 0, 0, 0.06);
-  border-color: rgba(0, 0, 0, 0.1);
-  color: rgba(0, 0, 0, 0.5);
-}
-
-[data-theme="light"] .scroll-hint:hover {
-  background: rgba(0, 0, 0, 0.1);
-  color: rgba(0, 0, 0, 0.7);
-}
-
 /* Parallax: landing-body scrolls over the fixed hero */
 .landing-body {
   position: relative;
@@ -342,24 +295,11 @@ li::marker {
 
 
 html:not([data-theme="light"]) .landing-body {
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 120px);
-  mask-image: linear-gradient(to bottom, transparent 0%, black 120px);
-  background:
-    radial-gradient(circle 280px at 8% 75%, rgba(220, 40, 160, 0.18) 0%, rgba(220, 40, 160, 0.06) 40%, transparent 70%),
-    radial-gradient(circle 200px at 88% 15%, rgba(140, 60, 220, 0.15) 0%, rgba(140, 60, 220, 0.04) 45%, transparent 70%),
-    radial-gradient(circle 120px at 78% 55%, rgba(255, 50, 150, 0.12) 0%, transparent 60%),
-    radial-gradient(circle 150px at 20% 40%, rgba(60, 180, 220, 0.08) 0%, transparent 55%),
-    radial-gradient(circle 100px at 85% 80%, transparent 55%, rgba(255, 255, 255, 0.04) 58%, rgba(255, 255, 255, 0.06) 62%, transparent 65%),
-    radial-gradient(circle 140px at 12% 20%, transparent 52%, rgba(255, 255, 255, 0.03) 55%, rgba(255, 255, 255, 0.05) 60%, transparent 63%),
-    radial-gradient(ellipse at 15% 10%, rgba(180, 40, 200, 0.25) 0%, transparent 45%),
-    radial-gradient(ellipse at 85% 20%, rgba(100, 40, 180, 0.20) 0%, transparent 40%),
-    radial-gradient(ellipse at 50% 80%, rgba(200, 40, 120, 0.18) 0%, transparent 45%),
-    radial-gradient(ellipse at 75% 60%, rgba(60, 20, 140, 0.15) 0%, transparent 50%),
-    linear-gradient(160deg, #0f0a1a 0%, #1a0e2e 25%, #2a1040 50%, #1a0e2e 75%, #0f0a1a 100%);
+  background: transparent;
 }
 
 [data-theme="light"] .landing-body {
-  background: var(--bg);
+  background: transparent;
 }
 
 .landing ~ footer {
@@ -3553,5 +3493,246 @@ a.nav-action-btn:focus {
   color: var(--text-muted);
   padding: var(--space-xl) 0;
   font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   Section Navigation
+   ========================================================================== */
+
+/* Scrollbar hiding on landing page */
+.landing-page-body {
+  scrollbar-width: none; /* Firefox */
+}
+.landing-page-body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+/* Stacking parallax: each section sticks, next scrolls over it */
+/* Stacking parallax: each section sticks, next scrolls over it */
+.landing-body [data-section] {
+  position: sticky;
+  top: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Full-viewport-width background (content stays in its container) */
+.landing-body [data-section]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+html:not([data-theme="light"]) .landing-body [data-section]::before {
+  background:
+    radial-gradient(ellipse at 15% 10%, rgba(180, 40, 200, 0.25) 0%, transparent 45%),
+    radial-gradient(ellipse at 85% 20%, rgba(100, 40, 180, 0.20) 0%, transparent 40%),
+    radial-gradient(ellipse at 50% 80%, rgba(200, 40, 120, 0.18) 0%, transparent 45%),
+    linear-gradient(160deg, #0f0a1a 0%, #1a0e2e 25%, #2a1040 50%, #1a0e2e 75%, #0f0a1a 100%);
+}
+
+[data-theme="light"] .landing-body [data-section]::before {
+  background: var(--bg);
+}
+
+/* Transparent fade on top edge (applied to background pseudo-element) */
+.landing-body [data-section]::before {
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 120px);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 120px);
+}
+
+@media (max-width: 767px) {
+  .landing-body [data-section] {
+    min-height: 80vh;
+  }
+}
+
+/* Section indicator dots (left side) */
+.section-indicator {
+  position: fixed;
+  left: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-dot {
+  width: 3px;
+  height: 16px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  transition: height 0.3s ease, background 0.3s ease;
+  position: relative;
+  border: none;
+  padding: 0;
+}
+
+/* Extend hover hit area to the right */
+.section-dot::after {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -8px;
+  right: -32px;
+  bottom: -6px;
+}
+
+.section-dot:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.section-dot.active {
+  height: 24px;
+  background: var(--accent);
+}
+
+/* Tooltip on hover */
+.section-dot .section-tooltip {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.section-dot:hover .section-tooltip {
+  opacity: 1;
+}
+
+/* Arrow navigation (right side) */
+.section-arrows {
+  position: fixed;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: opacity 0.3s ease, background 0.2s ease;
+}
+
+.section-arrow:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+
+.section-arrow.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.section-arrow svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Light theme overrides */
+[data-theme="light"] .section-dot {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .section-dot:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="light"] .section-dot.active {
+  background: var(--accent);
+}
+
+[data-theme="light"] .section-dot .section-tooltip {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: var(--text);
+}
+
+[data-theme="light"] .section-arrow {
+  background: rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="light"] .section-arrow:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+  .section-indicator {
+    left: 0.5rem;
+    gap: 8px;
+  }
+
+  .section-dot {
+    height: 12px;
+  }
+
+  .section-dot.active {
+    height: 18px;
+  }
+
+  .section-dot .section-tooltip {
+    display: none;
+  }
+
+  .section-arrows {
+    right: 0.5rem;
+  }
+
+  .section-arrow {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .section-dot,
+  .section-arrow,
+  .section-dot .section-tooltip {
+    transition: none;
+  }
 }
 
