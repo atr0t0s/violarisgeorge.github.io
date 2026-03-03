@@ -2744,8 +2744,13 @@ a.nav-action-btn:focus {
   padding: 10px 14px;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  background: var(--bg);
+  background: rgba(255, 255, 255, 0.08);
   color: var(--text);
+}
+
+[data-theme="light"] .ask-input input {
+  background: #fff;
+  color: #2a2a2a;
   font-family: var(--font-body);
   font-size: 0.95rem;
   outline: none;
@@ -2761,7 +2766,7 @@ a.nav-action-btn:focus {
   border: none;
   border-radius: var(--radius-sm);
   background: var(--accent);
-  color: var(--bg);
+  color: #fff;
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 0.9rem;
