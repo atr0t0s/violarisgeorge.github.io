@@ -294,20 +294,10 @@ li::marker {
   padding-top: var(--space-2xl);
 }
 
-/* Fade-in edge at the top so the transition from hero feels smooth */
-html:not([data-theme="light"]) .landing-body::before {
-  content: '';
-  position: absolute;
-  top: -80px;
-  left: 0;
-  right: 0;
-  height: 80px;
-  background: linear-gradient(to bottom, transparent 0%, #0f0a1a 100%);
-  z-index: 2;
-  pointer-events: none;
-}
 
 html:not([data-theme="light"]) .landing-body {
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 120px);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 120px);
   background:
     radial-gradient(circle 280px at 8% 75%, rgba(220, 40, 160, 0.18) 0%, rgba(220, 40, 160, 0.06) 40%, transparent 70%),
     radial-gradient(circle 200px at 88% 15%, rgba(140, 60, 220, 0.15) 0%, rgba(140, 60, 220, 0.04) 45%, transparent 70%),
