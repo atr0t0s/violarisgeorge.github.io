@@ -291,6 +291,20 @@ li::marker {
   position: relative;
   z-index: 1;
   margin-top: 100vh;
+  padding-top: var(--space-2xl);
+}
+
+/* Fade-in edge at the top so the transition from hero feels smooth */
+html:not([data-theme="light"]) .landing-body::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent 0%, #0f0a1a 100%);
+  z-index: 2;
+  pointer-events: none;
 }
 
 html:not([data-theme="light"]) .landing-body {
@@ -480,6 +494,7 @@ html:not([data-theme="light"]) .landing-body {
   flex-direction: column;
   overflow: hidden;
   height: 100%;
+  min-height: 360px;
 }
 
 .glance-card .section-label {
