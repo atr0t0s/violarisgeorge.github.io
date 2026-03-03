@@ -136,9 +136,12 @@ body {
 /* --- Dark-mode gradient background + abstract shapes --- */
 html:not([data-theme="light"]) body::before {
   content: '';
-  position: fixed;
-  inset: 0;
-  z-index: -2;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
   background:
     radial-gradient(ellipse at 15% 10%, rgba(180, 40, 200, 0.25) 0%, transparent 45%),
     radial-gradient(ellipse at 85% 20%, rgba(100, 40, 180, 0.20) 0%, transparent 40%),
@@ -150,9 +153,12 @@ html:not([data-theme="light"]) body::before {
 /* Abstract floating shapes */
 html:not([data-theme="light"]) body::after {
   content: '';
-  position: fixed;
-  inset: 0;
-  z-index: -1;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
   pointer-events: none;
   background:
     /* Large fuchsia orb — bottom left */
@@ -267,14 +273,6 @@ li::marker {
   background: var(--bg);
 }
 
-/* Scrolling content covers the fixed hero */
-.landing > section:not(.landing-hero) {
-  background: var(--bg);
-}
-
-html:not([data-theme="light"]) .landing > section:not(.landing-hero) {
-  background: #0f0a1a;
-}
 
 /* Hero */
 .landing-hero {
@@ -298,11 +296,11 @@ html:not([data-theme="light"]) .landing > section:not(.landing-hero) {
   margin-top: 100vh;
 }
 
-/* All content after hero scrolls over it with a background */
+/* All content after hero scrolls over it */
 .landing > section:not(.landing-hero),
 .landing ~ footer {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .hero-canvas {
@@ -2027,9 +2025,9 @@ tr:hover td {
   border-top: 1px solid var(--border);
   color: var(--text-muted);
   font-size: 0.85rem;
-  background-color: var(--bg);
+  background-color: transparent;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 [data-theme="light"] .site-footer {
