@@ -267,16 +267,42 @@ li::marker {
   background: var(--bg);
 }
 
+/* Scrolling content covers the fixed hero */
+.landing > section:not(.landing-hero) {
+  background: var(--bg);
+}
+
+html:not([data-theme="light"]) .landing > section:not(.landing-hero) {
+  background: #0f0a1a;
+}
+
 /* Hero */
 .landing-hero {
-  position: relative;
-  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 6rem 2rem 4rem;
   max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
+  z-index: 0;
+}
+
+/* Spacer so content starts below the fixed hero */
+.landing-hero + section {
+  margin-top: 100vh;
+}
+
+/* All content after hero scrolls over it with a background */
+.landing > section:not(.landing-hero),
+.landing ~ footer {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-canvas {
@@ -2001,7 +2027,9 @@ tr:hover td {
   border-top: 1px solid var(--border);
   color: var(--text-muted);
   font-size: 0.85rem;
-  background-color: transparent;
+  background-color: var(--bg);
+  position: relative;
+  z-index: 1;
 }
 
 [data-theme="light"] .site-footer {
