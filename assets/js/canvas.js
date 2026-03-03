@@ -6,7 +6,7 @@
 
   var ctx = canvas.getContext('2d');
   var mouse = { x: -1000, y: -1000 };
-  var MOUSE_REPEL = 100;
+  var MOUSE_REPEL = 140;
   var LABEL_RADIUS = 200;
   var HIGHLIGHT_RADIUS = 60;
   var running = true;
@@ -81,6 +81,9 @@
         vx: (Math.random() - 0.5) * 0.3,
         vy: (Math.random() - 0.5) * 0.3,
         radius: def.type === 'project' ? 6 : 4,
+        driftPhase: Math.random() * Math.PI * 2,
+        driftSpeed: 0.0003 + Math.random() * 0.0004,
+        driftRadius: 4 + Math.random() * 6,
         edges: []
       };
       nodes.push(node);
@@ -182,11 +185,19 @@
       var isHighlighted = hovered && highlightSet[eg.a.name] && highlightSet[eg.b.name] &&
                           (eg.a === hovered || eg.b === hovered);
       ctx.strokeStyle = isHighlighted ? colors.lineHighlight : colors.lineDim;
-      ctx.lineWidth = isHighlighted ? 1.2 : 0.5;
+      ctx.lineWidth = isHighlighted ? 1.5 : 0.5;
+      if (isHighlighted) {
+        ctx.shadowColor = colors.lineHighlight;
+        ctx.shadowBlur = 8;
+      }
       ctx.beginPath();
       ctx.moveTo(eg.a.x, eg.a.y);
       ctx.lineTo(eg.b.x, eg.b.y);
       ctx.stroke();
+      if (isHighlighted) {
+        ctx.shadowColor = 'transparent';
+        ctx.shadowBlur = 0;
+      }
     }
 
     // Update and draw nodes
@@ -194,28 +205,29 @@
     for (var k = 0; k < nodes.length; k++) {
       var n = nodes[k];
 
-      // Gentle drift: add tiny random acceleration
-      n.vx += (Math.random() - 0.5) * 0.02;
-      n.vy += (Math.random() - 0.5) * 0.02;
+      // Gentle drift: sine-based ambient motion
+      var t = Date.now();
+      n.vx += Math.sin(t * n.driftSpeed + n.driftPhase) * 0.008;
+      n.vy += Math.cos(t * n.driftSpeed * 0.7 + n.driftPhase) * 0.008;
 
       // Mouse repel
       mouseDist = dist(n.x, n.y, mouse.x, mouse.y);
       if (mouseDist < MOUSE_REPEL && mouseDist > 0) {
-        var force = (1 - mouseDist / MOUSE_REPEL) * 0.6;
+        var force = (1 - mouseDist / MOUSE_REPEL) * 0.35;
         var angle = Math.atan2(n.y - mouse.y, n.x - mouse.x);
         n.vx += Math.cos(angle) * force;
         n.vy += Math.sin(angle) * force;
       }
 
       // Damping — keep speed gentle
-      n.vx *= 0.97;
-      n.vy *= 0.97;
+      n.vx *= 0.94;
+      n.vy *= 0.94;
 
       // Clamp max speed
       var speed = Math.sqrt(n.vx * n.vx + n.vy * n.vy);
-      if (speed > 1.5) {
-        n.vx = (n.vx / speed) * 1.5;
-        n.vy = (n.vy / speed) * 1.5;
+      if (speed > 0.8) {
+        n.vx = (n.vx / speed) * 0.8;
+        n.vy = (n.vy / speed) * 0.8;
       }
 
       // Move
@@ -246,15 +258,18 @@
       // Glow for highlighted nodes
       if (isNodeHighlighted) {
         ctx.beginPath();
-        ctx.arc(n.x, n.y, n.radius + 5, 0, Math.PI * 2);
+        ctx.arc(n.x, n.y, n.radius + 8, 0, Math.PI * 2);
         ctx.fillStyle = isProject ? colors.glowProject : colors.glowSkill;
         ctx.fill();
       }
 
-      // Node circle
+      // Node circle with radial gradient
+      var grad = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, n.radius + 3);
+      grad.addColorStop(0, fillColor);
+      grad.addColorStop(1, 'transparent');
       ctx.beginPath();
-      ctx.arc(n.x, n.y, n.radius, 0, Math.PI * 2);
-      ctx.fillStyle = fillColor;
+      ctx.arc(n.x, n.y, n.radius + 3, 0, Math.PI * 2);
+      ctx.fillStyle = grad;
       ctx.fill();
 
       // Labels — only show near mouse
