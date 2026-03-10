@@ -10,6 +10,11 @@ Writing about what I'm building and what breaks along the way. All posts live on
 ## Featured
 
 <div class="featured-grid">
+  <a href="https://blog.violaris.org/ai-existential-dread-and-developer-ego-death" class="featured-card">
+    <span class="featured-icon">&#9671;</span>
+    <h3>AI Existential Dread and Developer Ego Death</h3>
+    <p>I haven't written a line of code in two weeks. The strangest part isn't the realization -- it's that I don't feel anything about it.</p>
+  </a>
   <a href="https://blog.violaris.org/1-500-lines-one-commit-fc7afc3fa6d5" class="featured-card">
     <span class="featured-icon">&#9998;</span>
     <h3>1,500 Lines, One Commit</h3>
@@ -19,11 +24,6 @@ Writing about what I'm building and what breaks along the way. All posts live on
     <span class="featured-icon">&#9670;</span>
     <h3>Agent Memory at Scale</h3>
     <p>Vector databases alone broke immediately. What worked: Postgres + Qdrant + Redis with three explicit memory types.</p>
-  </a>
-  <a href="https://blog.violaris.org/ai-existential-dread-and-developer-ego-death" class="featured-card">
-    <span class="featured-icon">&#9671;</span>
-    <h3>AI Existential Dread and Developer Ego Death</h3>
-    <p>I haven't written a line of code in two weeks. The strangest part isn't the realization -- it's that I don't feel anything about it.</p>
   </a>
 </div>
 
