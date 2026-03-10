@@ -10,15 +10,15 @@ Writing about what I'm building and what breaks along the way. All posts live on
 ## Featured
 
 <div class="featured-grid">
-  <a href="https://blog.violaris.org/ai-existential-dread-and-developer-ego-death" class="featured-card">
-    <span class="featured-icon">&#9671;</span>
-    <h3>AI Existential Dread and Developer Ego Death</h3>
-    <p>I haven't written a line of code in two weeks. The strangest part isn't the realization -- it's that I don't feel anything about it.</p>
-  </a>
   <a href="https://medium.com/@violaris.org/the-agentic-development-loop-how-i-ship-features-with-claude-code-a14db265379c" class="featured-card">
     <span class="featured-icon">&#8635;</span>
     <h3>The Agentic Development Loop</h3>
     <p>The value of agentic coding isn't speed. It's that it forces you to be explicit about what you'd normally leave implicit.</p>
+  </a>
+  <a href="https://blog.violaris.org/ai-existential-dread-and-developer-ego-death" class="featured-card">
+    <span class="featured-icon">&#9671;</span>
+    <h3>AI Existential Dread and Developer Ego Death</h3>
+    <p>I haven't written a line of code in two weeks. The strangest part isn't the realization -- it's that I don't feel anything about it.</p>
   </a>
   <a href="https://blog.violaris.org/1-500-lines-one-commit-fc7afc3fa6d5" class="featured-card">
     <span class="featured-icon">&#9998;</span>
