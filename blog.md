@@ -20,16 +20,22 @@ Writing about what I'm building and what breaks along the way. All posts live on
     <h3>Agent Memory at Scale</h3>
     <p>Vector databases alone broke immediately. What worked: Postgres + Qdrant + Redis with three explicit memory types.</p>
   </a>
-  <a href="https://blog.violaris.org/the-model-that-never-made-a-trade-2d44289d116a" class="featured-card">
-    <span class="featured-icon">&#9656;</span>
-    <h3>The Model That Never Made a Trade</h3>
-    <p>I wrote a PPO reinforcement learning trading agent, then shelved it when LLMs with tool-calling shipped the same week.</p>
+  <a href="https://blog.violaris.org/ai-existential-dread-and-developer-ego-death" class="featured-card">
+    <span class="featured-icon">&#9671;</span>
+    <h3>AI Existential Dread and Developer Ego Death</h3>
+    <p>I haven't written a line of code in two weeks. The strangest part isn't the realization -- it's that I don't feel anything about it.</p>
   </a>
 </div>
 
 ## All Posts
 
 <div id="blog-list">
+
+<div class="blog-entry">
+<h3><a href="https://blog.violaris.org/ai-existential-dread-and-developer-ego-death">AI Existential Dread and Developer Ego Death</a> <span class="blog-tag">Career</span></h3>
+<span class="blog-date">Mar 10, 2026</span>
+<p>I haven't written a single line of code in over two weeks. Three autonomous agents work overnight on features I spec out, and my job is to review their pull requests. The developer I spent fifteen years becoming is no longer the bottleneck -- I am. This is what ego death looks like, and what's on the other side of it.</p>
+</div>
 
 <div class="blog-entry">
 <h3><a href="https://blog.violaris.org/googles-mcp-toolbox-for-databases-deserves-your-attention-2543bf910e30">Google's MCP Toolbox for Databases Deserves Your Attention</a> <span class="blog-tag">AI</span></h3>
